@@ -42,7 +42,7 @@ function html() {
 
 function css() {
   return gulp
-    .src("src/sass/style.scss")
+    .src("src/assets/sass/style.scss")
     .pipe(gulpIf(!isProd, sourcemaps.init()))
     .pipe(sass().on("error", sass.logError))
     .pipe(
@@ -54,7 +54,7 @@ function css() {
     )
     .pipe(gulpIf(!isProd, sourcemaps.write()))
     .pipe(gulpIf(isProd, cssmin()))
-    .pipe(gulp.dest("/"));
+    .pipe(gulp.dest("public/assets/css/"));
 }
 
 function js() {
