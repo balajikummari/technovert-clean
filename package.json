@@ -1,0 +1,32 @@
+{
+  "name": "technovert-custom-theme",
+  "version": "1.0.0",
+  "description": "Technovert.com",
+  "author": "Technovert Devs",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "gulp",
+    "start": "gulp serve",
+    "prod": "cross-env NODE_ENV=prod gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "cross-env": "^7.0.2",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssbeautify": "^2.0.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-gzip": "^1.4.2",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-html-partial": "^1.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-js-import": "^1.0.6",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  }
+}

@@ -1,0 +1,139 @@
+//Padding in each section set globally from here
+section {
+  @extend .py-80;
+  @extend .px-4, .px-md-5, .px-lg-14;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.underline {
+  @extend .mb-30;
+}
+
+.underline::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 6px;
+  margin-top: 5px;
+  @extend .bg-blue;
+}
+
+.mx-auto.underline::after {
+  @extend .mx-auto;
+}
+
+.flex-h-center {
+  @extend .d-flex;
+  @extend .justify-content-center;
+}
+
+.flex-v-center {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .justify-content-center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gradient-1 {
+  background: linear-gradient(135deg, #5f1ab3 0%, #005f91 100%);
+}
+
+.card-circular {
+  display: inline-block;
+  margin: 15px;
+  padding: 40px;
+  max-width: 360px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+
+  .icon {
+    display: inline-block;
+    background-color: rgba(16, 120, 218, 0.1);
+    border-radius: 55px;
+    margin-bottom: 30px;
+    padding: 30px 17px;
+  }
+
+  img {
+    width: 75px;
+    height: auto;
+  }
+
+  h3 {
+    color: #2e3342;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 32px;
+  }
+
+  p {
+    color: $gray;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+}
+
+.card {
+  @extend .card-circular;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .banner {
+    height: 160px;
+    width: 100%;
+    margin-bottom: 35px;
+    overflow: hidden;
+  }
+}
+
+.subnav {
+  // max-height: 80px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.05);
+  overflow-x: scroll;
+  // overflow-y: hidden;
+
+  @extend .container-fluid;
+  @extend .px-4, .px-md-5, .px-lg-14, .py-25;
+
+  a {
+    margin-right: 60px;
+    color: $gray !important;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+    line-height: 28px;
+  }
+
+  a.active {
+    color: #2e3342;
+    position: relative;
+  }
+
+  a.active::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 10px;
+    background-color: #2986ce;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    position: absolute;
+    bottom: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

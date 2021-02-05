@@ -1,0 +1,309 @@
+// Spacings
+$spacer: (
+  0,
+  6,
+  8,
+  10,
+  12,
+  15,
+  16,
+  20,
+  24,
+  25,
+  30,
+  36,
+  40,
+  50,
+  56,
+  60,
+  65,
+  70,
+  80,
+  90,
+  100,
+  140,
+  150,
+  160,
+  180,
+  300
+); // Add your values here
+
+// For Margins
+@each $size in $spacer {
+  .m-#{$size} {
+    margin: #{$size}px !important;
+  }
+
+  .ml-#{$size},
+  .mx-#{$size} {
+    margin-left: #{$size}px !important;
+  }
+
+  .mr-#{$size},
+  .mx-#{$size} {
+    margin-right: #{$size}px !important;
+  }
+
+  .mt-#{$size},
+  .my-#{$size} {
+    margin-top: #{$size}px !important;
+  }
+
+  .mb-#{$size},
+  .my-#{$size} {
+    margin-bottom: #{$size}px !important;
+  }
+}
+
+// For Paddings
+@each $size in $spacer {
+  .p-#{$size} {
+    padding: #{$size}px !important;
+  }
+
+  .pl-#{$size},
+  .px-#{$size} {
+    padding-left: #{$size}px !important;
+  }
+
+  .pr-#{$size},
+  .px-#{$size} {
+    padding-right: #{$size}px !important;
+  }
+
+  .pt-#{$size},
+  .py-#{$size} {
+    padding-top: #{$size}px !important;
+  }
+
+  .pb-#{$size},
+  .py-#{$size} {
+    padding-bottom: #{$size}px !important;
+  }
+}
+
+// for medium device
+
+@media (min-width: 768px) and (max-width: 991px) {
+  @each $size in $spacer {
+    .m-md-#{$size} {
+      margin: #{$size}px !important;
+    }
+
+    .ml-md-#{$size},
+    .mx-md-#{$size} {
+      margin-left: #{$size}px !important;
+    }
+
+    .mr-md-#{$size},
+    .mx-md-#{$size} {
+      margin-right: #{$size}px !important;
+    }
+
+    .mt-md-#{$size},
+    .my-md-#{$size} {
+      margin-top: #{$size}px !important;
+    }
+
+    .mb-md-#{$size},
+    .my-md-#{$size} {
+      margin-bottom: #{$size}px !important;
+    }
+  }
+
+  // For Paddings
+  @each $size in $spacer {
+    .p-md-#{$size} {
+      padding: #{$size}px !important;
+    }
+
+    .pl-md-#{$size},
+    .px-md-#{$size} {
+      padding-left: #{$size}px !important;
+    }
+
+    .pr-md-#{$size},
+    .px-md-#{$size} {
+      padding-right: #{$size}px !important;
+    }
+
+    .pt-md-#{$size},
+    .py-md-#{$size} {
+      padding-top: #{$size}px !important;
+    }
+
+    .pb-md-#{$size},
+    .py-md-#{$size} {
+      padding-bottom: #{$size}px !important;
+    }
+  }
+}
+
+// for mobile landscape
+@media (min-width: 576px) and (max-width: 767px) {
+  @each $size in $spacer {
+    .m-sm-#{$size} {
+      margin: #{$size}px !important;
+    }
+
+    .ml-sm-#{$size},
+    .mx-sm-#{$size} {
+      margin-left: #{$size}px !important;
+    }
+
+    .mr-sm-#{$size},
+    .mx-sm-#{$size} {
+      margin-right: #{$size}px !important;
+    }
+
+    .mt-sm-#{$size},
+    .my-xs-#{$size} {
+      margin-top: #{$size}px !important;
+    }
+
+    .mb-sm-#{$size},
+    .my-sm-#{$size} {
+      margin-bottom: #{$size}px !important;
+    }
+  }
+
+  // For Paddings
+  @each $size in $spacer {
+    .p-sm-#{$size} {
+      padding: #{$size}px !important;
+    }
+
+    .pl-sm-#{$size},
+    .px-sm-#{$size} {
+      padding-left: #{$size}px !important;
+    }
+
+    .pr-sm-#{$size},
+    .px-sm-#{$size} {
+      padding-right: #{$size}px !important;
+    }
+
+    .pt-sm-#{$size},
+    .py-sm-#{$size} {
+      padding-top: #{$size}px !important;
+    }
+
+    .pb-sm-#{$size},
+    .py-sm-#{$size} {
+      padding-bottom: #{$size}px !important;
+    }
+  }
+}
+
+// for mobile portrait
+
+@media (min-width: 300px) and (max-width: 767px) {
+  @each $size in $spacer {
+    .m-xs-#{$size} {
+      margin: #{$size}px !important;
+    }
+
+    .ml-xs-#{$size},
+    .mx-xs-#{$size} {
+      margin-left: #{$size}px !important;
+    }
+
+    .mr-xs-#{$size},
+    .mx-xs-#{$size} {
+      margin-right: #{$size}px !important;
+    }
+
+    .mt-xs-#{$size},
+    .my-xs-#{$size} {
+      margin-top: #{$size}px !important;
+    }
+
+    .mb-xs-#{$size},
+    .my-xs-#{$size} {
+      margin-bottom: #{$size}px !important;
+    }
+  }
+
+  // For Paddings
+  @each $size in $spacer {
+    .p-xs-#{$size} {
+      padding: #{$size}px !important;
+    }
+
+    .pl-xs-#{$size},
+    .px-xs-#{$size} {
+      padding-left: #{$size}px !important;
+    }
+
+    .pr-xs-#{$size},
+    .px-xs-#{$size} {
+      padding-right: #{$size}px !important;
+    }
+
+    .pt-xs-#{$size},
+    .py-xs-#{$size} {
+      padding-top: #{$size}px !important;
+    }
+
+    .pb-xs-#{$size},
+    .py-xs-#{$size} {
+      padding-bottom: #{$size}px !important;
+    }
+  }
+}
+
+$values: (
+  95,
+  140,
+  150,
+  165,
+  200,
+  250,
+  260,
+  275,
+  280,
+  300,
+  320,
+  340,
+  360,
+  375,
+  400,
+  450,
+  480,
+  550,
+  570,
+  600,
+  700,
+  750,
+  800,
+  900,
+  950
+); // Add your values here
+
+@each $value in $values {
+  // For Maximum Widths and Widths
+  .max-w-#{$value} {
+    max-width: #{$value}px;
+  }
+
+  .min-w-#{$value} {
+    min-width: #{$value}px;
+  }
+
+  .w-#{$value} {
+    width: #{$value}px;
+  }
+
+  // For Maximum Heights and Heights
+  .max-h-#{$value} {
+    max-height: #{$value}px;
+  }
+
+  .min-h-#{$value} {
+    min-height: #{$value}px;
+  }
+
+  .h-#{$value} {
+    height: #{$value}px;
+  }
+}

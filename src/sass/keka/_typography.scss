@@ -1,0 +1,200 @@
+body {
+  font-family: "Nunito Sans", sans-serif;
+  @extend .text-primary;
+  @extend .text-body-font-size;
+}
+
+a {
+  @extend .text-blue;
+  @extend .text-decoration-none;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6,
+p,
+ul {
+  @extend .mb-0;
+}
+
+// font-sizes
+.hero-white {
+  font-size: 56px;
+  line-height: 72px;
+  @extend .text-white;
+  @extend .font-weight-black;
+}
+
+h1,
+.header-1 {
+  font-size: 48px;
+  line-height: 64px;
+  @extend .font-weight-extra-bold;
+  @extend .text-secondary;
+}
+
+h2,
+.header-2 {
+  font-size: 40px;
+  line-height: 56px;
+  @extend .text-secondary;
+  @extend .font-weight-extra-bold;
+}
+
+h3,
+.header-3 {
+  font-size: 36px;
+  line-height: 52px;
+  @extend .text-secondary;
+  @extend .font-weight-extra-bold;
+}
+
+h4,
+.header-4 {
+  font-size: 32px;
+  line-height: 40px;
+  @extend .text-secondary;
+  @extend .font-weight-extra-bold;
+}
+
+.header-4-light {
+  color: #2e3342;
+  font-size: 32px;
+  line-height: 40px;
+  @extend .font-weight-semi-bold;
+  @extend .text-secondary;
+}
+
+h5,
+.header-5 {
+  font-size: 24px;
+  line-height: 32px;
+  @extend .font-weight-semi-bold;
+  @extend .text-secondary;
+}
+
+.jd-quote {
+  font-size: 28px;
+  line-height: 36px;
+  @extend .font-weight-light;
+  @extend .text-secondary;
+}
+
+.label,
+.meta-heading {
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  line-height: 28px;
+  @extend .font-weight-extra-bold;
+}
+
+// default font size
+.text-body-font-size {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.text-sm {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.text-xs {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.text-xxs {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+// font weights
+.font-weight-light {
+  font-weight: 300;
+}
+
+.font-weight-semi-bold {
+  font-weight: 600;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.font-weight-extra-bold {
+  font-weight: 800;
+}
+
+.font-weight-black {
+  font-weight: 900;
+}
+
+// extending font sizes and font weights
+.text-bold {
+  @extend .text-secondary;
+  @extend .font-weight-bold;
+}
+
+// for 100px max height
+.max-h-100px {
+  max-height: 100px;
+}
+
+$values: (
+  95,
+  140,
+  150,
+  165,
+  200,
+  250,
+  260,
+  275,
+  280,
+  300,
+  320,
+  340,
+  360,
+  375,
+  400,
+  450,
+  480,
+  550,
+  570,
+  600,
+  700,
+  750,
+  800,
+  900,
+  950
+); // Add your values here
+
+@each $value in $values {
+  // For Maximum Widths and Widths
+  .max-w-#{$value} {
+    max-width: #{$value}px;
+  }
+
+  .min-w-#{$value} {
+    min-width: #{$value}px;
+  }
+
+  .w-#{$value} {
+    width: #{$value}px;
+  }
+
+  // For Maximum Heights and Heights
+  .max-h-#{$value} {
+    max-height: #{$value}px;
+  }
+
+  .min-h-#{$value} {
+    min-height: #{$value}px;
+  }
+
+  .h-#{$value} {
+    height: #{$value}px;
+  }
+}

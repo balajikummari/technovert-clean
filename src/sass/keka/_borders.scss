@@ -1,0 +1,91 @@
+// borders
+$border: (0, 1, 2, 3, 4, 5); // Add your values here
+
+// For borders
+@each $size in $border {
+    .border-width-#{$size} {
+        border-width: #{$size}px !important;
+    }
+
+    .border-left-width-#{$size},
+    .border-x-width-#{$size} {
+        border-left-width: #{$size}px !important;
+    }
+
+    .border-right-width-#{$size},
+    .border-x-width-#{$size} {
+        border-right-width: #{$size}px !important;
+    }
+
+    .border-top-width-#{$size},
+    .border-y-width-#{$size} {
+        border-top-width: #{$size}px !important;
+    }
+
+    .border-bottom-width-#{$size},
+    .border-y-width-#{$size} {
+        border-bottom-width: #{$size}px !important;
+    }
+}
+
+.border-dashed {
+    border-style: dashed !important;
+}
+
+
+.border-top-dashed {
+    @extend .border-x-width-0;
+    @extend .border-bottom-width-0;
+    @extend .border-top-width-1;
+    @extend .border-dashed;
+    @extend .border-slate-300;
+}
+
+.border-left-dashed {
+    @extend .border-y-width-0;
+    @extend .border-right-width-0;
+    @extend .border-left-width-1;
+    @extend .border-dashed;
+    @extend .border-slate-300;
+}
+
+.border-y-dashed {
+    @extend .border-x-width-0;
+    @extend .border-top-width-1;
+    @extend .border-bottom-width-1;
+    @extend .border-dashed;
+    @extend .border-slate-300;
+}
+
+// border radius
+
+.rounded {
+    border-radius: 3px !important;
+}
+.rounded-right {
+    border-radius: 0 3px 3px 0 !important;
+}
+
+.rounded-4 {
+    border-radius: 4px !important;
+}
+
+.rounded-y-4 {
+    border-radius: 4px 4px 0px 0px !important;
+}
+
+.rounded-y-5 {
+    border-radius: 5px 5px 0px 0px !important;
+}
+
+.rounded-5 {
+    border-radius: 5px !important;
+}
+
+.rounded-16 {
+    border-radius: 16px !important;
+}
+
+.rounded-20 {
+    border-radius: 20px !important;
+}

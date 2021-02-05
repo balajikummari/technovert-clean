@@ -1,0 +1,39 @@
+$blue: #1077da;
+$blue-100: #dbebfa;
+
+$green: #63c572;
+
+$gray: #666d7d;
+$gray-100: #bbc2d2;
+
+$primary-text-color: #2c2e31 !default;
+$secondary-text-color: #fff !default;
+
+$slate-500: #a4aab2 !default; // icon color
+
+// Text Colors
+$colors: (
+  "icon-color": $slate-500,
+  "secondary": $secondary-text-color,
+  "green": $green,
+  "blue": $blue,
+  "light-blue": $blue-100,
+  "gray": $gray,
+  "light-gray": $gray-100,
+  "white": #FFF,
+  "primary": $primary-text-color
+);
+
+@each $color-name, $color-value in $colors {
+  .text-#{$color-name} {
+    color: $color-value !important;
+  }
+
+  .bg-#{$color-name} {
+    background-color: $color-value !important;
+  }
+
+  .border-#{$color-name} {
+    border-color: $color-value !important;
+  }
+}
