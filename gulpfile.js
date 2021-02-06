@@ -16,7 +16,7 @@ const htmlbeautify = require("gulp-html-beautify");
 var gzip = require("gulp-gzip");
 
 const isProd = process.env.NODE_ENV === "prod";
-// const isProd = true;
+//const isProd = true;
 
 const htmlFile = ["src/**/*.html"];
 
@@ -42,7 +42,7 @@ function html() {
 
 function css() {
   return gulp
-    .src("src/assets/sass/style.scss")
+    .src("src/sass/style.scss")
     .pipe(gulpIf(!isProd, sourcemaps.init()))
     .pipe(sass().on("error", sass.logError))
     .pipe(
@@ -54,22 +54,24 @@ function css() {
     )
     .pipe(gulpIf(!isProd, sourcemaps.write()))
     .pipe(gulpIf(isProd, cssmin()))
-    .pipe(gulp.dest("public/assets/css/"));
+    .pipe(gulp.dest("public/assets/css/"))
+    .pipe(gulp.dest("./"));
 }
 
 function js() {
   return (
     gulp
-      .src("src/assets/js/*.js")
+      .src("src/js/*.js")
       .pipe(
         jsImport({
           hideConsole: true,
         })
       )
-      //.pipe(concat("all.js"))
+      .pipe(concat("all.js"))
       .pipe(gulpIf(isProd, uglify()))
       //.pipe(gulpIf(isProd, gzip()))
       .pipe(gulp.dest("public/assets/js"))
+      .pipe(gulp.dest("./"))
   );
 }
 

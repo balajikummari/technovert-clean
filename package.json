@@ -8,11 +8,13 @@
   "scripts": {
     "build": "gulp",
     "start": "gulp serve",
-    "prod": "cross-env NODE_ENV=prod gulp"
+    "prod": "cross-env NODE_ENV=prod gulp",
+    "bundle": "dir-archiver --src . --dest ../technovert-clean.zip --exclude node_modules"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "cross-env": "^7.0.2",
+    "dir-archiver": "^1.1.2",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
