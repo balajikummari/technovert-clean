@@ -17,7 +17,7 @@
         <div class="row">
           <div class="col-md-4"></div>
           <div class="col-md-8">
-            <img src="assets/images/logos/tv-footer.svg" class="mt-5" />
+            <img src="https://staging3.technovert.com/wp-content/uploads/technovert_logo.svg" class="mt-5" />
             <p class="py-4 footer-text-color font-16 line-height-24">
               Technovert is your digital partner. Our experience brings the
               right insight, technology and teamwork together to create
