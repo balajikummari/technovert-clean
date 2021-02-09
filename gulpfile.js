@@ -55,7 +55,6 @@ function css() {
     .pipe(gulpIf(!isProd, sourcemaps.write()))
     .pipe(gulpIf(isProd, cssmin()))
     .pipe(gulp.dest("public/assets/css/"))
-    .pipe(gulp.dest("./"));
 }
 
 function js() {

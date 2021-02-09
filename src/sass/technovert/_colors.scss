@@ -29,7 +29,7 @@ $colors: (
     color: $color-value !important;
   }
 
-  .bg-#{$color-name} {
+  .bg-#{$color-name} { 
     background-color: $color-value !important;
   }
 
