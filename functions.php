@@ -178,7 +178,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function tvstyles_enqueue_styles() {
+	wp_enqueue_style( 'tvstyles', get_template_directory_uri() . '/public/assets/css/style.css',false,'1.1','all');
+	wp_enqueue_script('custom', get_stylesheet_directory_uri().'/public/assets/js/all.js', array(), false, true);
+}
+add_action( 'wp_enqueue_scripts', 'tvstyles_enqueue_styles' );
 
-wp_enqueue_style( 'tvstyles', get_template_directory_uri() . '/public/assets/css/style.css',false,'1.1','all');
 
-wp_enqueue_script('custom', get_stylesheet_directory_uri().'/public/assets/js/all.js', array(), false, true);
