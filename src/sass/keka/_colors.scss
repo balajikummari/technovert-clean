@@ -23,7 +23,7 @@ $colors: (
   "light-blue": $blue-100,
   "gray": $gray,
   "light-gray": $gray-100,
-  "white": #FFF,
+  "white": #fff,
 );
 
 @each $color-name, $color-value in $colors {
@@ -38,4 +38,36 @@ $colors: (
   .border-#{$color-name} {
     border-color: $color-value !important;
   }
+}
+
+.footer-text-color {
+  color: #a8aab4;
+}
+
+.bg-footer {
+  background-color: #303642;
+}
+.copyright-color {
+  color: #bbc2d2;
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.font-14 {
+  font-size: 14px;
+}
+.font-16 {
+  font-size: 16px;
+}
+.font-18 {
+  font-size: 18px;
+}
+.font-21 {
+  font-size: 21px;
+}
+.line-height-24 {
+  line-height: 24px;
+}
+.footer-text-color {
+  color: #a8aab4;
 }

@@ -201,28 +201,45 @@ $values: (
 
 // For a section in home page
 span.big {
-	width: 217px;
-	color: #1077DA;
-	font-size: 120px;
-	font-weight: 900;
-	letter-spacing: 0;
-	line-height: 136px;
+  width: 217px;
+  color: $blue;
+  font-size: 120px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 136px;
 }
 
 .customers h4 {
-	color: #2E3342;
-	font-size: 18px;
-	font-weight: 800;
-	letter-spacing: 0;
-	line-height: 28px;;
+  color: $black;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 28px;
 }
 
 span.pre {
-	display: block;
-	color: #1077DA;
-	font-size: 14px;
-	font-weight: 800;
-	letter-spacing: 0.7px;
-	line-height: 28px;
-	text-transform: uppercase;
+  display: block;
+  color: $blue;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+// Styles for footer
+.font-14 {
+  font-size: 14px;
+}
+.font-16 {
+  font-size: 16px;
+}
+.font-18 {
+  font-size: 18px;
+}
+.font-21 {
+  font-size: 21px;
+}
+.line-height-24 {
+  line-height: 24px;
 }

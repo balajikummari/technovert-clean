@@ -253,24 +253,6 @@
   .bg-transparent {
     background-color: transparent;
   }
-  .font-14 {
-    font-size: 14px;
-  }
-  .font-16 {
-    font-size: 16px;
-  }
-  .font-18 {
-    font-size: 18px;
-  }
-  .font-21 {
-    font-size: 21px;
-  }
-  .line-height-24 {
-    line-height: 24px;
-  }
-  .footer-text-color {
-    color: #a8aab4;
-  }
 </style>
 </div><!-- #page -->
 
