@@ -29,13 +29,11 @@
 	<header id="masthead" class="site-header">
 	<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
   <div class="px-4 px-md-5 px-lg-14 container-fluid">
-    <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<?php the_custom_logo(); ?>
-		</a>
+		<?php the_custom_logo(); ?>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 			<?php
 			wp_nav_menu(
 				array(
