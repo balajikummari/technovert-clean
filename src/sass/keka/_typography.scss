@@ -198,3 +198,31 @@ $values: (
     height: #{$value}px;
   }
 }
+
+// For a section in home page
+span.big {
+	width: 217px;
+	color: #1077DA;
+	font-size: 120px;
+	font-weight: 900;
+	letter-spacing: 0;
+	line-height: 136px;
+}
+
+.customers h4 {
+	color: #2E3342;
+	font-size: 18px;
+	font-weight: 800;
+	letter-spacing: 0;
+	line-height: 28px;;
+}
+
+span.pre {
+	display: block;
+	color: #1077DA;
+	font-size: 14px;
+	font-weight: 800;
+	letter-spacing: 0.7px;
+	line-height: 28px;
+	text-transform: uppercase;
+}
