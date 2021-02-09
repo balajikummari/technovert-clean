@@ -13,6 +13,27 @@ $secondary-text-color: #fff !default;
 
 $slate-500: #a4aab2 !default; // icon color
 
+//Footer color classes
+.footer-text-color {
+  color: #a8aab4;
+}
+
+.bg-footer {
+  background-color: #303642;
+}
+
+.copyright-color {
+  color: #bbc2d2;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.footer-text-color {
+  color: #a8aab4;
+}
+
 // Text Colors
 $colors: (
   "icon-color": $slate-500,
@@ -38,36 +59,4 @@ $colors: (
   .border-#{$color-name} {
     border-color: $color-value !important;
   }
-}
-
-.footer-text-color {
-  color: #a8aab4;
-}
-
-.bg-footer {
-  background-color: #303642;
-}
-.copyright-color {
-  color: #bbc2d2;
-}
-.bg-transparent {
-  background-color: transparent;
-}
-.font-14 {
-  font-size: 14px;
-}
-.font-16 {
-  font-size: 16px;
-}
-.font-18 {
-  font-size: 18px;
-}
-.font-21 {
-  font-size: 21px;
-}
-.line-height-24 {
-  line-height: 24px;
-}
-.footer-text-color {
-  color: #a8aab4;
 }
