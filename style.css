@@ -1,17 +1,19 @@
 /*
 Theme Name: UnderStrap
-Theme URI: http://understrap.com
-Author: Technovert
-Author URI: http://www.Technovert.com
-Description: A custom theme for Technovert.com based on UnderStrap  q
-Version: 0.1.0
+Theme URI: 		https://github.com/balajikummari/technovert-clean
+Description: 		A custom theme for Technovert.com based on UnderStrap
+Version: 			0.1.0
+License: 			GNU General Public License version 2.0
+License URI: 		http://www.gnu.org/licenses/gpl-2.0.html
+Author: 			Technovert Solutions
+Author URI: 		http://www.Technovert.com
+Tags: 				Bootstrap, underscore
+Text Domain: 		Technovert
+GitHub Theme URI:	https://github.com/balajikummari/technovert-clean 
+GitHub Branch:		master
+
 */
-/*!
- * Bootstrap v5.0.0-alpha2 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
 :root
 {
   --bs-blue: #0d6efd;
