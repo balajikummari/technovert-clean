@@ -11,6 +11,27 @@ $secondary-text-color: #fff !default;
 
 $slate-500: #a4aab2 !default; // icon color
 
+//Footer color classes
+.footer-text-color {
+  color: #a8aab4;
+}
+
+.bg-footer {
+  background-color: #303642;
+}
+
+.copyright-color {
+  color: #bbc2d2;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.footer-text-color {
+  color: #a8aab4;
+}
+
 // Text Colors
 $colors: (
   "icon-color": $slate-500,
