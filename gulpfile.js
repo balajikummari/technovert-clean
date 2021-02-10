@@ -102,10 +102,10 @@ function browserSyncReload(done) {
 
 function watchFiles() {
   gulp.watch("src/**/*.html", gulp.series(html, browserSyncReload));
-  gulp.watch("src/assets/**/*.scss", gulp.series(css, browserSyncReload));
-  gulp.watch("src/assets/**/*.js", gulp.series(js, browserSyncReload));
-  gulp.watch("src/assets/images/**/*.*", gulp.series(img));
-  gulp.watch("src/assets/**/*.{eot,svg,ttf,woff,woff2}", gulp.series(fonts));
+  gulp.watch("src/**/*.scss", gulp.series(css, browserSyncReload));
+  gulp.watch("src/**/*.js", gulp.series(js, browserSyncReload));
+  gulp.watch("src/images/**/*.*", gulp.series(img));
+  gulp.watch("src/**/*.{eot,svg,ttf,woff,woff2}", gulp.series(fonts));
 
   return;
 }
