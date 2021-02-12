@@ -106,13 +106,10 @@ img {
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  list-style-type: none;
 
   @extend .px-4, .px-md-5, .px-lg-14, .py-25;
-
-  ul {
-    display: flex;
-    list-style-type: none;
-  }
 
   a {
     margin-right: 60px;
