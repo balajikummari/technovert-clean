@@ -261,3 +261,63 @@ function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
    
    return $urls;
    }
+
+
+// Code for sub navigation menu
+function generate_sub_nav_html($post) {
+	$menus = wp_get_nav_menus();
+	$selection = get_post_meta($post->ID, 'subnav_choice', true);
+
+	echo "<p>Please select the menu you want for sub navigation on this page</p><br/>";
+	echo "<select name='sub_nav_select' id='sub_nav_select' class='postbox'>";
+	echo "<option value='None'>None</option>";
+
+	foreach ($menus as $menu) {
+		$s = selected($selection, $menu->name);
+		echo "<option value='$menu->name' $s>$menu->name</option>";
+	}
+
+	echo "</select>";
+}
+
+function sub_nav_meta_box() {
+		$screens = ['post', 'page'];
+    foreach ( $screens as $screen ) {
+        add_meta_box(
+            'sub_nav_meta_box_id',
+            'Sub navigation Menu', 
+            'generate_sub_nav_html', 
+            $screen, 
+						'side',
+						'default'
+        );
+    }
+}
+
+function save_sub_nav_menu_value($post_id) {
+	$meta_value = get_post_meta($post_id, "subnav_choice", true);
+	global $post;
+	if(isset($_POST["sub_nav_select"])) {
+			$sub_nav_choice = $_POST['sub_nav_select'];
+
+			update_post_meta($post->ID, 'subnav_choice', $sub_nav_choice);
+	}
+}
+
+add_action( 'add_meta_boxes', 'sub_nav_meta_box' );
+add_action( 'save_post', 'save_sub_nav_menu_value', 10, 1);
+
+function sub_nav_shortcode() {
+	global $post;
+	$menu_name = get_post_meta($post->ID, "subnav_choice", true);
+
+	$options = array(
+		'menu' => $menu_name,
+		'menu_class' => 'subnav',
+		'echo' => false,
+	);
+
+	return wp_nav_menu($options);
+}
+
+add_shortcode('sub_nav', 'sub_nav_shortcode');
