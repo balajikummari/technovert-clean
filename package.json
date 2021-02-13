@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "cross-env": "^7.0.2",
+    "cross-env": "^7.0.3",
     "dir-archiver": "^1.1.2",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
