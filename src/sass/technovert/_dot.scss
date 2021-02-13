@@ -1,0 +1,33 @@
+.dot {
+
+    @extend .rounded-circle;
+    @extend .text-center;
+
+    &.dot-xl {
+        width: 48px;
+        height: 48px;
+        line-height: 44px;
+        min-width: 48px;
+    }
+
+    &.dot-lg {
+        width: 40px;
+        height: 40px;
+        line-height: 36px;
+        min-width: 40px;
+    }
+
+    &.dot-md {
+        width: 32px;
+        height: 32px;
+        line-height: 28px;
+        min-width: 32px;
+    }
+
+    &.dot-sm {
+        width: 24px;
+        height: 24px;
+        line-height: 20px;
+        min-width: 24px;
+    }
+}
