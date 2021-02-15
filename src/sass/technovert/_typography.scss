@@ -21,7 +21,7 @@ ul {
 
 // font-sizes
 .hero-white {
-  font-size: 56px;
+  @include font-size(56px);
   line-height: 72px;
   text-transform: uppercase;
   @extend .text-white;
@@ -30,21 +30,21 @@ ul {
 
 h1,
 .header-1 {
-  font-size: 48px;
+  @include font-size(48px);
   line-height: 64px;
   @extend .font-weight-extra-bold;
   @extend .text-primary;
 }
 
 h1.title-2 {
-  font-size: 48px;
+  @include font-size(48px);
   line-height: 64px;
   @extend .font-weight-semi-bold;
 }
 
 h2,
 .header-2 {
-  font-size: 40px;
+  @include font-size(40px);
   line-height: 56px;
   @extend .text-primary;
   @extend .font-weight-extra-bold;
@@ -52,7 +52,7 @@ h2,
 
 h3,
 .header-3 {
-  font-size: 36px;
+  @include font-size(36px);
   line-height: 52px;
   @extend .text-primary;
   @extend .font-weight-extra-bold;
@@ -60,7 +60,7 @@ h3,
 
 h4,
 .header-4 {
-  font-size: 32px;
+  @include font-size(32px);
   line-height: 40px;
   @extend .text-primary;
   @extend .font-weight-extra-bold;
@@ -68,28 +68,28 @@ h4,
 
 .header-4-light {
   color: #2e3342 !important;
-  font-size: 32px;
+  @include font-size(32px);
   line-height: 40px;
   @extend .font-weight-semi-bold;
 }
 
 h5,
 .header-5 {
-  font-size: 24px;
+  @include font-size(24px);
   line-height: 32px;
   @extend .font-weight-semi-bold;
   @extend .text-primary;
 }
 
 .jd-quote {
-  font-size: 28px;
+  @include font-size(28px);
   line-height: 36px;
   @extend .font-weight-light;
   @extend .text-primary;
 }
 
 .hero-prefix {
-  font-size: 20px;
+  @include font-size(20px);
   letter-spacing: 2px;
   line-height: 28px;
   text-transform: uppercase;
@@ -97,7 +97,7 @@ h5,
 }
 
 .label {
-  font-size: 14px;
+  @include font-size(14px);
   letter-spacing: 0.7px;
   line-height: 28px;
   text-transform: uppercase;
@@ -106,22 +106,22 @@ h5,
 
 // default font size
 .text-body-font-size {
-  font-size: 18px;
+  @include font-size(18px);
   line-height: 28px;
 }
 
 .text-sm {
-  font-size: 16px;
+  @include font-size(16px);
   line-height: 28px;
 }
 
 .text-xs {
-  font-size: 14px;
+  @include font-size(14px);
   line-height: 24px;
 }
 
 .text-xxs {
-  font-size: 12px;
+  @include font-size(12px);
   line-height: 20px;
 }
 
@@ -161,7 +161,7 @@ h5,
 span.big {
   width: 217px;
   color: $blue;
-  font-size: 120px;
+  @include font-size(120px);
   font-weight: 900;
   letter-spacing: 0;
   line-height: 136px;
@@ -169,7 +169,7 @@ span.big {
 
 .customers h4 {
   color: $black;
-  font-size: 18px;
+  @include font-size(18px);
   font-weight: 800;
   letter-spacing: 0;
   line-height: 28px;
@@ -178,7 +178,7 @@ span.big {
 span.pre {
   display: block;
   color: $blue;
-  font-size: 14px;
+  @include font-size(14px);
   font-weight: 800;
   letter-spacing: 0.7px;
   line-height: 28px;
@@ -187,19 +187,19 @@ span.pre {
 
 // Styles for footer
 .font-14 {
-  font-size: 14px;
+  @include font-size(14px);
 }
 
 .font-16 {
-  font-size: 16px;
+  @include font-size(16px);
 }
 
 .font-18 {
-  font-size: 18px;
+  @include font-size(18px);
 }
 
 .font-21 {
-  font-size: 21px;
+  @include font-size(21px);
 }
 
 .line-height-24 {

@@ -1,0 +1,83 @@
+// for list content
+
+ul {
+    counter-reset: list-counter;
+    &.list-content {
+        @extend .list-unstyled;
+
+        li {
+            @extend .position-relative;
+            @extend .mb-40;
+
+            &:last-child {
+                @extend .mb-0;
+            }
+
+            p {
+                @extend .text-gray;
+                @extend .ml-70;
+            
+            }
+
+            &::after {
+                font-family: "Material Icons";
+                content: "\e5ca";
+                font-weight: normal;
+                font-style: normal;
+                padding-top: 3px;
+                @extend .position-absolute;
+                @extend .top-0;
+                @extend .left-0;
+                @extend .dot;
+                @extend .dot-lg;
+                @extend .bg-light-blue;
+                @extend .icon;
+                @extend .icon-xl;
+                @extend .text-blue;
+            }
+        }
+
+        &.list-green {
+            li {
+                @extend .mb-20;
+                p {
+                    @extend .ml-40;
+                }
+                &::after {
+                    @extend .bg-light-green;
+                    @extend .text-white;
+                    @extend .dot-sm;
+                    @extend .icon-md;
+                    padding-top: 2px;
+                    top: 3px !important;
+                }
+            }
+        }
+
+        &.with-numbers {
+            li {
+                @extend .mb-60;
+                h4 {
+                    @extend .ml-60;
+                    @extend .mb-20;
+                    @extend .text-clay;
+                }
+                p {
+                    @extend .ml-0;
+                    @extend .text-clay;
+                    @extend .font-21;
+                }
+                &::after {
+                    font-family: 'Courier New', Courier, monospace;
+                    counter-increment: list-counter;
+                    content: ""counter(list-counter)"";
+                    @extend .font-weight-extra-bold;
+                    @extend .bg-dodger-blue;
+                    @extend .text-white;
+                    @extend .dot-xl;
+                    @extend .icon-md;
+                }
+            }
+        }
+    }
+}

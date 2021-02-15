@@ -1,10 +1,16 @@
 $blue: #1077da;
+$dodger-blue: #2770F1;
 $blue-100: #dbebfa;
 
 $green: #63c572;
+$green-color: #6AC069 !default;
+
+$white: #ffffff;
 
 $gray: #666d7d;
 $gray-100: #bbc2d2;
+
+$clay: #2E3342;
 
 $primary-text-color: #2c2e31 !default;
 $secondary-text-color: #fff !default;
@@ -37,11 +43,14 @@ $colors: (
   "icon-color": $slate-500,
   "secondary": $secondary-text-color,
   "green": $green,
+  "light-green": $green-color,
   "blue": $blue,
+  "dodger-blue": $dodger-blue,
   "light-blue": $blue-100,
   "gray": $gray,
   "light-gray": $gray-100,
-  "white": #FFF,
+  "clay": $clay,
+  "white": $white,
   "primary": $primary-text-color
 );
 

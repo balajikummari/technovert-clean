@@ -137,3 +137,40 @@ img {
     transform: translateX(-50%);
   }
 }
+
+.feature-container {
+  @extend .container;
+  @extend .row;
+  @extend .ml-auto;
+  @extend .mr-auto;
+  @extend .px-lg-8;
+
+  &.image-first {
+    @extend .flex-row-reverse;
+  }
+
+  .content-container {
+    @extend .px-30;
+    @extend .col-lg-6;
+
+    h6 {
+      @extend .label;
+      @extend .text-green;
+    }
+    h2 {
+      @extend .underline;
+    }
+    p {
+      @extend .text-gray;
+    }
+  }
+
+  .image-container {
+    @extend .px-30;
+    @extend .col-lg-6;
+    @extend .flex-v-center;
+      img {
+        @extend .w-100;
+      }
+  }
+}
