@@ -102,13 +102,13 @@ img {
 }
 
 .subnav {
-  // max-height: 80px;
-  background-color: #ffffff;
+  max-height: 80px;
+  overflow: hidden;
+  background-color: #fff;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.05);
-  overflow-x: scroll;
-  // overflow-y: hidden;
+  display: flex;
+  list-style-type: none;
 
-  @extend .container-fluid;
   @extend .px-4, .px-md-5, .px-lg-14, .py-25;
 
   a {
@@ -135,5 +135,42 @@ img {
     bottom: -26px;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+.feature-container {
+  @extend .container;
+  @extend .row;
+  @extend .ml-auto;
+  @extend .mr-auto;
+  @extend .px-lg-8;
+
+  &.image-first {
+    @extend .flex-row-reverse;
+  }
+
+  .content-container {
+    @extend .px-30;
+    @extend .col-lg-6;
+
+    h6 {
+      @extend .label;
+      @extend .text-green;
+    }
+    h2 {
+      @extend .underline;
+    }
+    p {
+      @extend .text-gray;
+    }
+  }
+
+  .image-container {
+    @extend .px-30;
+    @extend .col-lg-6;
+    @extend .flex-v-center;
+      img {
+        @extend .w-100;
+      }
   }
 }
