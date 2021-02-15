@@ -12,6 +12,12 @@ $gray-100: #bbc2d2;
 
 $clay: #2E3342;
 
+$mandy-pink: #E44C7D;
+
+$aqua: #5BBAD6;
+
+$violet: #3B4A64;
+
 $primary-text-color: #2c2e31 !default;
 $secondary-text-color: #fff !default;
 
@@ -50,6 +56,9 @@ $colors: (
   "gray": $gray,
   "light-gray": $gray-100,
   "clay": $clay,
+  "mandy-pink": $mandy-pink,
+  "aqua": $aqua,
+  "violet": $violet,
   "white": $white,
   "primary": $primary-text-color
 );

@@ -65,7 +65,8 @@ img {
   }
 
   img {
-    width: 75px;
+    width: 110px;
+    @extend .mb-30;
     height: auto;
   }
 
