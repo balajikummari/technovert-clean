@@ -307,3 +307,8 @@ $values: (
     height: #{$value}px;
   }
 }
+
+// Used in home post for bigger size
+.min-h-540 {
+	min-height: 540px;
+}
