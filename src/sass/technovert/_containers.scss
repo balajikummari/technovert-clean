@@ -1,0 +1,20 @@
+.blurb-container{
+    @extend .col-md-4;
+    @extend .px-5;
+  
+    div{
+      @extend .d-flex;
+      @extend .flex-column;
+      @extend .m-auto;
+      img{
+        @extend .rounded-circle;
+        width: 80px;
+      }
+  
+      h5{
+        @extend .font-weight-bold;
+        @extend .mt-3;
+        @extend .text-center;
+      }
+    }
+  }
