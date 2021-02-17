@@ -202,7 +202,7 @@
                             <div id="productsinner" class="collapse p-20" aria-labelledby="products" data-parent="#accordiongroup">
                                 <div class="mb-40">
                                     <p class="mb-20">Data Analytics</p>
-                                    <ul>
+                                    <ul> 
                                         <li><a href="#">Product Engineering</a></li>
                                         <li><a href="#">Digital Transformation</a></li>
                                         <li><a href="#">Data Analytics</a></li>
