@@ -120,11 +120,11 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col mb-5">
-                                    <img src="http://technovert.local/wp-content/uploads/gdpr.svg" width="60" class="mr-20">
-                                    <img src="http://technovert.local/wp-content/uploads/gdpr.svg" width="60" class="mr-20">
-                                    <img src="http://technovert.local/wp-content/uploads/gdpr.svg" width="60" class="mr-20">
-                                    <img src="http://technovert.local/wp-content/uploads/gdpr.svg" width="60" >
+                                <div class="d-none d-lg-block d-xl-block">
+                                    <img src="https://staging3.technovert.com/wp-content/uploads/skyhigh_logo.svg" width="60" class="mr-20">
+                                    <img src="https://staging3.technovert.com/wp-content/uploads/soc_logo.svg" width="60" class="mr-20">
+                                    <img src="https://staging3.technovert.com/wp-content/uploads/gdpr_logo.svg" width="60" class="mr-20">
+                                    <img src="https://staging3.technovert.com/wp-content/uploads/iso_logo.svg" width="60" >
                                 </div>
                             </div>
                         </div>
@@ -150,7 +150,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-lg-12 col-md-6">
+                                <div class="col-lg-12 col-md-6 mb-5">
                                     <h5 class="text-white font-18 mb-8">Locations</h5>
                                     <ul class="list-group">
                                         <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
@@ -170,6 +170,12 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="d-lg-none d-xl-none d-md-block">
+                                    <img src="https://staging3.technovert.com/wp-content/uploads/skyhigh_logo.svg" width="60" class="mr-20">
+                                    <img src="https://staging3.technovert.com/wp-content/uploads/soc_logo.svg" width="60" class="mr-20">
+                                    <img src="https://staging3.technovert.com/wp-content/uploads/gdpr_logo.svg" width="60" class="mr-20">
+                                    <img src="https://staging3.technovert.com/wp-content/uploads/iso_logo.svg" width="60" >
+                                </div>
                             </div>
 
 
@@ -178,146 +184,127 @@
 
                 </div>
                 <div class="d-block d-md-none">
+                    <div class="mb-5">
+                        <img src="https://staging3.technovert.com/wp-content/uploads/skyhigh_logo.svg" width="60" class="mr-20">
+                        <img src="https://staging3.technovert.com/wp-content/uploads/soc_logo.svg" width="60" class="mr-20">
+                        <img src="https://staging3.technovert.com/wp-content/uploads/gdpr_logo.svg" width="60" class="mr-20">
+                        <img src="https://staging3.technovert.com/wp-content/uploads/iso_logo.svg" width="60" >
+                    </div>
+
                     <div class="accordion" id="accordiongroup">
                         <div class="mb-10">
                             <div id="products">
-                                <div class="collapse-header" data-toggle="collapse" data-target="#productsinner" aria-expanded="true" aria-controls="productsinner">
-                                    <p>Products</p>
-                                    <span class="icon icon-sm ic-chevron-down"></span>
+                                <div class="collapse-header cursor-pointer" data-toggle="collapse" data-target="#productsinner" aria-expanded="true" aria-controls="productsinner">
+                                    <p>Services</p>
+                                    <img class="width-24 ml-auto" src="https://staging3.technovert.com/wp-content/uploads/chevron-right.svg" />
                                 </div>
                             </div>
                             <div id="productsinner" class="collapse p-20" aria-labelledby="products" data-parent="#accordiongroup">
                                 <div class="mb-40">
-                                    <p class="mb-20">Core HR</p>
+                                    <p class="mb-20">Data Analytics</p>
                                     <ul>
-                                        <li><a href="#">Employee Information</a></li>
-                                        <li><a href="#">Employee document storage</a></li>
-                                        <li><a href="#">HRIS</a></li>
-                                        <li><a href="#">HRMS software</a></li>
+                                        <li><a href="#">Product Engineering</a></li>
+                                        <li><a href="#">Digital Transformation</a></li>
+                                        <li><a href="#">Data Analytics</a></li>
+                                        <li><a href="#">UX Design</a></li>
+                                        <li><a href="#">Cloud</a></li>
+                                        <li><a href="#">Mobile Experience</a></li>
+                                        <li><a href="#">Quality Engineering</a></li>
                                     </ul>
                                 </div>
                                 <div class="mb-40">
-                                    <p class="mb-20">Payroll</p>
+                                    <p class="mb-20">Product Engineering</p>
                                     <ul>
-                                        <li><a href="#">Payroll software for India</a></li>
-                                        <li><a href="#">Expense Management</a></li>
-                                        <li><a href="#">Compliance management</a></li>
-                                        <li><a href="#">Provident Fund Software</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <p class="mb-20">Performance Mangement</p>
-                                    <ul>
-                                        <li><a href="#">OKR Software</a></li>
-                                        <li><a href="#">360 Reviews</a></li>
-                                        <li><a href="#">Compliance management</a></li>
-                                        <li><a href="#">Provident Fund Software</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-10">
-                            <div id="company">
-                                <div class="collapse-header" data-toggle="collapse" data-target="#companyinner" aria-expanded="true" aria-controls="companyinner">
-                                    <p>Company</p>
-                                    <span class="icon icon-sm ic-chevron-down"></span>
-                                </div>
-                            </div>
-                            <div id="companyinner" class="collapse p-20" aria-labelledby="company" data-parent="#accordiongroup">
-                                <div class="mb-40">
-                                    <p class="mb-20">Time Tracking</p>
-                                    <ul>
-                                        <li><a href="#">Employee Information</a></li>
-                                        <li><a href="#">Employee document storage</a></li>
-                                        <li><a href="#">HRIS</a></li>
-                                    </ul>
-                                </div>
-                                <div class="mb-40">
-                                    <p class="mb-20">Hiring</p>
-                                    <ul>
-                                        <li><a href="#">Payroll software for India</a></li>
-                                        <li><a href="#">Expense Management</a></li>
-                                        <li><a href="#">Compliance management</a></li>
-                                        <li><a href="#">Provident Fund Software</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <p class="mb-20">Expense Management</p>
-                                    <ul>
-                                        <li><a href="#">OKR Software</a></li>
-                                        <li><a href="#">360 Reviews</a></li>
-                                        <li><a href="#">Compliance management</a></li>
-                                        <li><a href="#">Provident Fund Software</a></li>
+                                        <li><a href="#">MVP Development</a></li>
+                                        <li><a href="#">Enterprise App Development</a></li>
+                                        <li><a href="#">Modernization</a></li>
+                                        <li><a href="#">Cloud Transformation</a></li>
+                                        <li><a href="#">UX Design</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="mb-10">
                             <div id="compare">
-                                <div class="collapse-header" data-toggle="collapse" data-target="#compareinner" aria-expanded="true" aria-controls="compareinner">
-                                    <p>Compare</p>
-                                    <span class="icon icon-sm ic-chevron-down"></span>
+                                <div class="collapse-header cursor-pointer" data-toggle="collapse" data-target="#compareinner" aria-expanded="true" aria-controls="compareinner">
+                                    <p>Solutions</p>
+                                    <img class="width-24 ml-auto" src="https://staging3.technovert.com/wp-content/uploads/chevron-right.svg" />
                                 </div>
                             </div>
                             <div id="compareinner" class="collapse p-20" aria-labelledby="compare" data-parent="#accordiongroup">
                                 <div class="mb-40">
-                                    <p class="mb-20">Solutions</p>
+                                    <p class="mb-20">Digital Transformation</p>
                                     <ul>
-                                        <li><a href="#">IT Services talent management</a></li>
-                                        <li><a href="#">SAP Integration</a></li>
-                                        <li><a href="#">Oracle Integration</a></li>
-                                        <li><a href="#">Workday Integration</a></li>
-                                        <li><a href="#">Expense Management</a></li>
-                                        <li><a href="#">Integrations</a></li>
-                                        <li><a href="#">Resources</a></li>
+                                        <li><a href="#">Customer Experience</a></li>
+                                        <li><a href="#">Employee Experience</a></li>
+                                        <li><a href="#">Test UX Design</a></li>
+                                        <li><a href="#">Cloud</a></li>
+                                        <li><a href="#">Mobile</a></li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <p class="mb-20">Compare</p>
+                                    <p class="mb-20">Cloud Transformation</p>
                                     <ul>
-                                        <li><a href="#">Workday</a></li>
-                                        <li><a href="#">SAP Success Factors</a></li>
-                                        <li><a href="#">Oracle Peoplesoft</a></li>
-                                        <li><a href="#">Namely</a></li>
-                                        <li><a href="#">Bamboo HR</a></li>
-                                        <li><a href="#">Freshteam</a></li>
-                                        <li><a href="#">NetSuite</a></li>
+                                        <li><a href="#">Cloud Migration</a></li>
+                                        <li><a href="#">SaaS Development</a></li>
+                                        <li><a href="#">Cloud Devops</a></li>
+                                        <li><a href="#">Low code platforms</a></li>
+                                        <li><a href="#">Cloud Strategy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-10">
+                            <div id="company">
+                                <div class="collapse-header cursor-pointer" data-toggle="collapse" data-target="#companyinner" aria-expanded="true" aria-controls="companyinner">
+                                    <p>Company</p>
+                                    <img class="width-24 ml-auto" src="https://staging3.technovert.com/wp-content/uploads/chevron-right.svg" />
+                                </div>
+                            </div>
+                            <div id="companyinner" class="collapse p-20" aria-labelledby="company" data-parent="#accordiongroup">
+                                <div class="mb-40">
+                                    <p class="mb-20">About</p>
+                                    <ul>
+                                        <li><a href="#">Our Products</a></li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Core Values</a></li>
+                                        <li><a href="#">Our Quality</a></li>
+                                        <li><a href="#">Careers</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="mb-10">
                             <div id="help">
-                                <div class="collapse-header" data-toggle="collapse" data-target="#helpinner" aria-expanded="true" aria-controls="helpinner">
-                                    <p>Help & Resources</p>
-                                    <span class="icon icon-sm ic-chevron-down"></span>
+                                <div class="collapse-header cursor-pointer" data-toggle="collapse" data-target="#helpinner" aria-expanded="true" aria-controls="helpinner">
+                                    <p>Insights</p>
+                                    <img class="width-24 ml-auto" src="https://staging3.technovert.com/wp-content/uploads/chevron-right.svg" />
                                 </div>
                             </div>
                             <div id="helpinner" class="collapse p-20" aria-labelledby="help" data-parent="#accordiongroup">
-                                <div class="mb-40">
-                                    <p class="mb-20">Company</p>
+                                
+                                <div class="mb-30">
+                                <p class="mb-20">Contact</p>
                                     <ul>
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Careers</a></li>
-                                        <li><a href="#">Support</a></li>
-                                        <li><a href="#">Customer Stories</a></li>
-                                        <li><a href="#">Partner with Us</a></li>
-                                        <li><a href="#">Integrations</a></li>
-                                        <li><a href="#">Security</a></li>
+                                        <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
+                                            Plot 104 Kavuri Hills<br />
+                                            Madhapur, Hyderabad 500033<br />
+                                            +91 40 4025 4293
+                                        </li>
+                                        <li class="list-group-item bg-transparent border-0 font-14 footer-text-color px-0 py-4">
+                                            6010 W Spring Creek Pkwy,<br />
+                                            Plano, TX 75024<br />
+                                            +1 (425) 943-9412
+                                        </li>
+                                        <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
+                                            2211 Elliott Avenue, Suite 200<br />
+                                            Seattle, WA 98121<br />
+                                            +1 (425) 943-9412
+                                        </li>
                                     </ul>
                                 </div>
-                                <div class="mb-30">
-                                    <a href="#" class="text-pink header-4">We are hiring !</a>
-                                </div>
-                                <div class="mb-30">
-                                    <p class="mb-20">Contact</p>
-                                    <div><span>Plot No 283/A, Incor 9</span></div>
-                                    <div><span>3rd Floor, Kavuri Hills, Madhapur</span></div>
-                                    <div><span>Hyderabad - 500033</span> </div>
-                                </div>
                                 <div>
-                                    <div class="mb-10"><span>support@keka.com</span></div>
-                                    <div><span>+91 630 175 3141</span></div>
+                                    <div class="mb-10"><span>support@technovert.com</span></div>
                                 </div>
                             </div>
                         </div>
@@ -355,7 +342,12 @@
   .bg-transparent {
     background-color: transparent;
   }
-
+  .cursor-pointer{
+      cursor: pointer;
+  }
+  .width-24{
+      width: 24px;
+  }
   
 </style>
 </div><!-- #page -->
