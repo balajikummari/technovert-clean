@@ -223,7 +223,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         <div class="mb-10">
                             <div id="compare">
                                 <div class="collapse-header cursor-pointer" data-toggle="collapse" data-target="#compareinner" aria-expanded="true" aria-controls="compareinner">
