@@ -197,9 +197,8 @@
 .card-circulars-title-left-container {
   @extend .container;
 
-  .row {
-    div.card-circular-container-title {
-      @extend .col-xs-12 !optional;
+    .card-circular-container-title {
+      @extend .col-12;
       @extend .col-md-2;
       @extend .col-lg-2;
       @extend .p-0;
@@ -214,11 +213,10 @@
     }
 
     .card-circular-containers {
-      @extend .col-xs-12 !optional;
+      @extend .col-12;
       @extend .col-md-10;
       @extend .d-flex;
       @extend .flex-wrap;
       @extend .justify-content-end;
     }
-  }
 }
