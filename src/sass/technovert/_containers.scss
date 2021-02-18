@@ -1,0 +1,121 @@
+.feature-section {
+    @extend .container;
+    @extend .row;
+    @extend .mx-0;
+
+    &.no-underline {
+        h2 {
+            @extend .mb-0;
+            &::after {
+                @extend .d-none;
+            }
+        }
+    }
+
+    &.center {
+        @extend .text-center;
+        h2::after {
+            @extend .mx-auto;
+        }
+
+        .description {
+            @extend .mx-auto;
+        }
+    }
+
+    .title {
+        @extend .col-lg-12;
+        h2 {
+            @extend .underline;
+        }
+    }
+    .description {
+        @extend .col-lg-9;
+        @extend .mb-30;
+    }
+    .feature-image {
+        @extend .w-100;
+    }
+}
+
+.feature-container {
+    @extend .container;
+    @extend .row;
+    @extend .ml-auto;
+    @extend .mr-auto;
+    @extend .px-lg-8;
+  
+    &.image-last {
+      @extend .flex-row-reverse;
+    }
+  
+    .content-container {
+      @extend .px-30;
+      
+      @extend .col-lg-6;
+      @extend .flex-v-center;
+  
+      h6 {
+        @extend .label;
+        @extend .mb-10;
+        @extend .text-green;
+      }
+      h2 {
+        @extend .underline;
+      }
+      p {
+        @extend .text-gray;
+      }
+    }
+  
+    .image-container {
+      @extend .mb-0;
+      @extend .mb-xs-20;
+      @extend .mb-md-20;
+      @extend .px-30;
+      @extend .col-lg-6;
+      @extend .flex-v-center;
+        img {
+          @extend .w-100;
+        }
+    }
+}
+
+.leaders-avatar {
+    @extend .text-center;
+        img {
+            @extend .rounded-circle;
+            @extend .mb-30;
+            max-width: 200px;
+            height: auto;
+        }
+        h6 {
+            @extend .font-weight-bold;
+            @extend .text-clay;
+            @extend .font-21;
+        }
+        p {
+            @extend .text-gray;
+        }
+}
+
+.banner-container {
+    @extend .position-relative;
+    
+    &::after {
+        content: "";
+        left: 0;
+        top: 80px;
+        min-height: 1528px;
+        // height: 80%; // need to check for the repeating part of the banner
+        background-image: url("http://technovert.local/wp-content/uploads/TV-Logo-Copy-TV-Logo-1.svg");
+        background-position-x: center;
+        background-repeat: no-repeat round;
+        @extend .position-absolute;
+        @extend .col-md-3, .d-none, .d-md-block;
+    }
+    & > div  {
+        @extend .ml-auto;
+        @extend .col-md-9, .col-sm-12;
+    }
+}
