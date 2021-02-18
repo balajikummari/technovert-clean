@@ -7,6 +7,7 @@
 .blurb-container{
     @extend .col-md-6;
     @extend .px-5;
+
     div{
       @extend .d-flex;
       @extend .flex-column;
@@ -20,6 +21,7 @@
 
   .blurb-container-center{
     @extend .blurb-container;
+
     &.blurb-col-4{
         @extend .col-md-4;
     }
@@ -67,5 +69,36 @@
     p{
         // @extend .w-50;
         @extend .font-weight-bold;
+    }
+  }
+
+
+  .card-circulars-title-left-container{
+    @extend .container;
+
+    .row{
+      
+      div.card-circular-container-title{
+        @extend .col-xs-12;
+        @extend .col-md-2;
+        @extend .col-lg-2;
+        @extend .p-0;
+  
+        h2{
+          @extend .underline;
+        }
+        img{
+          @extend .my-5;
+          @extend .py-2;
+        }
+      }
+    
+      .card-circular-containers{
+        @extend .col-xs-12;
+        @extend .col-md-10;
+        @extend .d-flex;
+        @extend .flex-wrap;
+        @extend .justify-content-end;
+      }
     }
   }
