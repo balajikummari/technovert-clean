@@ -1,0 +1,228 @@
+
+.feature-section {
+    @extend .container;
+    @extend .row;
+    @extend .mx-0;
+
+    &.no-underline {
+        h2 {
+            @extend .mb-0;
+            &::after {
+                @extend .d-none;
+            }
+        }
+    }
+
+    &.center {
+        @extend .text-center;
+        h2::after {
+            @extend .mx-auto;
+        }
+
+        .description {
+            @extend .mx-auto;
+        }
+    }
+
+    .title {
+        @extend .col-lg-12;
+        h2 {
+            @extend .underline;
+        }
+    }
+    .description {
+        @extend .col-lg-9;
+        @extend .mb-30;
+    }
+    .feature-image {
+        @extend .w-100;
+    }
+}
+
+.feature-container {
+    @extend .container;
+    @extend .row;
+    @extend .ml-auto;
+    @extend .mr-auto;
+    @extend .px-lg-8;
+  
+    &.image-last {
+      @extend .flex-row-reverse;
+    }
+  
+    .content-container {
+      @extend .px-30;
+      
+      @extend .col-lg-6;
+      @extend .flex-v-center;
+  
+      h6 {
+        @extend .label;
+        @extend .mb-10;
+        @extend .text-green;
+      }
+      h2 {
+        @extend .underline;
+      }
+      p {
+        @extend .text-gray;
+      }
+    }
+  
+    .image-container {
+      @extend .mb-0;
+      @extend .mb-xs-20;
+      @extend .mb-md-20;
+      @extend .px-30;
+      @extend .col-lg-6;
+      @extend .flex-v-center;
+        img {
+          @extend .w-100;
+        }
+    }
+}
+
+.leaders-avatar {
+    @extend .text-center;
+        img {
+            @extend .rounded-circle;
+            @extend .mb-30;
+            max-width: 200px;
+            height: auto;
+        }
+        h6 {
+            @extend .font-weight-bold;
+            @extend .text-clay;
+            @extend .font-21;
+        }
+        p {
+            @extend .text-gray;
+        }
+}
+
+.banner-container {
+    @extend .position-relative;
+    
+    &::after {
+        content: "";
+        left: 0;
+        top: 80px;
+        min-height: 1528px;
+        // height: 80%; // need to check for the repeating part of the banner
+        background-image: url("http://technovert.local/wp-content/uploads/TV-Logo-Copy-TV-Logo-1.svg");
+        background-position-x: center;
+        background-repeat: no-repeat round;
+        @extend .position-absolute;
+        @extend .col-md-3, .d-none, .d-md-block;
+    }
+    & > div  {
+        @extend .ml-auto;
+        @extend .col-md-9, .col-sm-12;
+    }
+}
+
+.blurb-content{
+    h5{
+        @extend .font-weight-bold;
+        @extend .mt-3;
+      }
+}
+.blurb-container{
+    @extend .col-md-6;
+    @extend .px-5;
+
+    div{
+      @extend .d-flex;
+      @extend .flex-column;
+      img{
+        @extend .rounded-circle;
+        width: 80px;
+      }
+      @extend .blurb-content;
+    }
+  }
+
+  .blurb-container-center{
+    @extend .blurb-container;
+
+    &.blurb-col-4{
+        @extend .col-md-4;
+    }
+    div{
+        @extend .m-auto;
+        h5{
+            @extend .text-center;
+        }
+    }
+  }
+
+  .blurb-container-img-left{
+    @extend .container;
+    @extend .row;
+    @extend .py-30;
+    @extend .blurb-content;
+
+    .blurb-container-image{
+        @extend .col-lg-3;
+        @extend .col-sm-12;
+
+        img{
+            @extend .rounded-circle;
+        }
+    }
+    .blurb-container-content{
+        @extend .col-lg-9;
+        @extend .col-sm-12;
+
+        div{
+            @extend .d-flex;
+            @extend .flex-column;
+            @extend .text-left;
+        }
+    }
+  }
+
+  .percentage-content{
+    @extend .pr-5;
+
+    h3{
+        @extend .text-blue;
+        @extend .mb-0;
+    }
+    p{
+        // @extend .w-50;
+        @extend .font-weight-bold;
+    }
+  }
+
+
+  .card-circulars-title-left-container{
+    @extend .container;
+
+    .row{
+      
+      div.card-circular-container-title{
+        @extend .col-xs-12;
+        @extend .col-md-2;
+        @extend .col-lg-2;
+        @extend .p-0;
+  
+        h2{
+          @extend .underline;
+        }
+        img{
+          @extend .my-5;
+          @extend .py-2;
+        }
+      }
+    
+      .card-circular-containers{
+        @extend .col-xs-12;
+        @extend .col-md-10;
+        @extend .d-flex;
+        @extend .flex-wrap;
+        @extend .justify-content-end;
+      }
+    }
+  }
+
