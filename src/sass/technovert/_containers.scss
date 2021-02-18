@@ -1,6 +1,13 @@
-.feature-section {
-  @extend .container;
-  @extend .row;
+.hero-section {
+  @extend .pl-180;
+  @extend .m-0;
+  @extend .flex-v-center;
+  @extend .justify-content-start;
+  @extend .min-h-600;
+  @extend .gradient-1;
+}
+
+.feature-content {
   @extend .mx-0;
 
   &.no-underline {
@@ -12,28 +19,17 @@
     }
   }
 
-  &.center {
-    @extend .text-center;
+  &.text-center {
     h2::after {
       @extend .mx-auto;
     }
-
-    .description {
-      @extend .mx-auto;
-    }
   }
 
-  .title {
-    @extend .col-lg-12;
-    h2 {
-      @extend .underline;
-    }
+  h2 {
+    @extend .underline;
   }
-  .description {
-    @extend .col-lg-9;
-    @extend .mb-30;
-  }
-  .feature-image {
+
+  img {
     @extend .w-100;
   }
 }
@@ -41,18 +37,25 @@
 .feature-container {
   @extend .container;
   @extend .row;
-  @extend .ml-auto;
-  @extend .mr-auto;
-  @extend .px-lg-8;
+
+  div {
+    @extend .col-lg-6;
+  }
+
+  div:first-child {
+    @extend .pr-30;
+  }
 
   &.image-last {
     @extend .flex-row-reverse;
+
+    .feature-content {
+      @extend .pr-30;
+    }
   }
 
-  .content-container {
-    @extend .px-30;
-
-    @extend .col-lg-6;
+  .feature-content {
+    @extend .pl-30;
     @extend .flex-v-center;
 
     h6 {
@@ -89,7 +92,8 @@
     max-width: 200px;
     height: auto;
   }
-  h6 {
+  h3,
+  h4 {
     @extend .font-weight-bold;
     @extend .text-clay;
     @extend .font-21;
@@ -108,7 +112,7 @@
     top: 80px;
     min-height: 1528px;
     // height: 80%; // need to check for the repeating part of the banner
-    background-image: url("http://technovert.local/wp-content/uploads/TV-Logo-Copy-TV-Logo-1.svg");
+    background-image: url("https://staging3.technovert.com/wp-content/uploads/TV_logo.svg");
     background-position-x: center;
     background-repeat: no-repeat round;
     @extend .position-absolute;
@@ -116,7 +120,7 @@
   }
   & > div {
     @extend .ml-auto;
-    @extend .col-md-9, .col-sm-12;
+    @extend .col-lg-9, .col-sm-12;
   }
 }
 
@@ -126,18 +130,25 @@
     @extend .mt-3;
   }
 }
+
 .blurb-container {
+  min-width: 320px;
   @extend .col-md-6;
   @extend .px-5;
+  @extend .blurb-content;
+  @extend .d-flex;
+  @extend .flex-column;
 
-  div {
-    @extend .d-flex;
-    @extend .flex-column;
-    img {
-      @extend .rounded-circle;
-      width: 80px;
-    }
-    @extend .blurb-content;
+  p {
+    @extend .text-gray;
+    @extend .font-18;
+    letter-spacing: 0.2px;
+    line-height: 28px;
+  }
+
+  img {
+    @extend .rounded-circle;
+    width: 80px;
   }
 }
 
@@ -147,11 +158,11 @@
   &.blurb-col-4 {
     @extend .col-md-4;
   }
-  div {
-    @extend .m-auto;
-    h5 {
-      @extend .text-center;
-    }
+
+  @extend .text-center;
+
+  img {
+    margin: 0 auto;
   }
 }
 
@@ -197,26 +208,26 @@
 .card-circulars-title-left-container {
   @extend .container;
 
-    .card-circular-container-title {
-      @extend .col-12;
-      @extend .col-md-2;
-      @extend .col-lg-2;
-      @extend .p-0;
+  .card-circular-container-title {
+    @extend .col-12;
+    @extend .col-md-2;
+    @extend .col-lg-2;
+    @extend .p-0;
 
-      h2 {
-        @extend .underline;
-      }
-      img {
-        @extend .my-5;
-        @extend .py-2;
-      }
+    h2 {
+      @extend .underline;
     }
+    img {
+      @extend .my-5;
+      @extend .py-2;
+    }
+  }
 
-    .card-circular-containers {
-      @extend .col-12;
-      @extend .col-md-10;
-      @extend .d-flex;
-      @extend .flex-wrap;
-      @extend .justify-content-end;
-    }
+  .card-circular-containers {
+    @extend .col-12;
+    @extend .col-md-10;
+    @extend .d-flex;
+    @extend .flex-wrap;
+    @extend .justify-content-end;
+  }
 }
