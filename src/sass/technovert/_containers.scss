@@ -103,18 +103,19 @@
 
 .banner-container {
   @extend .position-relative;
+  min-height: 1528px;
 
   &::after {
     content: "";
     left: 0;
     top: 80px;
-    min-height: 1528px;
-    // height: 80%; // need to check for the repeating part of the banner
+    min-height: 1368px;
+    height: calc(100% - 160px );
     background-image: url("https://staging3.technovert.com/wp-content/uploads/TV_logo.svg");
     background-position-x: center;
-    background-repeat: no-repeat round;
+    background-repeat: no-repeat space;
     @extend .position-absolute;
-    @extend .col-md-3, .d-none, .d-md-block;
+    @extend .col-md-3, .d-none, .d-lg-block;
   }
   & > div {
     @extend .ml-auto;
@@ -204,6 +205,8 @@
 
 .card-circulars-title-left-container {
   @extend .container;
+  @extend .row;
+  @extend .mx-0;
 
   .card-circular-container-title {
     @extend .col-12;
