@@ -1,10 +1,20 @@
 .hero-section {
   @extend .pl-180;
+  @extend .pl-4, .pl-md-5, .pl-lg-14;
   @extend .m-0;
   @extend .flex-v-center;
   @extend .justify-content-start;
   @extend .min-h-600;
   @extend .gradient-1;
+  
+  span {
+    @extend .hero-prefix;
+  }
+
+  h1, h2 {
+    @extend .hero-white;
+    @extend .max-w-900;
+  }
 }
 
 .feature-content {
