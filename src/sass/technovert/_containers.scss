@@ -103,13 +103,13 @@
 
 .banner-container {
   @extend .position-relative;
-  min-height: 1528px;
+  min-height: 1688px;
 
   &::after {
     content: "";
     left: 0;
     top: 80px;
-    min-height: 1368px;
+    min-height: 1528px;
     height: calc(100% - 160px );
     background-image: url("https://staging3.technovert.com/wp-content/uploads/TV_logo.svg");
     background-position-x: center;
