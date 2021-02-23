@@ -307,17 +307,18 @@ function save_sub_nav_menu_value($post_id) {
 add_action( 'add_meta_boxes', 'sub_nav_meta_box' );
 add_action( 'save_post', 'save_sub_nav_menu_value', 10, 1);
 
-function sub_nav_shortcode() {
-	global $post;
-	$menu_name = get_post_meta($post->ID, "subnav_choice", true);
+// * Moved sub nav functionality to hero-template.php rather than using Shortcodes
+// function sub_nav_shortcode() {
+// 	global $post;
+// 	$menu_name = get_post_meta($post->ID, "subnav_choice", true);
 
-	$options = array(
-		'menu' => $menu_name,
-		'menu_class' => 'subnav',
-		'echo' => false,
-	);
+// 	$options = array(
+// 		'menu' => $menu_name,
+// 		'menu_class' => 'subnav',
+// 		'echo' => false,
+// 	);
 
-	return wp_nav_menu($options);
-}
+// 	return wp_nav_menu($options);
+// }
 
-add_shortcode('sub_nav', 'sub_nav_shortcode');
+// add_shortcode('sub_nav', 'sub_nav_shortcode');
