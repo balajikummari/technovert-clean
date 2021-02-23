@@ -23,11 +23,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-12 content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
-          <section class="pl-180 m-0 flex-v-center justify-content-start min-h-600 gradient-1">
+          <section class="hero-section">
             <div class="hero-prefix"><?php the_field('hero_label') ?></div>
             <h1 class="hero-white max-w-900"><?php the_field('hero_title') ?></h1>
           </section>
+					<div class="subnav-container">
+								<?php global $post;
+								$menu_name = get_post_meta($post->ID, "subnav_choice", true);
+	
+								$options = array(
+									'menu' => $menu_name,
+									'menu_class' => 'subnav',
+									'echo' => false,
+								);
 
+								echo wp_nav_menu($options); ?>
+					</div>
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
