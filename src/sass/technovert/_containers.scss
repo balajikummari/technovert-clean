@@ -110,10 +110,10 @@
     left: 0;
     top: 80px;
     min-height: 1528px;
-    height: calc(100% - 160px );
+    // height: calc(100% - 160px ); // to check the repeating part of banner
     background-image: url("https://staging3.technovert.com/wp-content/uploads/TV_logo.svg");
     background-position-x: center;
-    background-repeat: no-repeat space;
+    background-repeat: no-repeat;
     @extend .position-absolute;
     @extend .col-md-3, .d-none, .d-lg-block;
   }
