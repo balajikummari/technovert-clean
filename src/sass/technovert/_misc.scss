@@ -1,6 +1,6 @@
 //Padding in each section set globally from here
 section {
-  @extend .py-80;
+  @extend .py-80, .py-xs-40;
   @extend .px-4, .px-md-5, .px-lg-14;
 }
 
