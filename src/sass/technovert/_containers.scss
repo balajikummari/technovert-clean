@@ -184,6 +184,7 @@
   @extend .blurb-content;
 
     .blurb-image {
+      @extend .col-3;
       @extend .col-lg-3;
       @extend .col-sm-12;
       @extend .rounded-circle;
