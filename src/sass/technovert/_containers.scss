@@ -1,6 +1,5 @@
 .hero-section {
-  @extend .pl-180;
-  @extend .pl-4, .pl-md-5, .pl-lg-14;
+  @extend .pl-180, .pl-md-5, .pl-lg-14;
   @extend .m-0;
   @extend .flex-v-center;
   @extend .justify-content-start;
@@ -100,12 +99,15 @@
     max-width: 200px;
     height: auto;
   }
+
   h3,
   h4 {
     @extend .font-weight-bold;
     @extend .text-clay;
     @extend .font-21;
+    @extend .mb-0;
   }
+
   p {
     @extend .text-gray;
   }
@@ -140,7 +142,7 @@
   }
 }
 
-.blurb-container {
+.blurb {
   min-width: 320px;
   @extend .col-md-6;
   @extend .px-5;
@@ -161,8 +163,8 @@
   }
 }
 
-.blurb-container-center {
-  @extend .blurb-container;
+.blurb-center {
+  @extend .blurb;
 
   &.blurb-col-4 {
     @extend .col-md-4;
@@ -175,7 +177,7 @@
   }
 }
 
-.blurb-container-img-left {
+.blurb-img-left {
   @extend .mx-0;
   @extend .row;
   @extend .py-30;
@@ -207,18 +209,19 @@
     @extend .text-blue;
     @extend .mb-0;
   }
+
   p {
     // @extend .w-50;
     @extend .font-weight-bold;
   }
 }
 
-.card-circulars-title-left-container {
+.cards-container-left {
   @extend .container;
   @extend .row;
   @extend .mx-0;
 
-  .card-circular-container-title {
+  .container-title {
     @extend .col-12;
     @extend .col-md-2;
     @extend .col-lg-2;
@@ -233,7 +236,7 @@
     }
   }
 
-  .card-circular-containers {
+  .cards-wrapper {
     @extend .col-12;
     @extend .col-md-10;
     @extend .d-flex;
