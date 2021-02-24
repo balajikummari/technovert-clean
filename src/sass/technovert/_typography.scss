@@ -22,7 +22,8 @@ ul {
 // font-sizes
 .hero-white {
   @include font-size(56px);
-  line-height: 72px;
+  @include line-height(72px);
+  // line-height: 72px;
   text-transform: uppercase;
   @extend .text-white;
   @extend .font-weight-black;
@@ -31,21 +32,24 @@ ul {
 h1,
 .header-1 {
   @include font-size(48px);
-  line-height: 64px;
+  @include line-height(64px);
+  // line-height: 64px;
   @extend .font-weight-extra-bold;
   @extend .text-primary;
 }
 
 h1.title-2 {
   @include font-size(48px);
-  line-height: 64px;
+  @include line-height(64px);
+  //line-height: 64px;
   @extend .font-weight-semi-bold;
 }
 
 h2,
 .header-2 {
   @include font-size(40px);
-  line-height: 56px;
+  @include line-height(56px);
+  //line-height: 56px;
   @extend .text-primary;
   @extend .font-weight-extra-bold;
 }
@@ -53,7 +57,8 @@ h2,
 h3,
 .header-3 {
   @include font-size(36px);
-  line-height: 52px;
+  @include line-height(52px);
+  //line-height: 52px;
   @extend .text-primary;
   @extend .font-weight-extra-bold;
 }
@@ -61,7 +66,8 @@ h3,
 h4,
 .header-4 {
   @include font-size(32px);
-  line-height: 40px;
+  @include line-height(40px);
+  //line-height: 40px;
   @extend .text-primary;
   @extend .font-weight-extra-bold;
 }
@@ -69,21 +75,24 @@ h4,
 .header-4-light {
   color: #2e3342 !important;
   @include font-size(32px);
-  line-height: 40px;
+  @include line-height(40px);
+  //line-height: 40px;
   @extend .font-weight-semi-bold;
 }
 
 h5,
 .header-5 {
   @include font-size(24px);
-  line-height: 32px;
+  @include line-height(32px);
+  //line-height: 32px;
   @extend .font-weight-semi-bold;
   @extend .text-primary;
 }
 
 .jd-quote {
   @include font-size(28px);
-  line-height: 36px;
+  @include line-height(36px);
+  //line-height: 36px;
   @extend .font-weight-light;
   @extend .text-primary;
 }
@@ -91,7 +100,8 @@ h5,
 .hero-prefix {
   @include font-size(20px);
   letter-spacing: 2px;
-  line-height: 28px;
+  @include line-height(28px);
+  //line-height: 28px;
   text-transform: uppercase;
   @extend .text-secondary;
 }
@@ -99,7 +109,8 @@ h5,
 .label {
   @include font-size(14px);
   letter-spacing: 0.7px;
-  line-height: 28px;
+  @include line-height(28px);
+  //line-height: 28px;
   text-transform: uppercase;
   @extend .font-weight-extra-bold;
 }
@@ -107,22 +118,26 @@ h5,
 // default font size
 .text-body-font-size {
   @include font-size(18px);
-  line-height: 28px;
+  @include line-height(28px);
+  // line-height: 28px;
 }
 
 .text-sm {
   @include font-size(16px);
-  line-height: 28px;
+  @include line-height(28px);
+  //line-height: 28px;
 }
 
 .text-xs {
   @include font-size(14px);
-  line-height: 24px;
+  @include line-height(24px);
+  // line-height: 24px;
 }
 
 .text-xxs {
   @include font-size(12px);
-  line-height: 20px;
+  @include line-height(20px);
+  //line-height: 20px;
 }
 
 // font weights
@@ -164,7 +179,8 @@ span.big {
   @include font-size(120px);
   font-weight: 900;
   letter-spacing: 0;
-  line-height: 136px;
+  @include line-height(136px);
+  //line-height: 136px;
 }
 
 .customers h4 {
@@ -172,7 +188,8 @@ span.big {
   @include font-size(18px);
   font-weight: 800;
   letter-spacing: 0;
-  line-height: 28px;
+  @include line-height(28px);
+  //line-height: 28px;
 }
 
 span.pre {
@@ -181,7 +198,8 @@ span.pre {
   @include font-size(14px);
   font-weight: 800;
   letter-spacing: 0.7px;
-  line-height: 28px;
+  @include line-height(28px);
+  //line-height: 28px;
   text-transform: uppercase;
 }
 
@@ -203,5 +221,6 @@ span.pre {
 }
 
 .line-height-24 {
-  line-height: 24px;
+  //line-height: 24px;
+  @include line-height(24px);
 }
