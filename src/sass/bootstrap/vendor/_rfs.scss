@@ -310,3 +310,7 @@ $rfs-mq-property-height: if($rfs-mode == max-media-query, max-height, min-height
 @mixin margin-left($value) {
   @include rfs($value, margin-left);
 }
+
+@mixin line-height($value) {
+  @include rfs($value, line-height);
+}
