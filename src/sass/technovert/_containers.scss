@@ -244,3 +244,8 @@
   }
 }
  
+@media (max-width:767px) {
+  .hero-section {
+    min-height: 65vh !important;
+  }
+}
