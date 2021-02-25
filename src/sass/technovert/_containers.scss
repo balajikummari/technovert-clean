@@ -82,6 +82,7 @@
     @extend .px-xs-0;
     @extend .px-md-0;
     @extend .flex-v-center;
+    @extend .mt-xs-30, .mt-md-30, .mt-0;
 
     p {
       @extend .text-gray;
