@@ -250,3 +250,9 @@
     min-height: 65vh !important;
   }
 }
+
+@media (max-width:991px) {
+  .banner-container {
+    min-height: auto !important;
+  }
+}
