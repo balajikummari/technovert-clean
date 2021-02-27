@@ -132,12 +132,12 @@
                             <div class="row mx-0">
                                 <div class="col-lg-12 col-md-6 mb-5">
                                     <h5 class="text-white font-18 mb-8">About</h5>
-                                    <ul class="list-group">
+                                    <ul class="list-group"> 
                                         <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
                                             Our Products
                                         </li>
                                         <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
-                                            About Us
+                                            <a class="footer-text-color" href="/about">About Us</a>
                                         </li>
                                         <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
                                             Core Values
