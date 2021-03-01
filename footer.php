@@ -12,7 +12,7 @@
 ?>
 <footer>
     <div class="bg-footer text-white overflow-hidden">
-        <div class="container-box">
+        <div class="container-box clear-margin-b">
             <div class="row mx-0 py-50">
                 <div class="col-md-4 col-lg-4 mb-xs-40">
                     <div class="pr-50 pr-xs-0">
@@ -313,7 +313,7 @@
             </div>
         </div>
         <hr class="m-0" />
-        <div class="container-box">
+        <div class="container-box clear-margin-b">
             <div class="row align-items-center mx-0 py-40">
                 <div class="col-md-5 col-sm-7 col-12  mb-xs-20">
                     <div>
