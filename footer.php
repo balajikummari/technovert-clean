@@ -64,7 +64,7 @@
                                     <h5 class="text-white font-18 mb-8">Digital Transformation</h5>
                                     <ul class="list-group">
                                         <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
-                                            Customer Experience
+                                        <a class="footer-text-color" href="/customer-experience">Customer Experience</a>
                                         </li>
                                         <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
                                             Employee Experience
@@ -84,7 +84,7 @@
                                     <h5 class="text-white font-18 mb-8">Product Engineering</h5>
                                     <ul class="list-group">
                                         <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
-                                            MVP Development
+                                        <a class="footer-text-color" href="/mvp-development">MVP Development</a>
                                         </li>
                                         <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
                                             Enterprise App Development
@@ -132,21 +132,21 @@
                             <div class="row mx-0">
                                 <div class="col-lg-12 col-md-6 mb-5">
                                     <h5 class="text-white font-18 mb-8">About</h5>
-                                    <ul class="list-group">
+                                    <ul class="list-group"> 
                                         <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
                                             Our Products
                                         </li>
                                         <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
-                                            About Us
+                                            <a class="footer-text-color" href="/about">About Us</a>
                                         </li>
                                         <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
-                                            Core Values
+                                            <a class="footer-text-color" href="/our-core-values">Core Values</a>
                                         </li>
                                         <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
-                                            Our Quality
+                                        <a class="footer-text-color" href="/our-quality">Our Quality</a>
                                         </li>
                                         <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
-                                            Careers
+                                        <a class="footer-text-color" href="/careers">Careers</a>
                                         </li>
                                     </ul>
                                 </div>
