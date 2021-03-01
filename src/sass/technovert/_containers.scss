@@ -5,9 +5,8 @@
   @extend .mb-160;
   @extend .mb-xs-80;
 
-
   &.clear-margin-b {
-      @extend .mb-0;
+    @extend .mb-0;
   }
 }
 
@@ -21,12 +20,13 @@
   .container-box {
     @extend .mb-0;
   }
-  
+
   span {
     @extend .hero-prefix;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     @extend .hero-white;
     @extend .max-w-900;
   }
@@ -110,7 +110,6 @@
       @extend .text-gray;
     }
   }
-
 }
 
 .leaders-avatar {
@@ -200,15 +199,15 @@
   @extend .py-30;
   @extend .blurb-content;
 
-    .blurb-image {
-      @extend .col-3;
-      @extend .col-lg-3;
-      @extend .col-sm-12;
-      @extend .rounded-circle;
-      width: 160px;
-    }
+  .blurb-image {
+    @extend .col-3;
+    @extend .col-lg-3;
+    @extend .col-sm-12;
+    @extend .rounded-circle;
+    width: 160px;
+  }
 
-    .blurb-container-content {
+  .blurb-container-content {
     @extend .col-lg-9;
     @extend .col-sm-12;
 
@@ -242,7 +241,7 @@
     @extend .col-xl-3;
     @extend .col-lg-4;
     @extend .col-12;
-    
+
     @extend .pr-40;
     @extend .pl-0;
 
@@ -269,16 +268,40 @@
   }
 }
 
+.talk-to-us {
+  background: url("https://staging3.technovert.com/wp-content/uploads/talk-to-us-1.png")
+    no-repeat;
+  background-size: 100%;
+  background-position: bottom;
 
+  .card {
+    height: 390px;
+    background-color: #444c5a;
+
+    img {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .talk-to-us-button {
+    font-size: 18px;
+    background-color: #1077da;
+
+    .right-arrow {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
 
 // for making container for 1140px
 @media (min-width: 1400px) {
   .container {
-      max-width: 1140px !important;
+    max-width: 1140px !important;
   }
 }
- 
-@media (max-width:767px) {
+
+@media (max-width: 767px) {
   .hero-section {
     min-height: 65vh !important;
   }
@@ -288,7 +311,7 @@
   }
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .banner-container {
     min-height: auto !important;
   }
