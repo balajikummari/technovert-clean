@@ -1,14 +1,3 @@
-//Padding in each section set globally from here
-section {
-  @extend .py-80, .py-xs-40, .py-md-50;
-  @extend .px-4, .px-md-5, .px-lg-14;
-}
-
-// img {
-//   width: 100%;
-//   height: auto;
-// }
-
 .underline {
   @extend .mb-30;
 }
@@ -48,12 +37,12 @@ section {
 }
 
 .card-circular {
-  display: inline-block;
-  margin: 15px;
-  padding: 40px;
-  max-width: 360px;
-  border-radius: 4px;
-  background-color: #ffffff;
+  @extend .mb-30;
+  @extend .p-40;
+  @extend .p-md-30;
+  @extend .p-xs-20;
+  @extend .rounded;
+  @extend .bg-white;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 
   .icon {

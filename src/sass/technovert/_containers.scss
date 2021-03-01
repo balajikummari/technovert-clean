@@ -51,6 +51,7 @@
 
   div {
     @extend .col-lg-6;
+    @extend .flex-v-center;
     @extend .px-0;
   }
 
@@ -86,7 +87,6 @@
     @extend .pl-30;
     @extend .px-xs-0;
     @extend .px-md-0;
-    @extend .flex-v-center;
     @extend .mt-xs-30, .mt-md-30, .mt-0;
 
     p {
@@ -125,11 +125,10 @@
   &::after {
     content: "";
     left: 0;
-    top: 80px;
     min-height: 1528px;
     // height: calc(100% - 160px ); // to check the repeating part of banner
     background-image: url("https://staging3.technovert.com/wp-content/uploads/TV_logo.svg");
-    background-position-x: center;
+    background-position-x: left;
     background-repeat: no-repeat;
     @extend .position-absolute;
     @extend .col-md-3, .d-none, .d-lg-block;
@@ -250,6 +249,26 @@
     @extend .d-flex;
     @extend .flex-wrap;
     @extend .justify-content-center;
+  }
+}
+
+.container-box {
+  @extend .container;
+  @extend .g-0;
+  @extend .px-xs-20;
+  @extend .mb-160;
+  @extend .mb-xs-80;
+
+
+  &.clear-margin-b {
+      @extend .mb-0;
+  }
+}
+
+// for making container for 1140px
+@media (min-width: 1400px) {
+  .container {
+      max-width: 1140px !important;
   }
 }
  

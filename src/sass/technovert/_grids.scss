@@ -1,19 +1,8 @@
-.features-card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0;
-  grid-template-areas:
-    ". . ."
-    ". . .";
-}
 
 .home-grid {
 	min-height: 1260px;
 	background-color: #F4F5F7;
-	padding: 180px;
 	@extend .row, .row-cols-md-3;
-	@extend .mx-0;
 
 	& > div {
 		@extend .px-0;
