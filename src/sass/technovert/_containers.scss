@@ -266,14 +266,11 @@
     @extend .row, .mx-0;
 
       .card-circular {
+        max-width: 45% !important;
+        @extend .m-15;
         @extend .col-md-6;
         @extend .col-12;
       }
-    // @extend .d-flex;
-    // @extend .flex-wrap;
-    // @extend .justify-content-center;
-
-
   }
 }
 
