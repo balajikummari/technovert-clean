@@ -117,12 +117,10 @@
   img {
     @extend .rounded-circle;
     @extend .mb-30;
-    max-width: 200px;
-    height: auto;
+    @extend .max-w-200;
   }
 
-  h3,
-  h4 {
+  h6 {
     @extend .font-weight-bold;
     @extend .text-clay;
     @extend .font-21;
