@@ -275,19 +275,21 @@
 .talk-to-us {
   background: url("https://staging3.technovert.com/wp-content/uploads/talk-to-us-1.png")
     no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: bottom;
+  .talk-to-us-content{
 
-  .card {
-    height: 390px;
-    background-color: #444c5a !important;
-
-    img {
-      margin-bottom: 0 !important;
-    }
-  }
-
+    bottom: 6rem;
+    .card {
+      height: 390px;
+      background-color: #444c5a !important;
   
+      img {
+        margin-bottom: 0 !important;
+      }
+  }
+  
+  }
 }
 
 .button-right-arrow {
