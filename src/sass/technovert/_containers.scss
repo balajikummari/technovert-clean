@@ -278,8 +278,10 @@
   background-size: cover;
   background-position: bottom;
   .talk-to-us-content{
-
-    bottom: 6rem;
+    @extend .mt-5;
+    @extend .position-relative;
+    @extend .col-md-12;
+    bottom: 7rem;
     .card {
       height: 390px;
       background-color: #444c5a !important;
@@ -293,10 +295,16 @@
 }
 
 .button-right-arrow {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .rounded-0;
+  @extend .px-5;
+  @extend .py-3; 
   font-size: 18px;
   background-color: #1077da;
 
   .right-arrow {
+    @extend .ml-4;
     width: 24px;
     height: 24px;
   }
