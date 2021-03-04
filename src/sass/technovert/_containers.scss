@@ -273,24 +273,18 @@
 }
 
 .talk-to-us {
-  background: url("https://staging3.technovert.com/wp-content/uploads/talk-to-us-1.png")
-    no-repeat;
+  background: url("https://staging3.technovert.com/wp-content/uploads/talk-to-us-1.png") no-repeat;
   background-size: cover;
+  min-height: 430px;
   background-position: bottom;
   .talk-to-us-content{
-    @extend .mt-5;
-    @extend .position-relative;
-    @extend .col-md-12;
-    bottom: 7rem;
-    .card {
-      height: 390px;
-      background-color: #444c5a !important;
-  
-      img {
-        margin-bottom: 0 !important;
-      }
-  }
-  
+    @extend .px-xs-0,.p-60;
+    @extend .position-absolute;
+    top: -100px;
+    background-color: #444c5a !important;
+    img {
+      margin-bottom: 0 !important;
+    }
   }
 }
 
@@ -324,6 +318,14 @@
 
   .blurb {
     max-width: 100% !important;
+  }
+
+  .talk-to-us {
+      background: #444c5a !important;
+      .talk-to-us-content {
+        position: relative !important;
+        top: 0;
+      }
   }
 }
 
