@@ -2,10 +2,26 @@ footer {
   .footer-logo {
     @extend .max-w-275;
   }
+
   img {
     width: 70px;
     max-width: 275px;
   }
+
+  .footer-menus {
+    @extend .p-0, .m-0;
+    li {
+      @extend .font-14;
+      @extend .list-unstyled;
+      a {
+        @extend .footer-text-color;
+        &:hover {
+          @extend .text-white;
+        }
+      }
+    }
+  }
+
   .accordion {
     ul {
       @extend .list-unstyled;
