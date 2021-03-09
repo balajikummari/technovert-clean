@@ -52,7 +52,27 @@ ul {
                     top: 3px !important;
                 }
             }
+
+            &.with-headings {
+                li {
+                    
+                    h6 {
+                        @extend .ml-40;
+                        @extend .mb-10;
+                        @extend .text-clay;
+                        @extend .font-21;
+                        @extend .font-weight-extra-bold;
+                    }
+                    p {
+                        @extend .ml-0;
+                        @extend .text-clay;
+                    }
+                    
+                }
+    
+            }
         }
+
 
         &.with-numbers {
             li {

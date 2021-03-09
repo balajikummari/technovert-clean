@@ -193,28 +193,17 @@
 }
 
 .blurb-img-left {
-  @extend .mx-0;
-  @extend .row;
-  @extend .py-30;
-  @extend .blurb-content;
+  @extend .d-md-flex;
 
   .blurb-image {
-    @extend .col-3;
-    @extend .col-lg-3;
-    @extend .col-sm-12;
-    @extend .rounded-circle;
-    width: 160px;
+    @extend .mr-xs-0, .mr-30, .mb-xs-20;
+    img {
+      @extend .rounded-circle;
+    }
   }
 
   .blurb-container-content {
-    @extend .col-lg-9;
-    @extend .col-sm-12;
-
-    div {
-      @extend .d-flex;
-      @extend .flex-column;
-      @extend .text-left;
-    }
+    @extend .flex-grow-1;
   }
 }
 
@@ -241,7 +230,7 @@
     @extend .col-lg-4;
     @extend .col-12;
 
-    @extend .pr-40;
+    @extend .pr-40, .pr-xs-0;
     @extend .pl-0;
 
     h2 {
@@ -261,14 +250,8 @@
     @extend .col-12;
     @extend .col-xl-9;
     @extend .col-lg-8;
-    @extend .row, .mx-0;
+    @extend .mx-xs-0;
 
-      .card-circular {
-        max-width: 45% !important;
-        @extend .m-15;
-        @extend .col-md-6;
-        @extend .col-12;
-      }
   }
 }
 

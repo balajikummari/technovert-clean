@@ -54,33 +54,38 @@
   }
 
   img {
-    width: 110px;
     @extend .mb-30;
-    height: auto;
   }
 
-  h3 {
-    color: #2e3342;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 0;
-    line-height: 32px;
+  h5 {
+    @extend .font-weight-bold;
+    @extend .mb-10;
   }
 
   p {
-    color: $gray;
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: 28px;
+    @extend .text-gray;
+  }
+
+  .learn-more {
+    @extend .d-block;
+    @extend .letter-spacing-02;
+    @extend .text-blue;
+    @extend .font-weight-semi-bold;
+    @extend .mt-12;
   }
 }
 
 .card {
   @extend .card-circular;
+  @extend .position-relative;
+  //@extend .p-0;
+
+  &.clear-padding {
+    @extend .p-0;
+  }
 
   img {
     width: 100%;
-    height: auto;
   }
 
   .banner {
@@ -88,6 +93,23 @@
     width: 100%;
     margin-bottom: 35px;
     overflow: hidden;
+  }
+
+  .card-body {
+    @extend .p-30, .p-xs-20;
+  }
+
+  .card-badge {
+    @extend .position-absolute;
+    @extend .px-12, .py-8;
+    @extend .rounded;
+    @extend .text-white;
+    @extend .bg-blue;
+    @extend .font-weight-extra-bold;
+    @extend .text-xs;
+    @extend .letter-spacing-1;
+    top: 20px;
+    left: 20px;
   }
 }
 
