@@ -62,10 +62,15 @@ ul {
                         @extend .text-clay;
                         @extend .font-21;
                         @extend .font-weight-extra-bold;
+                        line-height: 32px;
                     }
                     p {
                         @extend .ml-0;
                         @extend .text-clay;
+                    }
+
+                    &::after {
+                        top: 4px !important;
                     }
                     
                 }
