@@ -78,6 +78,24 @@ ul {
             }
         }
 
+        &.list-white {
+            li {
+                @extend .mb-10;
+                p {
+                    @extend .text-white;
+                    @extend .ml-40;
+                }
+                &::after {
+                    @extend .bg-white;
+                    @extend .text-dodger-blue;
+                    @extend .dot-sm;
+                    @extend .icon-md;
+                    padding-top: 2px;
+                    top: 3px !important;
+                }
+            }
+        }
+
 
         &.with-numbers {
             li {

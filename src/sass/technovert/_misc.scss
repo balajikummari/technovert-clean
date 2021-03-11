@@ -45,16 +45,32 @@
   @extend .bg-white;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 
-  .icon {
-    display: inline-block;
-    background-color: rgba(16, 120, 218, 0.1);
-    border-radius: 55px;
-    margin-bottom: 30px;
-    padding: 30px 17px;
+  // .icon {
+  //   display: inline-block;
+  //   background-color: rgba(16, 120, 218, 0.1);
+  //   border-radius: 55px;
+  //   margin-bottom: 30px;
+  //   padding: 30px 17px;
+  // }
+
+  &.padding-20 {
+    @extend .p-20;
   }
 
   img {
     @extend .mb-30;
+  }
+
+  .logo {
+    @extend .max-w-100;
+    @extend .max-h-55;
+    @extend .mb-30;
+    img {
+      @extend .mb-0;
+      @extend .max-w-100;
+      object-fit: contain;
+      object-position: 0% 0%;
+    }
   }
 
   h5 {

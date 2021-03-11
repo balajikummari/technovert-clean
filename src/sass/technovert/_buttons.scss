@@ -1,0 +1,90 @@
+.btn {
+    @extend .text-body-font-size;
+
+    &:focus{
+        @extend .shadow-none;
+    }
+
+    &.btn-primary {
+        @extend .bg-blue;
+        @extend .border-0;
+        @extend .rounded;
+        @extend .text-white;
+
+    }
+
+    &.btn-bright-gray {
+        @extend .bg-bright-gray;
+        @extend .border-0;
+        @extend .rounded;
+        @extend .text-white;
+
+    }
+
+    &.btn-white {
+        @extend .bg-white;
+        @extend .border-0;
+        @extend .rounded;
+        @extend .text-blue;
+
+    }
+
+    &.btn-outline {
+        @extend .bg-transparent;
+        @extend .rounded;
+        @extend .border;
+    }
+
+    &.btn-primary-outline {
+        @extend .btn-outline;
+        @extend .text-blue;
+        @extend .border-blue;
+    }
+
+    &.btn-white-outline {
+        @extend .btn-outline;
+        @extend .text-white;
+        @extend .border-white;
+        @extend .font-weight-extra-bold;
+        @extend .text-uppercase;
+        @extend .mb-30;
+        letter-spacing: 1px;
+    }
+
+    &.btn-x-lg {
+        @extend .px-30;
+        @extend .py-16;
+        @extend .font-21;
+        @extend .font-weight-semi-bold;
+    }
+
+    &.btn-lg {
+        @extend .px-20;
+        @extend .py-10;
+    }
+
+    &.btn-sm {
+        @extend .px-20;
+        @extend .py-12;
+        @extend .text-sm;
+        @extend .font-weight-semi-bold;
+    }
+
+    &.btn-xs {
+        @extend .px-16;
+        @extend .py-8;
+        @extend .text-xs;
+        @extend .font-weight-semi-bold;
+    }
+
+    &.btn-x-xs {
+        @extend .px-12;
+        @extend .py-6;
+        @extend .text-xs;
+        @extend .font-weight-extra-bold;
+    }
+
+    &.no-rounded {
+        @extend .rounded-0;
+    }
+}

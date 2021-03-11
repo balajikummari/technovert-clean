@@ -106,6 +106,13 @@
     @extend .px-md-0;
     @extend .mt-xs-30, .mt-md-30, .mt-0;
 
+    .learn-more {
+      @extend .d-inline-block;
+      @extend .font-weight-semi-bold;
+      @extend .letter-spacing-02;
+      @extend .mt-20;
+    }
+
     p {
       @extend .text-gray;
     }
@@ -287,6 +294,60 @@
   }
 }
 
+.full-feature-container {
+  @extend .row, .row-cols-md-2, .row-cols-1;
+  @extend .mx-0;
+
+  div {
+    @extend .p-0;
+  }
+
+  img {
+    @extend .w-100;
+    @extend .h-100;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .label {
+    @extend .d-inline-block;
+    @extend .px-12, .py-6;
+    @extend .text-xs;
+    @extend .font-weight-extra-bold;
+    @extend .rounded;
+    @extend .border, .border-white;
+    @extend .letter-spacing-1;
+    @extend .text-white;
+    @extend .text-uppercase;
+    @extend .mb-20;
+  }
+ 
+
+  .feature-content {
+    @extend .bg-blue;
+    @extend .p-70;
+  }
+  
+}
+
+.card-arrow {
+  @extend .position-relative;
+
+  .top-arrow::after {
+    content: " ";
+    background-image: url("https://staging3.technovert.com/wp-content/uploads/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    @extend .position-absolute;
+    @extend .d-md-block;
+    @extend .d-none;
+    top: -65px;
+    left: 50%;
+    height: 50px;
+    width: 80%;
+  }
+}
+
 // for making container for 1140px
 @media (min-width: 1400px) {
   .container {
@@ -315,5 +376,14 @@
 @media (max-width: 991px) {
   .banner-container {
     min-height: auto !important;
+  }
+
+  .card-arrow {
+      &:nth-of-type(odd) .top-arrow::after {
+        width: 100% !important;
+      }
+      &:nth-of-type(even) .top-arrow::after {
+        display: none !important;
+      }
   }
 }
