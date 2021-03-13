@@ -23,9 +23,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-12 content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
-          <section class="hero-section">
-            <div class="hero-prefix"><?php the_field('hero_label') ?></div>
-            <h1 class="hero-white max-w-900"><?php the_field('hero_title') ?></h1>
+				<?php
+					$bg = get_field("hero_background");
+
+					if(strlen($bg) > 0) {
+						echo "<section class='hero-section' style='background-image: url($bg);'>";
+					} else {
+						echo "<section class='hero-section'>";
+					}
+					?>
+            <span><?php the_field('hero_label') ?></span>
+            <h1><?php the_field('hero_title') ?></h1>
           </section>
 					<div class="subnav-container">
 								<?php global $post;
