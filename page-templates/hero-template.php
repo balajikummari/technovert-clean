@@ -2,7 +2,7 @@
 /**
  * Template Name: Hero and Subnav Template 
  *
- * Template for displaying a page with Technovert's Hero and sub navigation components.
+ * Template for displaying a page with Technovert's Hero and sub navigation component.
  *
  * @package understrap
  */
@@ -32,8 +32,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 						echo "<section class='hero-section'>";
 					}
 					?>
+					<span>some text here</span>
+					<div class="container-box">
             <span><?php the_field('hero_label') ?></span>
             <h1><?php the_field('hero_title') ?></h1>
+					</div>
           </section>
 					<div class="subnav-container">
 								<?php global $post;
@@ -71,9 +74,3 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div><!-- #full-width-page-wrapper -->
 
 <?php get_footer(); ?>
-
-
-<!-- Feature content
-Feature container
-Banner container
-Ciruclar avatar -->
