@@ -226,6 +226,11 @@ span.pre {
   @extend .font-weight-extra-bold;
 }
 
+.font-72 {
+  @include font-size(72px);
+  @include line-height(56px);
+}
+
 .line-height-24 {
   //line-height: 24px;
   @include line-height(24px);
