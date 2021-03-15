@@ -32,6 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						echo "<section class='hero-section'>";
 					}
 					?>
+
 					<div class="container-box">
             <span><?php the_field('hero_label') ?></span>
             <h1><?php the_field('hero_title') ?></h1>
