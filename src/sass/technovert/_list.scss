@@ -7,10 +7,9 @@ ul {
 
         li {
             @extend .position-relative;
-            @extend .mb-40;
 
-            &:last-child {
-                @extend .mb-0;
+            &:not(:last-child) {
+                @extend .mb-40;
             }
 
             p {
@@ -20,8 +19,8 @@ ul {
             }
 
             &::after {
-                font-family: "Material Icons";
-                content: "\e5ca";
+                font-family: "Technovert-Icons";
+                content: "\e911";
                 font-weight: normal;
                 font-style: normal;
                 padding-top: 3px;
@@ -32,14 +31,17 @@ ul {
                 @extend .dot-lg;
                 @extend .bg-light-blue;
                 @extend .icon;
-                @extend .icon-xl;
                 @extend .text-blue;
             }
         }
 
         &.list-green {
             li {
-                @extend .mb-20;
+
+                &:not(:last-child) {
+                    @extend .mb-20;
+                }
+
                 p {
                     @extend .ml-40;
                 }
@@ -47,7 +49,7 @@ ul {
                     @extend .bg-light-green;
                     @extend .text-white;
                     @extend .dot-sm;
-                    @extend .icon-md;
+                    @extend .icon-xs;
                     padding-top: 2px;
                     top: 3px !important;
                 }
@@ -80,7 +82,9 @@ ul {
 
         &.list-white {
             li {
-                @extend .mb-10;
+                &:not(:last-child) {
+                    @extend .mb-10;
+                }
                 p {
                     @extend .text-white;
                     @extend .ml-40;
@@ -89,7 +93,7 @@ ul {
                     @extend .bg-white;
                     @extend .text-dodger-blue;
                     @extend .dot-sm;
-                    @extend .icon-md;
+                    @extend .icon-xs;
                     padding-top: 2px;
                     top: 3px !important;
                 }
@@ -99,7 +103,9 @@ ul {
 
         &.with-numbers {
             li {
-                @extend .mb-60;
+                &:not(:last-child) {
+                    @extend .mb-60;
+                }
                 h4 {
                     @extend .ml-60;
                     @extend .mb-20;

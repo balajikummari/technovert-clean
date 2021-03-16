@@ -113,9 +113,9 @@
                     <div class="accordion" id="accordiongroup">
                         <div class="mb-10 accordion-item">
                             <div class="accordion-header border rounded px-16 py-12" id="services">
-                                <div class="d-flex justify-content-between" data-bs-toggle="collapse" data-bs-target="#servicesinner" aria-expanded="true" aria-controls="servicesinner">
+                                <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#servicesinner" aria-expanded="true" aria-controls="servicesinner">
                                     <p class="text-white font-weight-extra-bold">Products</p>
-                                    <img class="width-24 ml-auto" src="https://staging3.technovert.com/wp-content/uploads/chevron-right.svg" />
+                                    <span class="icon ic-chevron-right icon-xs text-white"></span>
                                 </div>
                             </div>
 
@@ -138,9 +138,9 @@
                         </div>
                         <div class="mb-10 accordion-item">
                             <div class="accordion-header border rounded px-16 py-12" id="products">
-                                <div class="d-flex justify-content-between" data-bs-toggle="collapse" data-bs-target="#productsinner" aria-expanded="true" aria-controls="productsinner">
+                                <div class="d-flex justify-content-between align-items-ceter" data-bs-toggle="collapse" data-bs-target="#productsinner" aria-expanded="true" aria-controls="productsinner">
                                     <p class="text-white font-weight-extra-bold">Products</p>
-                                    <img class="width-24 ml-auto" src="https://staging3.technovert.com/wp-content/uploads/chevron-right.svg" />
+                                    <span class="icon ic-chevron-right icon-xs text-white"></span>
                                 </div>
                             </div>
 
@@ -163,9 +163,9 @@
                         </div>
                         <div class="mb-10 accordion-item">
                             <div class="accordion-header border rounded px-16 py-12" id="company">
-                                <div class="d-flex justify-content-between" data-bs-toggle="collapse" data-bs-target="#companyinner" aria-expanded="true" aria-controls="companyinner">
+                                <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#companyinner" aria-expanded="true" aria-controls="companyinner">
                                     <p class="text-white font-weight-extra-bold">Products</p>
-                                    <img class="width-24 ml-auto" src="https://staging3.technovert.com/wp-content/uploads/chevron-right.svg" />
+                                    <span class="icon ic-chevron-right icon-xs text-white"></span>
                                 </div>
                             </div>
 
@@ -188,9 +188,9 @@
                         </div>
                         <div class="mb-10 accordion-item">
                             <div class="accordion-header border rounded px-16 py-12" id="insight">
-                                <div class="d-flex justify-content-between" data-bs-toggle="collapse" data-bs-target="#insightinner" aria-expanded="true" aria-controls="insightinner">
+                                <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#insightinner" aria-expanded="true" aria-controls="insightinner">
                                     <p class="text-white font-weight-extra-bold">Products</p>
-                                    <img class="width-24 ml-auto" src="https://staging3.technovert.com/wp-content/uploads/chevron-right.svg" />
+                                    <span class="icon ic-chevron-right icon-xs text-white"></span>
                                 </div>
                             </div>
 

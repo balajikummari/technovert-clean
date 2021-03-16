@@ -268,15 +268,23 @@
   background-size: cover;
   min-height: 430px;
   background-position: bottom;
+
   .talk-to-us-content{
     @extend .px-xs-0,.p-60;
     @extend .position-absolute;
     top: -100px;
     background-color: #444c5a !important;
-    img {
-      margin-bottom: 0 !important;
+
+    .talk-to-us-btn {
+      @extend .btn, .btn-x-lg, .btn-primary;
+      @extend .no-rounded;
+      @extend .d-flex, .align-items-center;
+      @extend .text-body-font-size, .font-weight-default;
+      @extend .letter-spacing-02;
     }
+
   }
+
 }
 
 .button-right-arrow {
