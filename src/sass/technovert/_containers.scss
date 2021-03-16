@@ -17,6 +17,10 @@
   @extend .min-h-600;
   @extend .gradient-1;
 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   .container-box {
     @extend .mb-0;
   }
@@ -447,6 +451,12 @@
     left: 50%;
     height: 50px;
     width: 80%;
+  }
+}
+
+@media (min-width: 1900px) {
+  .hero-section {
+    min-height: 780px !important;
   }
 }
 
