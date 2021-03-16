@@ -16,6 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="icon" href="/static/images/favicons/favicon.png" sizes="192x192">
 	<link
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&family=Mulish&display=swap"
     rel="stylesheet"
@@ -29,8 +30,10 @@
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
 	<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-  <div class="px-4 px-md-5 px-lg-14 container-fluid">
-		<?php the_custom_logo(); ?>
+  <div class="container-box">
+		<a class="navbar-brand" href="/">
+			<img src="/static/images/common/technovert_logo_white.svg" alt="Technovert Logo">
+		</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

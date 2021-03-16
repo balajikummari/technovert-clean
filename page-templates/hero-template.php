@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Hero and Subnav Template 
+ * Template Name: Hero Page Template 
  *
  * Template for displaying a page with Technovert's Hero and sub navigation component.
  *
@@ -15,24 +15,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="wrapper" id="hero-template-wrapper">
-
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
-
 		<div class="row">
-
 			<div class="col-md-12 content-area" id="primary">
-
 				<main class="site-main" id="main" role="main">
 				<?php
-					$bg = get_field("hero_background");
-
+					$bg = get_field('hero_background');
 					if(strlen($bg) > 0) {
 						echo "<section class='hero-section' style='background-image: url($bg);'>";
 					} else {
 						echo "<section class='hero-section'>";
 					}
 					?>
-					<span>some text here</span>
 					<div class="container-box">
             <span><?php the_field('hero_label') ?></span>
             <h1><?php the_field('hero_title') ?></h1>
@@ -63,14 +57,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php endwhile; // end of the loop. ?>
 
-				</main><!-- #main -->
-
-			</div><!-- #primary -->
-
-		</div><!-- .row end -->
-
-	</div><!-- #content -->
-
-</div><!-- #full-width-page-wrapper -->
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php get_footer(); ?>
