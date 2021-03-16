@@ -178,12 +178,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-//remove style.css fomr here
-function tv_enqueue_script() {
-	wp_enqueue_script('custom', get_stylesheet_directory_uri().'/public/assets/js/all.js', array(), false, true);
-}
-add_action( 'wp_enqueue_scripts', 'tv_enqueue_script' );
-
 // Technovert Clean up styles & scripts
 function Tv_Cleanup() {
 	//Remove block styles
