@@ -29,19 +29,13 @@ footer {
         @extend .font-weight-extra-bold;
       }
     }
-    ul {
-      @extend .list-unstyled;
+    .footer-menus {
 
       li {
         @extend .mb-10;
 
         a {
-          @extend .footer-text-color;
           @extend .text-xxs;
-
-          &:hover {
-            @extend .text-white;
-          }
         }
       }
     }

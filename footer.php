@@ -114,7 +114,7 @@
                         <div class="mb-10 accordion-item">
                             <div class="accordion-header border rounded px-16 py-12" id="services">
                                 <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#servicesinner" aria-expanded="true" aria-controls="servicesinner">
-                                    <p class="text-white font-weight-extra-bold">Products</p>
+                                    <p class="text-white font-weight-extra-bold">Services</p>
                                     <span class="icon ic-chevron-right icon-xs text-white"></span>
                                 </div>
                             </div>
@@ -164,7 +164,7 @@
                         <div class="mb-10 accordion-item">
                             <div class="accordion-header border rounded px-16 py-12" id="company">
                                 <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#companyinner" aria-expanded="true" aria-controls="companyinner">
-                                    <p class="text-white font-weight-extra-bold">Products</p>
+                                    <p class="text-white font-weight-extra-bold">About</p>
                                     <span class="icon ic-chevron-right icon-xs text-white"></span>
                                 </div>
                             </div>
@@ -189,7 +189,7 @@
                         <div class="mb-10 accordion-item">
                             <div class="accordion-header border rounded px-16 py-12" id="insight">
                                 <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#insightinner" aria-expanded="true" aria-controls="insightinner">
-                                    <p class="text-white font-weight-extra-bold">Products</p>
+                                    <p class="text-white font-weight-extra-bold">Insight</p>
                                     <span class="icon ic-chevron-right icon-xs text-white"></span>
                                 </div>
                             </div>
