@@ -41,10 +41,7 @@
                             'menu'        => 'Services',
                             'menu_class' => 'footer-menus',
                             'container' => 'ul'
-
-                            )
-                            );
-                            ?>
+                            )); ?>
                         </div>
                         <div class="col-md-4">
                             <p class="text-white mb-10">Products</p>
@@ -54,11 +51,7 @@
                             'theme_location' => 'menu-1',
                             'menu'        => 'Products',
                             'menu_class' => 'footer-menus',
-                            'container' => 'ul'
-
-                            )
-                            );
-                            ?>
+                            'container' => 'ul' )); ?>
                         </div>
                         <div class="col-md-4">
                             <p class="text-white mb-10">About</p>
@@ -69,14 +62,11 @@
                             'menu'        => 'About',
                             'menu_class' => 'footer-menus',
                             'container' => 'ul'
-
-                            )
-                            );
-                            ?>
+                            )); ?>
                         </div>
 
                     </div>
-                    <p class="mb-10">Locaions</p>
+                    <p class="mb-10">Locations</p>
                     <div class="row mb-60 font-14 footer-text-color">
                         <div class="col-md-4 ">
                             <p>6010 W Spring Creek Pkwy, Plano, TX 75024</p>
@@ -90,10 +80,6 @@
                             <p>2211 Elliott Avenue, Suite 200 Seattle, WA 98121</p>
                             <p>+91 40 4025 4293</p>
                         </div>
-
-
-
-
                     </div>
                     <div>
                         <img src="https://staging3.technovert.com/wp-content/uploads/skyhigh_logo.svg" width="70" class="mr-20">
@@ -128,12 +114,8 @@
                                     'menu'        => 'Services',
                                     'menu_class' => 'footer-menus',
                                     'container' => 'ul'
-
-                                    )
-                                    );
-                                    ?>
+                                    )); ?>
                                 </div>
-
                             </div>
                         </div>
                         <div class="mb-10 accordion-item">
@@ -153,12 +135,8 @@
                                     'menu'        => 'Products',
                                     'menu_class' => 'footer-menus',
                                     'container' => 'ul'
-
-                                    )
-                                    );
-                                    ?>
+                                    )); ?>
                                 </div>
-
                             </div>
                         </div>
                         <div class="mb-10 accordion-item">
@@ -178,10 +156,7 @@
                                     'menu'        => 'About',
                                     'menu_class' => 'footer-menus',
                                     'container' => 'ul'
-
-                                    )
-                                    );
-                                    ?>
+                                    )); ?>
                                 </div>
 
                             </div>
@@ -220,7 +195,6 @@
                                         <div class="mb-10"><span class="footer-text-color text-xs">support@technovert.com</span></div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -240,16 +214,15 @@
                         <span class="footer-text-color font-16">Privacy Policy</span>
                         <span class="footer-text-color font-16">Terms of use</span>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </footer>
-
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
+<script src="/static/js/all.js"></script>
 </body>
 </html>
