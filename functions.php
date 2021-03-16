@@ -235,10 +235,17 @@ function Tv_Cleanup() {
 	remove_action('wp_head', 'wp_generator');
 }
 
+function Tv_Admin_Page_Columns($columns) {
+	unset($columns['comments']);
+	$columns['template'] = 'Template';
+	$columns['categories'] = 'Categories';
+	return $columns;
+}
+
 // Fully Disable Gutenberg editor.
 add_filter('use_block_editor_for_post_type', '__return_false', 10);
 add_action( 'wp_enqueue_scripts', 'Tv_Cleanup', 15 );
-
+add_filter('manage_page_posts_columns', 'Tv_Admin_Page_Columns');
 
 // Customize messess up and adds inline styling. Remove it.
 function Tv_cleanup_admin_top_bar_menu( $wp_admin_bar ) {
