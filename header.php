@@ -82,12 +82,12 @@
               Services
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Cloud</a></li>
-              <li><a class="dropdown-item" href="#">Modern Data Analytics</a></li>
-              <li><a class="dropdown-item" href="#">Product Engineering</a></li>
-              <li><a class="dropdown-item" href="#">Digital Transformation</a></li>
-              <li><a class="dropdown-item" href="#">Quality Engineering</a></li>
-              <li><a class="dropdown-item" href="#">UX Design</a></li>
+              <li><a class="dropdown-item" href="/cloud">Cloud</a></li>
+              <li><a class="dropdown-item" href="/modern-data-analytics">Modern Data Analytics</a></li>
+              <li><a class="dropdown-item" href="/product-engineering">Product Engineering</a></li>
+              <li><a class="dropdown-item" href="/digital-transformation">Digital Transformation</a></li>
+              <li><a class="dropdown-item" href="/quality-engineering">Quality Engineering</a></li>
+              <li><a class="dropdown-item" href="/ux-design">UX Design</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -95,7 +95,7 @@
               Solutions
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Insurance</a></li>
+              <li><a class="dropdown-item" href="/insurance">Insurance</a></li>
               <li><a class="dropdown-item" href="#">Banking</a></li>
               <li><a class="dropdown-item" href="#">HR & People</a></li>
               <li><a class="dropdown-item" href="#">Digital Workplace</a></li>
@@ -109,17 +109,17 @@
             <a class="nav-link" href="#">Insights</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="/about" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               About
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Core Values</a></li>
-              <li><a class="dropdown-item" href="#">Our Quality</a></li>
-              <li><a class="dropdown-item" href="#">Contact</a></li>
+              <li><a class="dropdown-item" href="/core-values">Core Values</a></li>
+              <li><a class="dropdown-item" href="/our-quality">Our Quality</a></li>
+              <li><a class="dropdown-item" href="/contact">Contact</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="/careers">Careers</a>
           </li>
         </ul>
     </div>
