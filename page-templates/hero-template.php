@@ -33,30 +33,26 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
           </section>
 					<div class="subnav-container">
-								<?php global $post;
+								<?php 
 								$menu_name = get_post_meta($post->ID, "subnav_choice", true);
-	
 								$options = array(
 									'menu' => $menu_name,
 									'menu_class' => 'subnav',
-									'echo' => false,
+									'echo' => true,
 								);
-
-								echo wp_nav_menu($options); ?>
+								wp_nav_menu($options); ?>
 					</div>
-					<?php while ( have_posts() ) : the_post(); ?>
-
-						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
-
+					<div class="entry-content">
+						<?php the_content(); ?>
 						<?php
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
+						wp_link_pages(
+							array(
+								'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+								'after'  => '</div>',
+							)
+						);
 						?>
-
-					<?php endwhile; // end of the loop. ?>
-
+					</div><!-- .entry-content -->
 				</main>
 			</div>
 		</div>
