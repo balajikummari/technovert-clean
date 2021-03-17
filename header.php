@@ -67,7 +67,7 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
-	<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+	<nav class="navbar navbar-expand-lg bg-transparent">
   <div class="container-box">
 		<a class="navbar-brand" href="/">
 			<img src="/static/images/common/technovert_logo_white.svg" alt="Technovert Logo">
@@ -76,15 +76,52 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'menu_class' => 'navbar-nav ml-auto mb-2 mb-lg-0',
-				)
-			);
-			?>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Cloud</a></li>
+              <li><a class="dropdown-item" href="#">Modern Data Analytics</a></li>
+              <li><a class="dropdown-item" href="#">Product Engineering</a></li>
+              <li><a class="dropdown-item" href="#">Digital Transformation</a></li>
+              <li><a class="dropdown-item" href="#">Quality Engineering</a></li>
+              <li><a class="dropdown-item" href="#">UX Design</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Solutions
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Insurance</a></li>
+              <li><a class="dropdown-item" href="#">Banking</a></li>
+              <li><a class="dropdown-item" href="#">HR & People</a></li>
+              <li><a class="dropdown-item" href="#">Digital Workplace</a></li>
+              <li><a class="dropdown-item" href="#">Office 365 Apps</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Labs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Insights</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Core Values</a></li>
+              <li><a class="dropdown-item" href="#">Our Quality</a></li>
+              <li><a class="dropdown-item" href="#">Contact</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
     </div>
   </div>
 </nav>
