@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="/static/css/style.css?2" />
 
      <!-- Technovert Icons -->
-		<link rel="stylesheet" href="static/css/technovert-icons.css">
+		<link rel="stylesheet" href="/static/css/technovert-icons.css">
 
 		<link rel="profile" href="https://gmpg.org/xfn/11">
 </head>
