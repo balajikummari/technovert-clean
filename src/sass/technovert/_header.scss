@@ -28,17 +28,25 @@ header {
 
   .navbar {
     ul.dropdown-menu {
-      min-width: fit-content;
+      min-width: 240px;
       border-radius: 2px;
       @extend .border-0;
       @extend .bg-white;
 
-      .dropdown-item {
+      a {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
         @extend .text-primary;
       }
 
+      .dropdown-item {
+        height: 44px;
+        @extend .flex-v-center;
+      }
+
       .dropdown-item:hover {
-        background-color: #EBF4FD;
+        background-color: #ebf4fd;
       }
     }
   }
