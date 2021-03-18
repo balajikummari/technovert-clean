@@ -55,7 +55,7 @@
 		/> 
 
 		<!-- All Technovert Styles -->
-    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/style.css?2" />
 
      <!-- Technovert Icons -->
 		<link rel="stylesheet" href="static/css/technovert-icons.css">
