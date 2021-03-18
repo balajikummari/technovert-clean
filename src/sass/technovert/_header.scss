@@ -29,15 +29,16 @@ header {
   .navbar {
     ul.dropdown-menu {
       min-width: fit-content;
-      background: rgba(180, 180, 180, 0.25);
+      border-radius: 2px;
       @extend .border-0;
+      @extend .bg-white;
 
       .dropdown-item {
-        @extend .text-white;
+        @extend .text-primary;
       }
 
       .dropdown-item:hover {
-        @extend .bg-blue;
+        background-color: #EBF4FD;
       }
     }
   }
