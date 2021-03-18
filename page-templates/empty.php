@@ -12,7 +12,7 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-echo "<div class='min-h-650'>";
+echo "<div class='min-h-600'>";
 
 while ( have_posts() ) :
 	the_post();
