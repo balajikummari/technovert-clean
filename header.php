@@ -68,7 +68,7 @@
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
 	<nav class="navbar navbar-expand-lg bg-transparent">
-  <div class="container-box">
+  <div class="container-box clear-margin-b">
 		<a class="navbar-brand" href="/">
 			<img src="/static/images/common/technovert_logo_white.svg" alt="Technovert Logo">
 		</a>
