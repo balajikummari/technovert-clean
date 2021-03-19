@@ -73,3 +73,43 @@
   }
 }
 
+.post-verticle-nav {
+  @extend .list-unstyled, .m-0;
+
+  .nav-items {
+    @extend .text-sm;
+    &:not(:last-child) {
+      @extend .mb-10;
+    }
+
+    .nav-link {
+      @extend .text-dodger-blue;
+      @extend .p-0;
+
+      &.active {
+        @extend .text-primary;
+      }
+    }
+  }
+
+}
+
+.pagination {
+  .page-item  {
+    @extend .px-16, .py-6;
+    @extend .border;
+    @extend .border-info;
+    @extend .text-dodger-blue;
+    @extend .rounded;
+    @extend .mr-12;
+
+    &.active {
+      @extend .bg-dodger-blue;
+      @extend .text-white;
+    }
+  }
+}
+
+.shadow-low {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
