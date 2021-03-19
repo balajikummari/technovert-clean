@@ -8,15 +8,46 @@ header {
   height: 75px;
   padding: 30px 0;
 
-  ul li {
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
-    margin-right: 50px;
+  ul {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-evenly;
 
-    a {
-      color: $white !important;
-      font-family: Mulish;
+    li {
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 24px;
+
+      a.nav-link {
+        color: $white !important;
+        font-family: Mulish;
+      }
+    }
+  }
+
+  .navbar {
+    ul.dropdown-menu {
+      min-width: 240px;
+      border-radius: 2px;
+      @extend .border-0;
+      @extend .bg-white;
+
+      a {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        @extend .text-primary;
+      }
+
+      .dropdown-item {
+        height: 44px;
+        @extend .flex-v-center;
+      }
+
+      .dropdown-item:hover {
+        background-color: #ebf4fd;
+      }
     }
   }
 }

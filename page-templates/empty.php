@@ -12,10 +12,12 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
+echo "<div class='min-h-600'>";
 
 while ( have_posts() ) :
 	the_post();
 	get_template_part( 'loop-templates/content', 'empty' );
 endwhile;
 
+echo "</div>";
 get_footer();
