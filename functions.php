@@ -417,18 +417,18 @@ function save_sub_nav_menu_value($post_id) {
 add_action( 'add_meta_boxes', 'sub_nav_meta_box' );
 add_action( 'save_post', 'save_sub_nav_menu_value', 10, 1);
 
-// * Moved sub nav functionality to hero-template.php rather than using Shortcodes
-// function sub_nav_shortcode() {
-// 	global $post;
-// 	$menu_name = get_post_meta($post->ID, "subnav_choice", true);
+// Hide Preview Changes button on LiveCanvas enabled page to prevent conflict with custom templates
+add_action('admin_head', 'hidePreviewButtonSaAdmin');
 
-// 	$options = array(
-// 		'menu' => $menu_name,
-// 		'menu_class' => 'subnav',
-// 		'echo' => false,
-// 	);
+function hidePreviewButtonSaAdmin() {
+	global $post;
+	$lc_enabled = get_post_meta($post->ID, '_lc_livecanvas_enabled', true);
 
-// 	return wp_nav_menu($options);
-// }
-
-// add_shortcode('sub_nav', 'sub_nav_shortcode');
+	if($lc_enabled > 0) {
+		echo "<style>
+					#post-preview {
+							display:none !important;  
+					} 
+				</style>";
+	}
+}
