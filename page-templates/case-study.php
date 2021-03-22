@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Case Study
+ * Template Name: Case Studies
  *
  * Template for Case Studies 
  *
