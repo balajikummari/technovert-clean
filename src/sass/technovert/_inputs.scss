@@ -1,0 +1,32 @@
+input, select {
+  margin: 0;
+  outline: 0;
+  border: 1px solid #D8DDE6;
+  font-size: 14px;
+  color: $primary-text-color;
+  border-collapse: collapse;
+  border-radius: 0;
+}
+
+select {
+  min-width: 236px;
+  min-height: 50px;
+}
+
+input {
+  width: 100%;
+}
+
+#search {
+  padding-left: 30px;
+  position: relative;
+}
+
+#search::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url("https://w3.technovert.com/static/css/icons/search.svg");
+}
