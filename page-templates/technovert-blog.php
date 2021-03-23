@@ -30,6 +30,22 @@ $blogquery = $GLOBALS['wp_query']
 
 
 ?>
+
+<section class="bg-blue">
+    <div class="container-box clear-margin-b">
+        <div class="sub-nav-bar">
+            <p class="d-none d-md-block">INSIGHTS:</p>
+            <ul class="">
+                <li class="active"><a href="#">Articles</a></li>
+                <li><a href="#">White Paper</a></li>
+                <li><a href="#">Case studies</a></li>
+                <li><a href="#">Events</a></li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+
 <section>
     <div class="container-box">
         <div class="row mx-0 mt-60">

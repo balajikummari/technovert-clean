@@ -8,5 +8,11 @@
         $(this).addClass("active");
       }
     });
+
+    // change header when no hero section
+    var isHeroSectionExist = $(".hero-section").length;
+    if (!isHeroSectionExist) {
+      $("header").addClass("coloured-header");
+    }
   });
 })(jQuery); // End of use strict

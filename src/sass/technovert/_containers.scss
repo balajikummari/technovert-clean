@@ -456,6 +456,7 @@
   h5 {
     @extend .h-95;
     @extend .text-clay;
+    @extend .overflow-hidden;
     @extend .mb-10;
   }
 
@@ -463,6 +464,7 @@
     @extend .text-sm;
     @extend .text-gray;
     @extend .mb-20;
+    @extend .overflow-hidden;
     height: 110px;
   }
 
