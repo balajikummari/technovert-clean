@@ -531,9 +531,10 @@
   margin-right: 30px;
 
   .preview-img {
-    width: 100%;
     max-height: 207px;
     overflow: hidden;
+
+    img { width: 100%; }
   }
 
   h2 {
@@ -563,7 +564,7 @@
     font-size: 16px;
     letter-spacing: 0;
     line-height: 28px;
-    margin-bottom: 39px;
+    margin: 30px 0;
   }
 }
 
