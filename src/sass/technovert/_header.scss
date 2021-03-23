@@ -5,8 +5,16 @@ header {
   right: 0;
   top: 0;
   z-index: 110;
-  height: 75px;
-  padding: 30px 0;
+
+  nav {
+    @extend .py-20;
+  }
+
+  &.coloured-header {
+    @extend .position-relative;
+    @extend .bg-clay-10;
+    @extend .p-0;
+  }
 
   ul {
     width: 100%;
@@ -55,3 +63,4 @@ header {
 header.entry-header {
   display: none;
 }
+

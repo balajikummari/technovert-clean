@@ -68,8 +68,8 @@
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
 	<nav class="navbar navbar-expand-lg bg-transparent">
-  <div class="container-box">
-		<a class="navbar-brand" href="/">
+  <div class="container-box clear-margin-b">
+		<a class="navbar-brand p-0" href="/">
 			<img src="/static/images/common/technovert_logo_white.svg" alt="Technovert Logo">
 		</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

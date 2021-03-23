@@ -2,6 +2,7 @@ $blue: #1077da;
 $dodger-blue: #2770F1;
 $mariner-blue: #2B80C5;
 $blue-100: #dbebfa;
+$cadet-blue: #B4BAC5;
 
 $green: #63c572;
 $green-color: #6AC069 !default;
@@ -12,8 +13,10 @@ $gray: #666d7d;
 $gray-light: #F4F5F7;
 $gray-100: #bbc2d2;
 $bright-gray: #39404C;
+$gray-200: #69727A;
 
 $clay: #2E3342;
+$clay-10: #2F3441;
 
 $mandy-pink: #E44C7D;
 
@@ -24,6 +27,8 @@ $violet: #3B4A64;
 $primary-text-color: #2c2e31 !default;
 $secondary-text-color: #fff !default;
 
+$slate-10: #FAFAFC !default; 
+$slate-40: #EEF0F4 !default;
 $slate-500: #a4aab2 !default; // icon color
 
 //Footer color classes
@@ -50,6 +55,8 @@ $slate-500: #a4aab2 !default; // icon color
 // Text Colors
 $colors: (
   "icon-color": $slate-500,
+  'slate-10': $slate-10,
+  'slate-40': $slate-40,
   "secondary": $secondary-text-color,
   "green": $green,
   "light-green": $green-color,
@@ -57,11 +64,14 @@ $colors: (
   "dodger-blue": $dodger-blue,
   "mariner-blue": $mariner-blue,
   "light-blue": $blue-100,
+  "cadet-blue" : $cadet-blue,
   "gray": $gray,
   "gray-light": $gray-light,
   "light-gray": $gray-100,
   "bright-gray": $bright-gray,
+  "gray-200": $gray-200,
   "clay": $clay,
+  "clay-10": $clay-10,
   "mandy-pink": $mandy-pink,
   "aqua": $aqua,
   "violet": $violet,
