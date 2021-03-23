@@ -20,7 +20,7 @@ $args = array(
     'orderby'          => 'date',
     'paged'            => $page,
     'suppress_filters' => true,
-    'post_type' => 'case-study'
+    'post_type' => 'case-studies'
 );
 
 $GLOBALS['wp_query'] = new WP_Query( $args );
@@ -50,8 +50,9 @@ $blogquery = $GLOBALS['wp_query']
       <div class="case-study-wrapper container-fluid">
         <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
           <div class="case-study-card">
-            <span class="label">Digital Transformation</span>
-            <img src='<?php the_field("feature_image") ?>' alt="case study preview">
+          <a href="<?php echo the_guid(); ?>">link</a>
+          <span class="label">Digital Transformation</span>
+          <img src='<?php the_field("feature_image") ?>' alt="case study preview">
             <h2><?php echo substr(get_field('intro_text'), 0, 165); ?></h2>
             <span class="industry"><?php echo get_field("industry"); ?></span>
           </div>
