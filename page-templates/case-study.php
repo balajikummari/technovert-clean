@@ -52,9 +52,11 @@ $blogquery = $GLOBALS['wp_query']
           <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
             <a class="box case-study-card" href="<?php echo the_guid(); ?>">
               <span class="label">Digital Transformation</span>
-              <img src='<?php the_field("feature_image") ?>' alt="case study preview">
+              <div class="preview-img">
+                <img src='<?php the_field("feature_image") ?>' alt="case study preview">
+              </div>
               <h2><?php echo substr(get_field('intro_text'), 0, 25); ?></h2>
-              <span class="industry"><?php echo get_field("industry"); ?></span>
+              <span class="industry"><?php echo get_terms("industry"); ?></span>
             </a>
           <?php endwhile; ?>
         </div>

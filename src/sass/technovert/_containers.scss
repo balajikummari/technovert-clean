@@ -530,10 +530,10 @@
   position: relative;
   margin-right: 30px;
 
-  img {
+  .preview-img {
     width: 100%;
-    height: auto;
-    max-height: 398px;
+    max-height: 207px;
+    overflow: hidden;
   }
 
   h2 {
