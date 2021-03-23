@@ -263,18 +263,18 @@
     @extend .col-xl-9;
     @extend .col-lg-8;
     @extend .mx-xs-0;
-
   }
 }
 
 .talk-to-us {
-  background: url("https://staging3.technovert.com/wp-content/uploads/talk-to-us-1.png") no-repeat;
+  background: url("https://staging3.technovert.com/wp-content/uploads/talk-to-us-1.png")
+    no-repeat;
   background-size: cover;
   min-height: 430px;
   background-position: bottom;
 
-  .talk-to-us-content{
-    @extend .px-xs-0,.p-60;
+  .talk-to-us-content {
+    @extend .px-xs-0, .p-60;
     @extend .position-absolute;
     top: -100px;
     background-color: #444c5a !important;
@@ -286,9 +286,7 @@
       @extend .text-body-font-size, .font-weight-default;
       @extend .letter-spacing-02;
     }
-
   }
-
 }
 
 .button-right-arrow {
@@ -296,7 +294,7 @@
   @extend .btn-primary;
   @extend .rounded-0;
   @extend .px-5;
-  @extend .py-3; 
+  @extend .py-3;
   font-size: 18px;
   background-color: #1077da;
 
@@ -334,13 +332,11 @@
     @extend .text-uppercase;
     @extend .mb-20;
   }
- 
 
   .feature-content {
     @extend .bg-blue;
     @extend .p-70;
   }
-  
 }
 
 .card-circular {
@@ -350,7 +346,6 @@
   @extend .rounded;
   @extend .bg-white;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-
 
   &.padding-20 {
     @extend .p-20;
@@ -476,18 +471,19 @@
     @extend .text-uppercase;
     @extend .letter-spacing-15;
   }
-
 }
 
 .box-4 {
   @extend .row, .row-cols-md-4, .row-cols-sm-2, .row-cols-1;
 
-  & > div, .box {
+  & > div,
+  .box {
     @extend .mb-30;
   }
 
   &.card-h-100 {
-    .card-circular, .card {
+    .card-circular,
+    .card {
       @extend .h-100;
     }
   }
@@ -496,12 +492,14 @@
 .box-3 {
   @extend .row, .row-cols-md-3, .row-cols-sm-2, .row-cols-1;
 
-  & > div, .box {
+  & > div,
+  .box {
     @extend .mb-30;
   }
 
   &.card-h-100 {
-    .card-circular, .card {
+    .card-circular,
+    .card {
       @extend .h-100;
     }
   }
@@ -510,14 +508,62 @@
 .box-2 {
   @extend .row, .row-cols-sm-2, .row-cols-1;
 
-  & > div, .box {
+  & > div,
+  .box {
     @extend .mb-30;
   }
 
   &.card-h-100 {
-    .card-circular, .card {
+    .card-circular,
+    .card {
       @extend .h-100;
     }
+  }
+}
+
+.case-study-card {
+  max-width: 440px;
+  border-radius: 5px;
+  background-color: $white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin-right: 30px;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 398px;
+  }
+
+  h2 {
+    color: $clay;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 32px;
+    margin: 30px 0;
+  }
+
+  .label {
+    position: absolute;
+    top: 34px;
+    left: 0;
+    background-color: #2F3441;
+    color: $white;
+    padding: 4px 7px;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .industry {
+    color: $primary-text-color;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 28px;
+    margin-bottom: 39px;
   }
 }
 
@@ -544,11 +590,11 @@
   }
 
   .talk-to-us {
-      background: #444c5a !important;
-      .talk-to-us-content {
-        position: relative !important;
-        top: 0;
-      }
+    background: #444c5a !important;
+    .talk-to-us-content {
+      position: relative !important;
+      top: 0;
+    }
   }
 }
 
@@ -558,11 +604,11 @@
   }
 
   .card-arrow {
-      &:nth-of-type(odd) .top-arrow::after {
-        width: 100% !important;
-      }
-      &:nth-of-type(even) .top-arrow::after {
-        display: none !important;
-      }
+    &:nth-of-type(odd) .top-arrow::after {
+      width: 100% !important;
+    }
+    &:nth-of-type(even) .top-arrow::after {
+      display: none !important;
+    }
   }
 }
