@@ -48,14 +48,16 @@ $blogquery = $GLOBALS['wp_query']
       </div>
 
       <div class="case-study-wrapper container-fluid mt-50">
-        <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
-          <a class="case-study-card" href="<?php echo the_guid(); ?>">
-            <span class="label">Digital Transformation</span>
-            <img src='<?php the_field("feature_image") ?>' alt="case study preview">
-            <h2><?php echo substr(get_field('intro_text'), 0, 25); ?></h2>
-            <span class="industry"><?php echo get_field("industry"); ?></span>
-          </a>
-        <?php endwhile; ?>
+        <div class="box-2"> 
+          <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
+            <a class="box case-study-card" href="<?php echo the_guid(); ?>">
+              <span class="label">Digital Transformation</span>
+              <img src='<?php the_field("feature_image") ?>' alt="case study preview">
+              <h2><?php echo substr(get_field('intro_text'), 0, 25); ?></h2>
+              <span class="industry"><?php echo get_field("industry"); ?></span>
+            </a>
+          <?php endwhile; ?>
+        </div>
       </div>
   </div>
 </section>
