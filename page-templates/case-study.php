@@ -56,7 +56,7 @@ $blogquery = $GLOBALS['wp_query']
                 <img src='<?php the_field("feature_image") ?>' alt="case study preview">
               </div>
               <h2><?php echo substr(get_field('intro_text'), 0, 25); ?></h2>
-              <span class="industry"><?php echo get_terms("industry"); ?></span>
+              <span class="industry"><?php the_field("industry"); ?></span>
             </a>
           <?php endwhile; ?>
         </div>
