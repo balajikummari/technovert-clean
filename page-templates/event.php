@@ -1,8 +1,8 @@
 <?php 
 /**
- * Template Name: Case Studies
+ * Template Name: Event
  *
- * Template for Case Studies 
+ * Template for Events 
  *
  * @package understrap
  */
