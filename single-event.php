@@ -40,7 +40,7 @@ while ( have_posts() ) : the_post();
     <div class="row mx-0">
         <div class="blurb-img-left mb-50 col-6">
             <div class="blurb-image">
-                <img src="/static/images/events/schedule.svg" width="98" alt="test">
+                <img src="/static/images/events/schedule.svg" width="60" alt="event_date_and_time">
             </div>
             <div class="blurb-container-content">
                 <span class="mb-10">Date & Time</span>
@@ -53,7 +53,7 @@ while ( have_posts() ) : the_post();
         </div>
         <div class="blurb-img-left mb-50 col-6">
             <div class="blurb-image">
-                <img src="/static/images/events/location-1.svg" width="98" alt="test">
+                <img src="/static/images/events/location-1.svg" width="60" alt="event_location">
             </div>
             <div class="blurb-container-content">
                 <h5 class="mb-10">Location</h5>
@@ -63,6 +63,30 @@ while ( have_posts() ) : the_post();
             </div>
         </div>
     </div>
+</section>
+<section class="container-box mt-80">
+	<div class="feature-content">
+		<h2 class="">Who is this for</h2>
+		<p class="">
+            <?php the_field('vision')  ?>
+		</p>
+	</div>
+</section>
+<section class="container-box mt-80">
+	<div class="feature-content">
+		<h2 class="">What you’ll learn</h2>
+		<p class="">
+            <?php the_field('mission')  ?>
+		</p>
+	</div>
+</section>
+<section class="container-box mt-80">
+	<div class="feature-content">
+		<h2 class="">Speakers</h2>
+		<p class="">
+            <?php the_field('about_speakers')  ?>
+		</p>
+	</div>
 </section>
 <!-- <section class="container-box mt-60 mt-xs-40">
     <div class="case-study">
