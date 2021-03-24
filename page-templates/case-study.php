@@ -56,13 +56,7 @@ $blogquery = $GLOBALS['wp_query']
                 <img src='<?php the_field("feature_image") ?>' alt="case study preview">
               </div>
               <h2><?php echo substr(get_field('intro_text'), 0, 25); ?></h2>
-              <?php
-                $industries = "";
-                $indList = get_field("industry");
-                foreach($indList as $ind) {
-                  $industries = $ind . ", ";
-                } ?>
-                <span class="industry"><?php echo $industries; ?></span>
+              <span class="industry"><?php the_field("industry") ?></span>
             </a>
           <?php endwhile; ?>
         </div>
