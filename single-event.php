@@ -23,7 +23,19 @@ while ( have_posts() ) : the_post();
 		</h1>
 	</div>
 </section>
-
+<section class="container-box">
+	<div class="feature-container image-last">
+		<div>
+			<img src="<?php the_field('event_logo')  ?>" alt="test">
+		</div>
+		<div class="feature-content">
+			<h2 class="no-underline"><?php the_field('event_title')  ?></h2>
+			<p class="">
+                <?php the_field('event_description')  ?>
+			</p>
+		</div>
+	</div>
+</section>
 <!-- <section class="container-box mt-60 mt-xs-40">
     <div class="case-study">
         <div class="case-study-left">
