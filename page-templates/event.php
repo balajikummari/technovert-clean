@@ -46,21 +46,23 @@ $blogquery = $GLOBALS['wp_query']
         <input type="text" id="search" placeholder="Search" onkeyup="searchFilter('.case-study-card', 'h2');" />
       </div>
 
-      
-    <div class="col-9 event-card-circular mt-5 border-0 p-0 row mx-0">
-		<!-- <img src="https://staging3.technovert.com/wp-content/uploads/Artificial-Intelligence.svg"> -->
-        <div class="col-8 py-5 px-4">
-            <h5 class="">Cloud Transformation</h5>
-            <span class="badge badge-secondary">WEBINAR</span>
-            <br />
-            <div class="my-4"><span>Jan 24 Wednesday, 2021</span></div>
-            <br />
-            <a class="learn-more" href="#">More info</a>
+      <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
+        <div class="col-9 event-card-circular mt-5 border-0 p-0 row mx-0">
+      <!-- <img src="https://staging3.technovert.com/wp-content/uploads/Artificial-Intelligence.svg"> -->
+          <div class="col-8 py-5 px-4">
+            
+              <h5 class=""><?php echo substr(get_field('intro_text'), 0, 50); ?></h5>
+              <span class="badge badge-secondary">WEBINAR</span>
+              <br />
+              <div class="my-4"><span><?php the_field("event_date") ?></span></div>
+              <br />
+              <a class="learn-more" href="<?php echo the_guid(); ?>">More info</a>
+          </div>
+          <div class="col-4">
+              <img class="event-logo" src='<?php the_field("event_logo") ?>' alt="event preview" />
+          </div>
         </div>
-		<div class="col-4">
-            <img class="event-logo" src="https://staging3.technovert.com/wp-content/uploads/Artificial-Intelligence.svg">
-        </div>
-	</div>
+      <?php endwhile; ?>
   </div>
 </section>
 
