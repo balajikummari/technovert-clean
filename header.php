@@ -46,7 +46,7 @@
     <meta name="twitter:title" content="<?php echo(META_TITLE); ?>" />
     <meta name="twitter:description" content="<?php echo(META_DESC); ?>" />
 
-		<link rel="icon" href="/static/images/favicons/favicon.png" sizes="192x192">
+		<link rel="icon" href="/static/images/favicon/favicon.png" sizes="192x192">
 
     <!--Nunito Sans Font Family-->
 		<link
