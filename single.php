@@ -59,7 +59,7 @@ get_header();
 						</div>
 					</form>
 				</div>
-				<div class="p-30 border-slate-40 rounded">
+				<div class="p-30 border border-slate-40 rounded">
                     <ul class=" post-verticle-nav">
                         <li class="nav-items">
                             <a href="#" class="nav-link active">Digital Transformation</a>
