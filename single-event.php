@@ -47,7 +47,7 @@ while ( have_posts() ) : the_post();
                 <p class="text-gray">
                     <?php echo date("M j, Y", strtotime(get_field("event_date"))) ?>
 
-                    <a href="#">Add to calendar</a>
+                    <a href="#" class="ml-3">Add to calendar</a>
                 </p>
             </div>
         </div>
@@ -56,7 +56,7 @@ while ( have_posts() ) : the_post();
                 <img src="/static/images/events/location-1.svg" width="60" alt="event_location">
             </div>
             <div class="blurb-container-content">
-                <h5 class="mb-10">Location</h5>
+                <span class="mb-10">Location</span>
                 <p class="text-gray">
                     <?php the_field('event_location')  ?>
                 </p>
@@ -65,7 +65,7 @@ while ( have_posts() ) : the_post();
     </div>
 </section>
 <section class="container-box mt-80">
-	<div class="feature-content">
+	<div class="feature-content no-underline">
 		<h2 class="">Who is this for</h2>
 		<p class="">
             <?php the_field('vision')  ?>
@@ -73,7 +73,7 @@ while ( have_posts() ) : the_post();
 	</div>
 </section>
 <section class="container-box mt-80">
-	<div class="feature-content">
+	<div class="feature-content no-underline">
 		<h2 class="">What you’ll learn</h2>
 		<p class="">
             <?php the_field('mission')  ?>
@@ -81,7 +81,7 @@ while ( have_posts() ) : the_post();
 	</div>
 </section>
 <section class="container-box mt-80">
-	<div class="feature-content">
+	<div class="feature-content no-underline">
 		<h2 class="">Speakers</h2>
 		<p class="">
             <?php the_field('about_speakers')  ?>
