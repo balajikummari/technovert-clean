@@ -17,9 +17,9 @@ while ( have_posts() ) : the_post();
 
 <section class="hero-section">
 	<div class="container-box">
-        <span>Case Study</span>
+        <span>WEBINAR</span>
 		<h1>
-			We are on a mission to lead the digital future
+            <?php the_field('event_title')  ?>
 		</h1>
 	</div>
 </section>
