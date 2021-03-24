@@ -29,11 +29,11 @@ $blogquery = $GLOBALS['wp_query']
 
 ?>
 
-<section class="case-studies mt-30">
+<section class="case-studies ">
 <?php get_template_part("template-parts/insights-nav"); ?>
 
     <div class="container-box">
-      <h4 class="text-color-clay">Case Studies</h4>
+      <h4 class="text-color-clay mt-30">Case Studies</h4>
 
       <div class="filters row mx-0 mt-20">
         <select name="industry" id="industry" class="col-md-3 col-12 px-0 mb-xs-30">
@@ -59,7 +59,9 @@ $blogquery = $GLOBALS['wp_query']
           <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
             <a class="box" href="<?php echo the_guid(); ?>">
               <div class="card">
+                <div class="max-h-200 overflow-hidden">
                   <img src='<?php the_field("feature_image") ?>' alt="case study preview">
+                </div>
                   <div class="card-body">
                     <h5><?php echo substr(get_the_title(), 0, 55); ?></h5>
                     <p class="industry"><?php the_field('industry'); ?></p>
