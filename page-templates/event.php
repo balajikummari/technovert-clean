@@ -29,45 +29,13 @@ $blogquery = $GLOBALS['wp_query']
 
 ?>
 
-<section class="case-studies">
-  <div class="min-h-100 bg-gray-dark"></div>
-    <div class="container-box">
-      <h4 class="text-gray">Events</h4>
 
-      <div class="filters d-flex mt-20">
-        <select name="industry" id="industry">
-          <option value="0">Industry</option>
-          <option value="1">Banking</option>
-          <option value="2">Insurance</option>
-          <option value="3">RPA</option>
-        </select>
-        <select name="solution" id="solution">
-          <option value="0">Solution</option>
-        </select>
-        <input type="text" id="search" placeholder="Search" onkeyup="searchFilter('.case-study-card', 'h2');" />
-      </div>
-
-      <div class="case-study-wrapper container-fluid mt-50">
-        <div class="box-2"> 
-          <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
-            <a class="box case-study-card" href="<?php echo the_guid(); ?>">
-              <span class="label">Digital Transformation</span>
-              <div class="preview-img">
-                <img src='<?php the_field("feature_image") ?>' alt="case study preview">
-              </div>
-              <h2><?php echo substr(get_field('intro_text'), 0, 25); ?></h2>
-              <?php
-                $industries = "";
-                $indList = get_field("industry");
-                foreach($indList as $ind) {
-                  $industries = $ind . ", ";
-                } ?>
-                <span class="industry"><?php echo $industries; ?></span>
-            </a>
-          <?php endwhile; ?>
-        </div>
-      </div>
-  </div>
+<section>
+    <div class="card-circular">
+		<img src="https://staging3.technovert.com/wp-content/uploads/Artificial-Intelligence.svg">
+		<h5 class="">Cloud Transformation</h5>
+		<p class="">From an Idea into a product,accelerate your product development</p>
+		<a class="learn-more" href="#">Learn More</a>
+	</div>
 </section>
-
 <?php get_footer(); ?>
