@@ -38,17 +38,19 @@
 
 .subnav {
   max-height: 80px;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   background-color: #fff;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.05);
   display: flex;
   list-style-type: none;
+  white-space: nowrap;
 
   @extend .px-4, .px-md-5, .px-lg-14, .py-25;
 
   a {
     margin-right: 60px;
-    color: $gray !important;
+    color: #666d7d;
     font-size: 18px;
     letter-spacing: 0.2px;
     line-height: 28px;
@@ -308,3 +310,9 @@
     }
   }
 }
+
+//For making bootstrap nav dropdowns work on hower
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+ }
