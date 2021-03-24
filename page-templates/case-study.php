@@ -44,7 +44,7 @@ $blogquery = $GLOBALS['wp_query']
         <select name="solution" id="solution">
           <option value="0">Solution</option>
         </select>
-        <input type="text" id="search" placeholder="Search" />
+        <input type="text" id="search" placeholder="Search" onkeyup="searchFilter('.case-study-card', 'h2');" />
       </div>
 
       <div class="case-study-wrapper container-fluid mt-50">
@@ -56,7 +56,13 @@ $blogquery = $GLOBALS['wp_query']
                 <img src='<?php the_field("feature_image") ?>' alt="case study preview">
               </div>
               <h2><?php echo substr(get_field('intro_text'), 0, 25); ?></h2>
-              <span class="industry"><?php the_field("industry"); ?></span>
+              <?php
+                $industries = "";
+                $indList = get_field("industry");
+                foreach($indList as $ind) {
+                  $industries = $ind . ", ";
+                } ?>
+                <span class="industry"><?php echo $industries; ?></span>
             </a>
           <?php endwhile; ?>
         </div>
