@@ -2,12 +2,14 @@
   "use strict"; // Start of use strict
 
   $(document).ready(function () {
-    // Mark current page in sub navigation menu
-    $("ul.subnav li a").each(function (i) {
+    // Mark current page in sub navigation menu, do the same with insights-nav
+    $("ul.subnav li a, .insights-nav ul").each(function (i) {
       if ($(this).attr("href") === window.location.href) {
         $(this).addClass("active");
       }
     });
+
+
 
     // change header when no hero section
     var isHeroSectionExist = $(".hero-section").length;

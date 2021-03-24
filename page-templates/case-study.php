@@ -30,6 +30,8 @@ $blogquery = $GLOBALS['wp_query']
 ?>
 
 <section class="case-studies mt-30">
+<?php get_template_part("template-parts/insights-nav"); ?>
+
     <div class="container-box">
       <h4 class="text-color-clay">Case Studies</h4>
 

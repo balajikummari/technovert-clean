@@ -571,6 +571,25 @@
 }
 
 
+.events{
+  .event-card-circular{
+    @extend .shadow-low; 
+
+    .badge{
+      background-color: #B4BAC5;
+      font-weight: 100;
+      font-size: 13px;
+    }
+
+    .event-logo{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+  }
+}
+
 @media (min-width: 1900px) {
   .hero-section {
     min-height: 780px !important;
