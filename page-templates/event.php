@@ -51,7 +51,7 @@ $blogquery = $GLOBALS['wp_query']
       <!-- <img src="https://staging3.technovert.com/wp-content/uploads/Artificial-Intelligence.svg"> -->
           <div class="col-8 py-5 px-4">
             
-              <h5 class="" title=<?php echo substr(get_field('event_title'), 0, 100); ?>><?php echo substr(get_field('event_title'), 0, 50); ?></h5>
+              <h5 class="" title=""+<?php echo get_field('event_title')+"" ?> ><?php echo substr(get_field('event_title'), 0, 50); ?></h5>
               <span class="badge badge-secondary">WEBINAR</span>
               <br />
               <div class="my-4"><span><?php echo date("M j l, Y", strtotime(get_field("event_date"))) ?></span></div>
