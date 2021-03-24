@@ -69,3 +69,5 @@ $blogquery = $GLOBALS['wp_query']
       </div>
   </div>
 </section>
+
+<?php get_footer(); ?>
