@@ -19,9 +19,9 @@ get_header();
     <div class="container-box">
         <div class="row mx-0 mt-60">
             <div class="col-md-4 col-sm-12 mb-xs-30 pr-xs-12 pr-md-30 pr-70">
-                <h2 class="text-clay mb-20">Insights on <?php get_the_category(); ?></h2>
+                <h2 class="text-clay mb-20">Insight</h2>
                 <div class="p-30 shadow-low rounded">
-                    <ul class=" post-verticle-nav">
+                    <ul class="post-verticle-nav">
                         <li class="nav-items">
                             <a href="/category/digital-transformation/" class="nav-link active">Digital Transformation</a>
                         </li>
