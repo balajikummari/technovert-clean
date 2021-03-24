@@ -23,18 +23,46 @@ while ( have_posts() ) : the_post();
 		</h1>
 	</div>
 </section>
-<section class="container-box">
+<section class="container-box mt-5">
 	<div class="feature-container image-last">
 		<div>
 			<img src="<?php the_field('event_logo')  ?>" alt="test">
 		</div>
-		<div class="feature-content">
-			<h2 class="no-underline"><?php the_field('event_title')  ?></h2>
-			<p class="">
+		<div class="feature-content no-underline">
+			<h2><?php the_field('event_title')  ?></h2>
+			<p class="mt-5">
                 <?php the_field('event_description')  ?>
 			</p>
 		</div>
 	</div>
+</section>
+<section class="container-box ">
+    <div class="row mx-0">
+        <div class="blurb-img-left mb-50 col-6">
+            <div class="blurb-image">
+                <img src="/static/images/events/schedule.svg" width="98" alt="test">
+            </div>
+            <div class="blurb-container-content">
+                <span class="mb-10">Date & Time</span>
+                <p class="text-gray">
+                    <?php echo date("M j, Y", strtotime(get_field("event_date"))) ?>
+
+                    <a href="#">Add to calendar</a>
+                </p>
+            </div>
+        </div>
+        <div class="blurb-img-left mb-50 col-6">
+            <div class="blurb-image">
+                <img src="/static/images/events/location-1.svg" width="98" alt="test">
+            </div>
+            <div class="blurb-container-content">
+                <h5 class="mb-10">Location</h5>
+                <p class="text-gray">
+                    <?php the_field('event_location')  ?>
+                </p>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- <section class="container-box mt-60 mt-xs-40">
     <div class="case-study">
