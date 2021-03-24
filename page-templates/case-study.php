@@ -29,6 +29,8 @@ $blogquery = $GLOBALS['wp_query']
 
 ?>
 
+<?php get_template_part("template-parts/insights-nav"); ?>
+
 <section class="case-studies">
   <div class="min-h-100 bg-gray-dark"></div>
     <div class="container-box">
