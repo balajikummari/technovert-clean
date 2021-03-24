@@ -47,7 +47,7 @@ $blogquery = $GLOBALS['wp_query']
       </div>
 
       
-    <div class="col-9 card-circular card mt-5 border-0 p-0 row mx-0">
+    <div class="col-9 event-card-circular mt-5 border-0 p-0 row mx-0">
 		<!-- <img src="https://staging3.technovert.com/wp-content/uploads/Artificial-Intelligence.svg"> -->
         <div class="col-8 py-5 px-4">
             <h5 class="">Cloud Transformation</h5>
@@ -56,7 +56,7 @@ $blogquery = $GLOBALS['wp_query']
             <a class="learn-more" href="#">More info</a>
         </div>
 		<div class="col-4">
-            <img class="event-log" src="https://staging3.technovert.com/wp-content/uploads/Artificial-Intelligence.svg">
+            <img class="event-logo" src="https://staging3.technovert.com/wp-content/uploads/Artificial-Intelligence.svg">
         </div>
 	</div>
   </div>
