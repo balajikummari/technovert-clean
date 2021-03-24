@@ -28,7 +28,7 @@ $GLOBALS['wp_query'] = new WP_Query( $args );
 $blogquery = $GLOBALS['wp_query']
 
 ?>
-<section class="case-studies">
+<section class="events">
   <div class="min-h-100 bg-gray-dark"></div>
     <div class="container-box">
       <h4 class="text-gray">Events</h4>
@@ -47,12 +47,17 @@ $blogquery = $GLOBALS['wp_query']
       </div>
 
       
-    <div class="card-circular case-study-card">
+    <div class="col-9 card-circular card mt-5 border-0 p-0 row mx-0">
 		<!-- <img src="https://staging3.technovert.com/wp-content/uploads/Artificial-Intelligence.svg"> -->
-		<h5 class="">Cloud Transformation</h5>
-		<h5>Example heading <span class="badge badge-secondary">WEBINAR</span></h5>
-        <span>Jan 24 Wednesday, 2021</span>
-		<a class="learn-more" href="#">More info</a>
+        <div class="col-8 py-5 px-4">
+            <h5 class="">Cloud Transformation</h5>
+            <h5>Example heading <span class="badge badge-secondary">WEBINAR</span></h5>
+            <span>Jan 24 Wednesday, 2021</span>
+            <a class="learn-more" href="#">More info</a>
+        </div>
+		<div class="col-4">
+            <img class="event-log" src="https://staging3.technovert.com/wp-content/uploads/Artificial-Intelligence.svg">
+        </div>
 	</div>
   </div>
 </section>
