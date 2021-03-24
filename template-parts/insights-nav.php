@@ -11,7 +11,7 @@
 
 <section class="bg-blue">
     <div class="container-box clear-margin-b">
-        <div class="insights-nav">
+        <div class="sub-nav-bar">
             <p class="d-none d-md-block">INSIGHTS:</p>
             <ul>
                 <li class="active"><a href="/blog">Articles</a></li>
