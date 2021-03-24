@@ -54,7 +54,7 @@ $blogquery = $GLOBALS['wp_query']
               <h5 class=""><?php echo substr(get_field('event_title'), 0, 50); ?></h5>
               <span class="badge badge-secondary">WEBINAR</span>
               <br />
-              <div class="my-4"><span><?php echo date("M j l, Y",the_field("event_date")) ?></span></div>
+              <div class="my-4"><span><?php echo date("M j l, Y",strtotime(get_field("event_date"))) ?></span></div>
               <br />
               <a class="learn-more" href="<?php echo the_guid(); ?>">More info</a>
           </div>
