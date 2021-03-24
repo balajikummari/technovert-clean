@@ -1,7 +1,8 @@
-input, select {
+input,
+select {
   margin: 0;
   outline: 0;
-  border: 1px solid #D8DDE6;
+  border: 1px solid #d8dde6;
   font-size: 14px;
   color: $primary-text-color;
   border-collapse: collapse;
@@ -29,4 +30,59 @@ input {
   width: 16px;
   height: 16px;
   background: url("https://w3.technovert.com/static/css/icons/search.svg");
+}
+
+.floating-label {
+  position: relative;
+}
+
+.floating-label label {
+  left: 8px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  color: #666d7d;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 28px;
+  transition: all 200ms ease-in-out;
+}
+
+.floating-label input:not(:placeholder-shown) + label {
+  background: #fff;
+  transform: translate(0, -50%);
+  opacity: 1;
+}
+
+.form-container {
+  max-width: 500px;
+}
+
+input.big {
+  height: 70px;
+}
+
+textarea.big {
+  max-height: 141px;
+}
+
+input.big,
+textarea.big {
+  width: 100%;
+  border: 1px solid #d0d4d9;
+  border-radius: 2px;
+  background-color: #ffffff;
+  color: #2e3342;
+  font-size: 21px;
+  letter-spacing: 0;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+
+::placeholder {
+  color: #bbc2d2;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 28px;
 }
