@@ -9,7 +9,23 @@
       }
     });
 
+    // Does the same thing but for blue ribbon navigation bar
+    $(".sub-nav-bar ul li a").each(function (i) {
+      console.log($(this).attr("href"), window.location.href);
+      if (window.location.href.includes($(this).attr("href"))) {
+        $(this).parent("li").addClass("active");
+      } else {
+        $(this).parent("li").removeClass("active");
+      }
+    });
 
+    // Does the same thing for vertical category nav: FIX THIS SHIT
+    $(".post-verticle-nav li a").each(function (i) {
+        console.log($(this).attr("href"), window.location.href);
+      if (window.location.href.includes($(this).attr("href"))) {
+        $(this).addClass("active");
+      } else { $(this).removeClass("active"); }
+    })
 
     // change header when no hero section
     var isHeroSectionExist = $(".hero-section").length;
