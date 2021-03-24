@@ -57,6 +57,17 @@ input {
 
 .form-container {
   max-width: 500px;
+
+  p {
+    text-align: right;
+
+    input[type="submit"] {
+      max-width: 191px;
+      border-radius: 2px !important;
+      padding: 17px 50px;
+      text-align: center;
+    }
+  }
 }
 
 input.big {
