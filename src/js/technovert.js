@@ -47,5 +47,36 @@
         jQuery(".jobRecord").show();
       }
     }
+
+    $("#post-search-field").val("");
+    const fetchPost = () => {
+      $.ajax({
+        type: "POST",
+        url: "/wp-admin/admin-ajax.php",
+        dataType: "html",
+        data: {
+          action: "filter_post_by_title",
+          inputValue: $.trim($("#post-search-field").val()),
+          postType: "case-studies",
+        },
+        success: function (res) {
+          if (res == "empty") {
+            console.log(res);
+            $("#suggestion-container")
+              .addClass("d-none")
+              .removeClass("d-block");
+          } else {
+            console.log(res);
+            $("#suggestion-container")
+              .removeClass("d-none")
+              .addClass("d-block")
+              .html(res);
+          }
+        },
+      });
+    };
+    $("#post-search-field").on("keyup", function () {
+      fetchPost();
+    });
   });
 })(jQuery); // End of use strict

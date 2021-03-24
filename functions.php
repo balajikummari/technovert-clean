@@ -432,3 +432,42 @@ function hidePreviewButtonSaAdmin() {
 				</style>";
 	}
 }
+
+// function tvstyles_enqueue_styles() {
+//     wp_enqueue_style( 'tvstyles', get_template_directory_uri() . '/public/assets/css/style.css',false,'1.1','all');
+//     wp_enqueue_script('custom', get_stylesheet_directory_uri().'/public/assets/js/all.js', array(), false, true);
+// }
+// add_action( 'wp_enqueue_scripts', 'tvstyles_enqueue_styles' );
+
+// function to get filtered post by title
+function filter_post_by_title() {
+	$search_query = $_POST['inputValue'];
+	$post_type = $_POST['postType'];
+	  
+	  global $wpdb;
+	  $response="";
+	  $filtered_post="";
+	  
+	  if(strlen($search_query) > 0) {
+		  $query = "SELECT post_title,post_name FROM wp_posts WHERE post_type='$post_type' and post_status='publish' and post_title LIKE '%$search_query%' LIMIT 10";
+		  $filtered_post = (array)($wpdb->get_results($query));
+	  }
+	  
+	  if($filtered_post) {
+		  foreach($filtered_post as $key => $row) {
+			  $row_array = (array)$row;
+			  $response.='<li><a class="dropdown-item text-primary text-truncate py-8" href="/'.($row_array['post_name']).'" title="'.($row_array['post_title']).'">'.  ($row_array['post_title']).'</a></li>';
+			  
+		  }
+	  } else if(strlen($search_query) > 0 ) {
+		  $response = '<li class="p-8 text-center">No result</li>';
+	  } else {
+		  $response = "empty";
+	  }
+	  
+	  echo $response;
+	  exit;
+	}
+	add_action('wp_ajax_filter_post_by_title', 'filter_post_by_title');
+	add_action('wp_ajax_nopriv_filter_post_by_title', 'filter_post_by_title'); 
+
