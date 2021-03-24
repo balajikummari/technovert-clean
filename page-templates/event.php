@@ -32,7 +32,7 @@ $blogquery = $GLOBALS['wp_query']
 <section class="case-studies">
   <div class="min-h-100 bg-gray-dark"></div>
     <div class="container-box">
-      <h4 class="text-gray">Case Studies</h4>
+      <h4 class="text-gray">Events</h4>
 
       <div class="filters d-flex mt-20">
         <select name="industry" id="industry">
