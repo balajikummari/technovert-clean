@@ -26,25 +26,9 @@ $args = array(
 $GLOBALS['wp_query'] = new WP_Query( $args );
 
 $blogquery = $GLOBALS['wp_query']
-
-
-
 ?>
 
-<section class="bg-blue">
-    <div class="container-box clear-margin-b">
-        <div class="sub-nav-bar">
-            <p class="d-none d-md-block">INSIGHTS:</p>
-            <ul class="">
-                <li class="active"><a href="#">Articles</a></li>
-                <li><a href="#">White Paper</a></li>
-                <li><a href="#">Case studies</a></li>
-                <li><a href="#">Events</a></li>
-
-            </ul>
-        </div>
-    </div>
-</section>
+<?php get_template_part("template-parts/insights-nav"); ?>
 
 <section>
     <div class="container-box">
@@ -52,21 +36,21 @@ $blogquery = $GLOBALS['wp_query']
             <div class="col-md-4 col-sm-12 mb-xs-30 pr-xs-12 pr-md-30 pr-70">
                 <h2 class="text-clay mb-20">Insight</h2>
                 <div class="p-30 shadow-low rounded">
-                    <ul class=" post-verticle-nav">
+                    <ul class="post-verticle-nav">
                         <li class="nav-items">
-                            <a href="#" class="nav-link active">Digital Transformation</a>
+                            <a href="/category/digital-transformation/" class="nav-link active">Digital Transformation</a>
                         </li>
                         <li class="nav-items">
-                            <a href="#" class="nav-link">Cloud</a>
+                            <a href="/category/cloud/" class="nav-link">Cloud</a>
                         </li>
                         <li class="nav-items">
-                            <a href="#" class="nav-link">Product Engineering</a>
+                            <a href="/category/product-engineering/" class="nav-link">Product Engineering</a>
                         </li>
                         <li class="nav-items">
-                            <a href="#" class="nav-link">Quality Engineering</a>
+                            <a href="/category/quality-engineering/" class="nav-link">Quality Engineering</a>
                         </li>
                         <li class="nav-items">
-                            <a href="#" class="nav-link">User Experience</a>
+                            <a href="/category/user-experience/" class="nav-link">User Experience</a>
                         </li>
                     </ul>
                 </div>
