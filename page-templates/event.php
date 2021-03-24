@@ -51,8 +51,10 @@ $blogquery = $GLOBALS['wp_query']
 		<!-- <img src="https://staging3.technovert.com/wp-content/uploads/Artificial-Intelligence.svg"> -->
         <div class="col-8 py-5 px-4">
             <h5 class="">Cloud Transformation</h5>
-            <h5>Example heading <span class="badge badge-secondary">WEBINAR</span></h5>
-            <span>Jan 24 Wednesday, 2021</span>
+            <span class="badge badge-secondary">WEBINAR</span>
+            <br />
+            <div class="my-4"><span>Jan 24 Wednesday, 2021</span></div>
+            <br />
             <a class="learn-more" href="#">More info</a>
         </div>
 		<div class="col-4">
