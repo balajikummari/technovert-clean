@@ -301,6 +301,16 @@
   border-bottom: dashed;
 }
 
+.dropdown-item:active{
+    @extend .bg-aqua-10;
+}
+
+.case-studies {
+  select {
+    min-width: auto;
+  }
+}
+
 @media (max-width: 767px){
   .case-study {
     .case-study-right {

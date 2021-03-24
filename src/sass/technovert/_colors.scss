@@ -4,6 +4,8 @@ $mariner-blue: #2B80C5;
 $blue-100: #dbebfa;
 $cadet-blue: #B4BAC5;
 
+$aqua-10:#F8FAFC;
+
 $green: #63c572;
 $green-color: #6AC069 !default;
 
@@ -65,6 +67,7 @@ $colors: (
   "mariner-blue": $mariner-blue,
   "light-blue": $blue-100,
   "cadet-blue" : $cadet-blue,
+  "aqua-10": $aqua-10,
   "gray": $gray,
   "gray-light": $gray-light,
   "light-gray": $gray-100,
@@ -81,6 +84,10 @@ $colors: (
 
 @each $color-name, $color-value in $colors {
   .text-#{$color-name} {
+    color: $color-value !important;
+  }
+
+  .text-color-#{$color-name} {
     color: $color-value !important;
   }
 
