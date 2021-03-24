@@ -4,7 +4,7 @@ const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass");
 const htmlmin = require("gulp-htmlmin");
 const cssmin = require("gulp-cssmin");
-const uglify = require("gulp-uglify");
+const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
 const concat = require("gulp-concat");
 const jsImport = require("gulp-js-import");
@@ -54,7 +54,7 @@ function css() {
     )
     .pipe(gulpIf(!isProd, sourcemaps.write()))
     .pipe(gulpIf(isProd, cssmin()))
-    .pipe(gulp.dest("public/assets/css/"))
+    .pipe(gulp.dest("public/assets/css/"));
 }
 
 function js() {
@@ -67,7 +67,7 @@ function js() {
         })
       )
       .pipe(concat("all.js"))
-      .pipe(gulpIf(isProd, uglify()))
+      .pipe(gulpIf(isProd, terser()))
       //.pipe(gulpIf(isProd, gzip()))
       .pipe(gulp.dest("public/assets/js"))
       .pipe(gulp.dest("./"))
