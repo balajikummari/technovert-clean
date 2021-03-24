@@ -68,7 +68,7 @@ while ( have_posts() ) : the_post();
 	<div class="feature-content no-underline">
 		<h2 class="">Who is this for</h2>
 		<p class="">
-            <?php the_field('vision')  ?>
+            NPCA embarked on a digital transformation journey in adapting a cloud-first strategy with a rollout of Office 365, Microsoft Teams and Power Platform. NPCA began looking for modern solutions that could automate and streamline many of their processes and turned to Technovert for help.
 		</p>
 	</div>
 </section>
@@ -76,71 +76,23 @@ while ( have_posts() ) : the_post();
 	<div class="feature-content no-underline">
 		<h2 class="">What you’ll learn</h2>
 		<p class="">
-            <?php the_field('mission')  ?>
+        NPCA embarked on a digital transformation journey in adapting a cloud-first strategy with a rollout of Office 365, Microsoft Teams and Power Platform.
 		</p>
+        <ul>
+            <li>The performance management system got set-up in literally 1 week</li>
+            <li>Real-time data and high-quality metrics for better conversations</li>
+            <li>The performance management system got set-up in literally 1 week</li>
+        </ul>
 	</div>
 </section>
 <section class="container-box mt-80">
 	<div class="feature-content no-underline">
 		<h2 class="">Speakers</h2>
 		<p class="">
-            <?php the_field('about_speakers')  ?>
+            We have some distinguished speakers on the event
 		</p>
 	</div>
 </section>
-<!-- <section class="container-box mt-60 mt-xs-40">
-    <div class="case-study">
-        <div class="case-study-left">
-            <h5 class="text-clay font-weight-default">
-            <?php the_field('intro_text')  ?>
-            </h5>
-        </div>
-        <div class="case-study-right">
-            <div class="w-100">
-                <div class="card">
-                    <div class="mb-30">
-                        <img src="<?php the_field('logo')  ?>" class="max-w-360 max-h-100px" />
-                    </div>
-                    <div class="mb-50">
-                        <h5>World’s leading datacenter real estate organization</h5>
-                    </div>
-                    <div class="data-bar">
-                        <p>Industry</p>
-                        <p>Banking</p>
-                    </div>
-                    <div class="data-bar">
-                        <p>Location</p>
-                        <p><?php the_field('location')  ?></p>
-                    </div>
-                    <div class="data-bar">
-                        <p>Engaged in</p>
-                        <p>March 2014</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="customer-feedback">
-        <div class="d-flex ">
-            <div class="d-none d-md-block mr-20">
-                <img src="https://www.keka.com/static/images/misc/quotes.svg" width="105" height="80" />
-            </div>
-            <div>
-                <p class="mb-20"><?php the_field('testimonial')  ?></p>
-                <div class="d-flex">
-                    <img src="<?php the_field('testimonial_pic')  ?>" width="60" height="60" class="img-circle mr-20" />
-                    <div>
-                        <h5 class="text-clay"><?php the_field('testimonial_name')  ?></h5>
-                        <p class="text-gray"><?php the_field('testimonial_title')  ?></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="customer-content">
-        <?php the_content(); ?>
-    </div>
-</section> -->
 
 <?php endwhile; // end of the loop. 
 
