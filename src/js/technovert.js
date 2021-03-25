@@ -18,12 +18,14 @@
       }
     });
 
-    // Does the same thing for vertical category nav: FIX THIS SHIT
+    // Does the same thing for vertical category nav
     $(".vertical-nav li a").each(function (i) {
       if (window.location.href.includes($(this).attr("href"))) {
         $(this).addClass("active");
-      } else { $(this).removeClass("active"); }
-    })
+      } else {
+        $(this).removeClass("active");
+      }
+    });
 
     // change header when no hero section
     var isHeroSectionExist = $(".hero-section").length;
