@@ -12,6 +12,8 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
+get_template_part("template-parts/insights-nav");
+
 $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array(
     'posts_per_page'   => 12,
@@ -47,7 +49,7 @@ $blogquery = $GLOBALS['wp_query']
       </div>
 
       <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
-        <div class="col-9 event-card-circular mt-5 border-0 p-0 row mx-0">
+        <div class="col-9 event-card-circular mt-5 border-0 p-0 row mx-0 rounded">
       <!-- <img src="https://staging3.technovert.com/wp-content/uploads/Artificial-Intelligence.svg"> -->
           <div class="col-8 py-5 px-4">
             
@@ -59,7 +61,7 @@ $blogquery = $GLOBALS['wp_query']
               <a class="learn-more" href="<?php echo the_guid(); ?>">More info</a>
           </div>
           <div class="col-4 p-0">
-              <img class="event-logo" src='<?php the_field("event_logo") ?>' alt="event preview" />
+              <img class="event-logo rounded-right" src='<?php the_field("event_logo") ?>' alt="event preview" />
           </div>
         </div>
       <?php endwhile; ?>
