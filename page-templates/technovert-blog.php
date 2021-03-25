@@ -36,7 +36,7 @@ $blogquery = $GLOBALS['wp_query']
             <div class="col-md-4 col-sm-12 mb-xs-30 pr-xs-12 pr-md-30 pr-70">
                 <h2 class="text-clay mb-20">Insight</h2>
                 <div class="p-30 shadow-low rounded">
-                    <ul class="post-verticle-nav">
+                    <ul class="vertical-nav">
                         <li class="nav-items">
                             <a href="/category/digital-transformation/" class="nav-link active">Digital Transformation</a>
                         </li>
