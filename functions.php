@@ -479,10 +479,12 @@ function filter_post_by_select() {
 	$searchVal = $_POST['searchVal'];
 	  
 	global $wpdb;
-	$response="";
+	$response = "";
 	
 	$query1 = "select post_id from yud_postmeta where meta_key='$filterBy' and meta_value='$searchVal';";
 	$postIds = $wpdb->get_results($query1);
+
+	$response .= $postIds;
 
 	foreach($postIds as $id) {
 		// feature_image, solution_category, industry, post_title
