@@ -467,26 +467,27 @@
     @extend .rounded-top;
   }
 
-  & > div {
+  & > div:last-of-type, .post-body {
     @extend .p-20;
   }
 
   h5 {
     @extend .h-95;
-    @extend .text-clay;
+    @extend .text-color-clay;
     @extend .overflow-hidden;
     @extend .mb-10;
   }
 
   p {
     @extend .text-sm;
-    @extend .text-gray;
+    @extend .text-color-gray;
     @extend .mb-20;
     @extend .overflow-hidden;
     height: 110px;
   }
 
   span {
+    @extend .text-primary;
     @extend .text-xxs;
     @extend .text-uppercase;
     @extend .letter-spacing-15;
@@ -547,6 +548,10 @@
   @extend .pr-md-160;
   @extend .pr-xs-0;
   .card {
+
+    img{
+      @extend .rounded-top;
+    }
 
     .card-body {
       h5 {
