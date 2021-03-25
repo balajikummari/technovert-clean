@@ -19,18 +19,34 @@ input {
 }
 
 #search {
-  padding-left: 30px;
-  position: relative;
+
+  input {
+    @extend .py-12;
+    @extend .pl-50;
+    @extend .pr-20;
+    @extend .text-xs;
+
+    &::placeholder {
+      @extend .text-gray;
+    }
+  }
+
+  .icon {
+    @extend .position-absolute;
+    top: 16px;
+    left: 16px;
+  }
 }
 
-#search::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background: url("https://w3.technovert.com/static/css/icons/search.svg");
-}
+// #search::before {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   width: 16px;
+//   height: 16px;
+//   background: url("https://w3.technovert.com/static/css/icons/search.svg");
+// }
+
 
 .floating-label {
   position: relative;
@@ -57,6 +73,17 @@ input {
 
 .form-container {
   max-width: 500px;
+
+  p {
+    text-align: right;
+
+    input[type="submit"] {
+      max-width: 191px;
+      border-radius: 2px !important;
+      padding: 17px 50px;
+      text-align: center;
+    }
+  }
 }
 
 input.big {

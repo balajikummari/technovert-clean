@@ -29,34 +29,45 @@ $blogquery = $GLOBALS['wp_query']
 
 ?>
 
-<section class="case-studies">
-  <div class="min-h-100 bg-gray-dark"></div>
-    <div class="container-box">
-      <h4 class="text-gray">Case Studies</h4>
+<section class="case-studies ">
+<?php get_template_part("template-parts/insights-nav"); ?>
 
-      <div class="filters d-flex mt-20">
-        <select name="industry" id="industry">
+    <div class="container-box">
+      <h4 class="text-color-clay mt-30">Case Studies</h4>
+
+      <div class="filters row mx-0 mt-20">
+        <select name="industry" id="industry" class="col-md-3 col-12 px-0 mb-xs-30">
           <option value="0">Industry</option>
           <option value="1">Banking</option>
           <option value="2">Insurance</option>
           <option value="3">RPA</option>
         </select>
-        <select name="solution" id="solution">
+        <select name="solution" id="solution" class="col-md-3 col-12 px-0 mb-xs-30">
           <option value="0">Solution</option>
         </select>
-        <input type="text" id="search" placeholder="Search" onkeyup="searchFilter('.case-study-card', 'h2');" />
+        <div class="col-md-6 col-12 px-0 position-relative">
+          <div id="search">
+            <input type="text" id="post-search-field" placeholder="Search" />
+            <span class="icon icon-sm ic-search"></span>
+          </div>
+          <ul class="dropdown-menu w-100" id="suggestion-container"></ul>
+        </div>
       </div>
 
-      <div class="case-study-wrapper container-fluid mt-50">
-        <div class="box-2"> 
+      <div class="case-study-wrapper mt-50">
+        <div class="box-2 card-h-100"> 
           <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
-            <a class="box case-study-card" href="<?php echo the_guid(); ?>">
-              <span class="label">Digital Transformation</span>
-              <div class="preview-img">
-                <img src='<?php the_field("feature_image") ?>' alt="case study preview">
+            <a class="box" href="<?php echo the_guid(); ?>">
+              <div class="card">
+                <div class="max-h-200 overflow-hidden">
+                  <img src='<?php the_field("feature_image") ?>' alt="case study preview">
+                </div>
+                  <div class="card-body">
+                    <h5><?php echo substr(get_the_title(), 0, 55); ?></h5>
+                    <p class="industry"><?php the_field('industry'); ?></p>
+                  </div>
+                  <span class="card-badge"><?php the_field('solution_category'); ?></span>
               </div>
-              <h2><?php echo substr(get_field('intro_text'), 0, 25); ?></h2>
-              <span class="industry"><?php the_field("industry") ?></span>
             </a>
           <?php endwhile; ?>
         </div>

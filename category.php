@@ -1,8 +1,7 @@
 <?php
 /**
- * Template Name: Technovert Blog 
  *
- * Template for showing Blog home 
+ * Template for showing posts of a particular category 
  *
  * @package understrap
  */
@@ -12,20 +11,6 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$args = array(
-    'posts_per_page'   => 1,
-    'post_status'      => 'publish',
-    'order'            => 'DESC',
-    'orderby'          => 'date',
-    'paged'            => $page,
-    'suppress_filters' => true,
-    'post_type' => 'post'
-);
-
-$GLOBALS['wp_query'] = new WP_Query( $args );
-
-$blogquery = $GLOBALS['wp_query']
 ?>
 
 <?php get_template_part("template-parts/insights-nav"); ?>
@@ -39,13 +24,11 @@ $blogquery = $GLOBALS['wp_query']
             </div>
             <div class="col-md-8 col-sm-12 ">
                 <div class="box-2">
-                    <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
-                        <a class="box" href="<?php echo the_permalink() ?>">
+                    <?php while ( have_posts()) : the_post();  ?>
+                        <div class="box">
                             <div class="post-tile">
-                                <div class="h-200 overflow-hidden">
-                                        <?php echo the_post_thumbnail('thumbnail') ?>
-                                </div>
-                                <div class="post-body">
+                                <img src="https://www.keka.com//media/2021/03/smart-goals-image-375x250.jpg" alt="Alternate Text" />
+                                <div>
                                     <h5>
                                         <?php 
                                             $truncate_title = substr(get_the_title(),0,75);
@@ -56,7 +39,7 @@ $blogquery = $GLOBALS['wp_query']
                                     <span>5 min Read</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     <?php endwhile; ?>
                 </div>
                 <div>
@@ -71,8 +54,4 @@ $blogquery = $GLOBALS['wp_query']
 <?php
 
 get_footer();
-
-
-
-
 

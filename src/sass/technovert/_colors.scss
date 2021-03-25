@@ -2,7 +2,12 @@ $blue: #1077da;
 $dodger-blue: #2770F1;
 $mariner-blue: #2B80C5;
 $blue-100: #dbebfa;
+$blue-200: #0077b5;
+$blue-300: #1ea0f2;
+$blue-400: #3b5997;
 $cadet-blue: #B4BAC5;
+
+$aqua-10:#F8FAFC;
 
 $green: #63c572;
 $green-color: #6AC069 !default;
@@ -61,10 +66,14 @@ $colors: (
   "green": $green,
   "light-green": $green-color,
   "blue": $blue,
+  "blue-200": $blue-200,
+  "blue-300": $blue-300,
+  "blue-400": $blue-400,
   "dodger-blue": $dodger-blue,
   "mariner-blue": $mariner-blue,
   "light-blue": $blue-100,
   "cadet-blue" : $cadet-blue,
+  "aqua-10": $aqua-10,
   "gray": $gray,
   "gray-light": $gray-light,
   "light-gray": $gray-100,
@@ -81,6 +90,10 @@ $colors: (
 
 @each $color-name, $color-value in $colors {
   .text-#{$color-name} {
+    color: $color-value !important;
+  }
+
+  .text-color-#{$color-name} {
     color: $color-value !important;
   }
 
