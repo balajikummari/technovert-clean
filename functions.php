@@ -475,7 +475,7 @@ function filter_post_by_title() {
 
 // function to get filtered post by select element
 function filter_post_by_select() {
-	$filterBy = $_POST['fiterBy'];
+	$filterBy = $_POST['filterBy'];
 	$searchVal = $_POST['searchVal'];
 	  
 	global $wpdb;
