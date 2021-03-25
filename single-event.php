@@ -65,7 +65,8 @@ while ( have_posts() ) : the_post();
     </div>
     <button class="button-right-arrow px-60 rounded">Register</button>
 </section>
-<section class="container-box mt-80">
+<?php the_content(); ?>
+<!-- <section class="container-box mt-80">
 	<div class="feature-content no-underline col-9">
 		<h2 class="">Who is this for</h2>
 		<p class="">
@@ -116,7 +117,7 @@ while ( have_posts() ) : the_post();
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <?php endwhile; // end of the loop. 
 
