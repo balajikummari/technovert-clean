@@ -58,10 +58,12 @@ $blogquery = $GLOBALS['wp_query']
             <div class="col-md-8 col-sm-12 ">
                 <div class="box-2">
                     <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
-                        <div class="box">
+                        <a class="box" href="<?php echo the_permalink() ?>">
                             <div class="post-tile">
-                                <img src="https://www.keka.com//media/2021/03/smart-goals-image-375x250.jpg" alt="Alternate Text" />
-                                <div>
+                                <div class="h-200 overflow-hidden">
+                                        <?php echo the_post_thumbnail('thumbnail') ?>
+                                </div>
+                                <div class="post-body">
                                     <h5>
                                         <?php 
                                             $truncate_title = substr(get_the_title(),0,75);
@@ -72,7 +74,7 @@ $blogquery = $GLOBALS['wp_query']
                                     <span>5 min Read</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     <?php endwhile; ?>
                 </div>
                 <div>

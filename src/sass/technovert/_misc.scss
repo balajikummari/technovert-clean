@@ -291,6 +291,21 @@
   @extend .px-20;
   @extend .py-30;
   @extend .mb-30;
+
+  #email-subscribe {
+    border-radius: 3px;
+    input,button {
+      @extend .text-sm;
+      @extend .py-12;
+      @extend .font-weight-default;
+    }
+    input {
+      @extend .no-rounded;
+    }
+    button {
+      border-radius: 0 3px 3px 0 !important;
+    }
+  }
 }
 
 
