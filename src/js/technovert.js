@@ -2,7 +2,7 @@
   "use strict"; // Start of use strict
 
   $(document).ready(function () {
-    // Mark current page in sub navigation menu, do the same with insights-nav
+    // Mark current page in sub navigation menu
     $("ul.subnav li a").each(function (i) {
       if ($(this).attr("href") === window.location.href) {
         $(this).addClass("active");
@@ -33,39 +33,6 @@
       $("header").addClass("coloured-header");
     }
 
-    function searchFilter(itemClass, searchElement) {
-      var query = jQuery("#search").val();
-
-      if (query.length > 0) {
-        jQuery(itemClass).each(function () {
-          if (jQuery(this).find(searchElement).text().indexOf(query) !== -1) {
-            jQuery(this).show();
-          } else {
-            jQuery(this).hide();
-          }
-        });
-      } else {
-        jQuery(itemClass).show();
-      }
-    }
-
-    function locFilter() {
-      var selected = jQuery("select#location :selected").text();
-      if (selected !== "All") {
-        jQuery(".jobRecord").each(function () {
-          var loc = jQuery(this).find("h3 + span").text();
-
-          if (selected === loc) {
-            jQuery(this).show();
-          } else {
-            jQuery(this).hide();
-          }
-        });
-      } else {
-        jQuery(".jobRecord").show();
-      }
-    }
-
     $("#post-search-field").val("");
     const fetchPost = () => {
       $.ajax({
@@ -79,12 +46,10 @@
         },
         success: function (res) {
           if (res == "empty") {
-            console.log(res);
             $("#suggestion-container")
               .addClass("d-none")
               .removeClass("d-block");
           } else {
-            console.log(res);
             $("#suggestion-container")
               .removeClass("d-none")
               .addClass("d-block")
@@ -96,5 +61,30 @@
     $("#post-search-field").on("keyup", function () {
       fetchPost();
     });
+
+    $("#industry").change(() => {
+      filterBySelectElem("industry", $(this).val());
+    });
+
+    $("#solution").change(() => {
+      filterBySelectElem("solution_category", $(this).val());
+    });
+
+    const filterBySelectElem = (filterBy, searchVal) => {
+      $.ajax({
+        type: "POST",
+        url: "/wp-admin/admin-ajax.php",
+        dataType: "json",
+        data: {
+          action: "filter_post_by_select",
+          filterBy: filterBy,
+          searchVal: searchVal,
+          postType: "case-studies",
+        },
+        success: function (res) {
+          console.log(res);
+        },
+      });
+    };
   });
 })(jQuery); // End of use strict
