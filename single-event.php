@@ -24,7 +24,7 @@ while ( have_posts() ) : the_post();
 	</div>
 </section>
 <section class="container-box mt-5">
-	<div class="feature-container image-last pb-5">
+	<div class="feature-container image-last pb-5 mb-5">
 		<div>
 			<img src="<?php the_field('event_logo')  ?>" alt="test">
 		</div>
