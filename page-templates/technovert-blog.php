@@ -35,25 +35,7 @@ $blogquery = $GLOBALS['wp_query']
         <div class="row mx-0 mt-60">
             <div class="col-md-4 col-sm-12 mb-xs-30 pr-xs-12 pr-md-30 pr-70">
                 <h2 class="text-clay mb-20">Insight</h2>
-                <div class="p-30 shadow-low rounded">
-                    <ul class="post-verticle-nav">
-                        <li class="nav-items">
-                            <a href="/category/digital-transformation/" class="nav-link active">Digital Transformation</a>
-                        </li>
-                        <li class="nav-items">
-                            <a href="/category/cloud/" class="nav-link">Cloud</a>
-                        </li>
-                        <li class="nav-items">
-                            <a href="/category/product-engineering/" class="nav-link">Product Engineering</a>
-                        </li>
-                        <li class="nav-items">
-                            <a href="/category/quality-engineering/" class="nav-link">Quality Engineering</a>
-                        </li>
-                        <li class="nav-items">
-                            <a href="/category/user-experience/" class="nav-link">User Experience</a>
-                        </li>
-                    </ul>
-                </div>
+                <?php get_template_part("template-parts/vertical-nav"); ?>
             </div>
             <div class="col-md-8 col-sm-12 ">
                 <div class="box-2">

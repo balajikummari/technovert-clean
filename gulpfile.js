@@ -9,36 +9,12 @@ const imagemin = require("gulp-imagemin");
 const concat = require("gulp-concat");
 const jsImport = require("gulp-js-import");
 const sourcemaps = require("gulp-sourcemaps");
-const htmlPartial = require("gulp-html-partial");
 const clean = require("gulp-clean");
 const cssbeautify = require("gulp-cssbeautify");
-const htmlbeautify = require("gulp-html-beautify");
 var gzip = require("gulp-gzip");
 
 const isProd = process.env.NODE_ENV === "prod";
 //const isProd = true;
-
-const htmlFile = ["src/**/*.html"];
-
-function html() {
-  return gulp
-    .src(htmlFile)
-    .pipe(
-      htmlPartial({
-        basePath: "src/partials/",
-      })
-    )
-    .pipe(htmlbeautify())
-    .pipe(
-      gulpIf(
-        isProd,
-        htmlmin({
-          collapseWhitespace: true,
-        })
-      )
-    )
-    .pipe(gulp.dest("public"));
-}
 
 function css() {
   return gulp
@@ -101,7 +77,7 @@ function browserSyncReload(done) {
 }
 
 function watchFiles() {
-  gulp.watch("src/**/*.html", gulp.series(html, browserSyncReload));
+  // gulp.watch("src/**/*.html", gulp.series(html, browserSyncReload));
   gulp.watch("src/**/*.scss", gulp.series(css, browserSyncReload));
   gulp.watch("src/**/*.js", gulp.series(js, browserSyncReload));
   gulp.watch("src/images/**/*.*", gulp.series(img));
@@ -115,9 +91,9 @@ function del() {
 }
 
 exports.css = css;
-exports.html = html;
+// exports.html = html;
 exports.js = js;
 exports.fonts = fonts;
 exports.del = del;
-exports.serve = gulp.parallel(html, css, js, img, fonts, watchFiles, serve);
-exports.default = gulp.series(del, html, css, js, fonts, img);
+exports.serve = gulp.parallel(css, js, img, fonts, watchFiles, serve);
+exports.default = gulp.series(del, css, js, fonts, img);

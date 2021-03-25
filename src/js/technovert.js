@@ -3,7 +3,7 @@
 
   $(document).ready(function () {
     // Mark current page in sub navigation menu, do the same with insights-nav
-    $("ul.subnav li a, .insights-nav ul").each(function (i) {
+    $("ul.subnav li a").each(function (i) {
       if ($(this).attr("href") === window.location.href) {
         $(this).addClass("active");
       }
@@ -11,21 +11,21 @@
 
     // Does the same thing but for blue ribbon navigation bar
     $(".sub-nav-bar ul li a").each(function (i) {
-      console.log($(this).attr("href"), window.location.href);
       if (window.location.href.includes($(this).attr("href"))) {
-        $(this).parent("li").addClass("active");
+        $(this).addClass("active");
       } else {
-        $(this).parent("li").removeClass("active");
+        $(this).removeClass("active");
       }
     });
 
-    // Does the same thing for vertical category nav: FIX THIS SHIT
-    $(".post-verticle-nav li a").each(function (i) {
-        console.log($(this).attr("href"), window.location.href);
+    // Does the same thing for vertical category nav
+    $(".vertical-nav li a").each(function (i) {
       if (window.location.href.includes($(this).attr("href"))) {
         $(this).addClass("active");
-      } else { $(this).removeClass("active"); }
-    })
+      } else {
+        $(this).removeClass("active");
+      }
+    });
 
     // change header when no hero section
     var isHeroSectionExist = $(".hero-section").length;

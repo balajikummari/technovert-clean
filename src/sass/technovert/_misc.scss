@@ -75,7 +75,7 @@
   }
 }
 
-.post-verticle-nav {
+.vertical-nav {
   @extend .list-unstyled, .m-0;
 
   .nav-items {
@@ -93,11 +93,10 @@
       }
     }
   }
-
 }
 
 .pagination {
-  .page-item  {
+  .page-item {
     @extend .px-16, .py-6;
     @extend .border;
     @extend .border-info;
@@ -116,47 +115,43 @@
   @extend .row, .mx-0;
 
   .case-study-left {
-      @extend .pr-80;
-      @extend .col-12;
-      @extend .order-2;
-      @extend .order-md-1;
-      @extend .col-md-7;
-      @extend .px-xs-0;
-
+    @extend .pr-80;
+    @extend .col-12;
+    @extend .order-2;
+    @extend .order-md-1;
+    @extend .col-md-7;
+    @extend .px-xs-0;
   }
 
   .case-study-right {
-      @extend .order-1;
-      @extend .order-md-2;
-      @extend .position-relative;
-      @extend .col-12;
-      @extend .col-md-5;
-      @extend .px-xs-0;
-      top: -120px;
+    @extend .order-1;
+    @extend .order-md-2;
+    @extend .position-relative;
+    @extend .col-12;
+    @extend .col-md-5;
+    @extend .px-xs-0;
+    top: -120px;
 
-      .card {
-        @extend .mb-xs-40;
-          
-        .data-bar {
-          @extend .mb-30;
+    .card {
+      @extend .mb-xs-40;
 
-          &:last-child {
-              @extend .mb-0;
-          }
+      .data-bar {
+        @extend .mb-30;
 
-          p:first-of-type {
-              @extend .font-weight-bold;
-          }
-          p:last-of-type {
-            @extend .text-green;
-            @extend .text-gray-200;
+        &:last-child {
+          @extend .mb-0;
+        }
+
+        p:first-of-type {
+          @extend .font-weight-bold;
+        }
+        p:last-of-type {
+          @extend .text-green;
+          @extend .text-gray-200;
         }
       }
-          
-      }
+    }
   }
-
- 
 }
 
 .customer-feedback {
@@ -168,7 +163,9 @@
 }
 
 .customer-content {
-  h4,h3,h5 {
+  h4,
+  h3,
+  h5 {
     @extend .text-clay;
     @extend .mb-20;
   }
@@ -183,13 +180,12 @@
   }
 }
 
-
 // For sub-nav-bar
 .sub-nav-bar {
   @extend .d-flex;
   @extend .align-items-center;
-  
-  p{
+
+  p {
     @extend .text-xs;
     @extend .text-white;
     @extend .font-weight-extra-bold;
@@ -208,23 +204,24 @@
       @extend .py-20;
       @extend .d-block;
       @extend .position-relative;
+
       &:not(:last-child) {
         @extend .mr-60;
-      }
-
-      &.active::after {
-        content: "";
-        @extend .position-absolute;
-        left: 50%;
-        border: 8px solid transparent;
-        bottom: 0;
-        transform: translate(-50%);
-        border-bottom-color: white;
       }
 
       a {
         @extend .text-white;
         white-space: nowrap;
+
+        &.active::after {
+          content: "";
+          @extend .position-absolute;
+          left: 50%;
+          border: 8px solid transparent;
+          bottom: 0;
+          transform: translate(-50%);
+          border-bottom-color: white;
+        }
       }
     }
   }
@@ -232,22 +229,25 @@
 
 // for blog article detail
 .blog {
-
   img {
-      @extend .img-fluid;
-      @extend .mb-20;
-      @extend .w-100;
+    @extend .img-fluid;
+    @extend .mb-20;
+    @extend .w-100;
   }
 
   p {
-      @extend .font-21;
-      @extend .mb-30;
+    @extend .font-21;
+    @extend .mb-30;
   }
 
-  h1,h2,h3,h4,h5,h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @extend .mb-20;
   }
-
 }
 
 // for share arcticle in blog inner page
@@ -264,21 +264,21 @@
   @extend .mb-20;
 
   .social-media {
-      @extend .d-flex;
-      @extend .align-items-center;
+    @extend .d-flex;
+    @extend .align-items-center;
 
-      & > span {
-          @extend .text-gray-200;
-          @extend .text-xs;
-          @extend .mr-16;
-      }
+    & > span {
+      @extend .text-gray-200;
+      @extend .text-xs;
+      @extend .mr-16;
+    }
   }
 
   label {
-      @extend .text-xxs;
-      @extend .text-uppercase;
-      @extend .font-weight-semi-bold;
-      @extend .letter-spacing-15;
+    @extend .text-xxs;
+    @extend .text-uppercase;
+    @extend .font-weight-semi-bold;
+    @extend .letter-spacing-15;
   }
 }
 
@@ -308,7 +308,6 @@
   }
 }
 
-
 .shadow-low {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
@@ -318,8 +317,8 @@
   border-bottom: dashed;
 }
 
-.dropdown-item:active{
-    @extend .bg-aqua-10;
+.dropdown-item:active {
+  @extend .bg-aqua-10;
 }
 
 .case-studies {
@@ -328,7 +327,7 @@
   }
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .case-study {
     .case-study-right {
       top: 0;
@@ -338,6 +337,6 @@
 
 //For making bootstrap nav dropdowns work on hower
 .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0; // remove the gap so it doesn't close
- }
+  display: block;
+  margin-top: 0; // remove the gap so it doesn't close
+}
