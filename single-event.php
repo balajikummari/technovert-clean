@@ -96,7 +96,7 @@ while ( have_posts() ) : the_post();
 	</div>
 </section>
 <section class="container-box mt-80">
-	<div class="feature-content no-underline col-9">
+	<div class="no-underline">
 		<h2 class="">Speakers</h2>
 		<p class="">
             We have some distinguished speakers on the event
