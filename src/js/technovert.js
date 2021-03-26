@@ -206,17 +206,21 @@
 
       $("select#industry").change(function () {
         if ($(this).val() != "Industry") {
-          filterBySelectElem("industry", $(this).val());
+          filterBySelectElem("industry", $(this).val(), "case-studies");
+        } else {
+          fetchAllByPostType("case-studies");
         }
       });
 
       $("select#solution").change(function () {
         if ($(this).val() != "Solution") {
-          filterBySelectElem("solution_category", $(this).val());
+          filterBySelectElem("solution_category", $(this).val(), "case-studies");
+        } else {
+          fetchAllByPostType("case-studies");
         }
       });
 
-      const filterBySelectElem = (filterBy, searchVal) => {
+      const filterBySelectElem = (filterBy, searchVal, postType) => {
         $.ajax({
           type: "POST",
           url: "/wp-admin/admin-ajax.php",
@@ -225,7 +229,7 @@
             action: "filter_post_by_select",
             filterBy: filterBy,
             searchVal: searchVal,
-            postType: "case-studies",
+            postType: postType,
           },
           success: function (res) {
             console.log(res);
@@ -237,6 +241,26 @@
         });
       };
     });
+
+    const fetchAllByPostType = (postType) => {
+      $.ajax({
+        type: "POST",
+        url: "/wp-admin/admin-ajax.php",
+        dataType: "html",
+        data: {
+          action: "fetch_all_by_post_type",
+          postType: postType,
+        },
+        success: function (res) {
+          console.log(res);
+          $(".case-study-wrapper").html(res);
+        },
+        error: function (err) {
+          console.log(err);
+        },
+      });
+    };
+  });
     // End Jquery code
   });
 })(jQuery);

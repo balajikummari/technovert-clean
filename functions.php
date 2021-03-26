@@ -529,3 +529,34 @@ function filter_post_by_select() {
 
 add_action('wp_ajax_filter_post_by_select', 'filter_post_by_select');
 add_action('wp_ajax_nopriv_filter_post_by_select', 'filter_post_by_select');
+
+// Fetch all posts by post type
+function fetch_all_by_post_type() {
+	$postType = $_POST['postType'];
+	$res = "";
+
+	$args = array(
+        'post_type' => $postType,
+        'posts_per_page' => -1
+	);
+
+	$query = new WP_Query($args);
+
+	if($query->have_posts()) {
+		while($query->have_posts()) {
+			$res .= "<a class='box' href='" . get_permalink() . "'>
+            <div class='card'>
+              <div class='max-h-200 overflow-hidden'>
+                <img src='" . get_field("feature_image") ."' alt='case study preview'>
+              </div>
+                <div class='card-body'>
+                  <h5>" . get_the_title() "</h5>
+                  <p class='industry'>" . get_field("industry") . "</p>
+                </div>
+                <span class='card-badge'>" . get_field("solution_category") . "</span></div></a>";
+		}
+	}
+
+	echo $res;
+	exit;
+}
