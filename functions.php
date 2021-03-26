@@ -491,12 +491,30 @@ function filter_post_by_select() {
 		$filtered_post = $wpdb->get_results($query, ARRAY_A);
 	}
 
-		$title = $filtered_post[0]["post_title"];
-		$sol = $filtered_post[0]["meta_value"];
-		$ind = $filtered_post[1]["meta_value"];
-		$img = $filtered_post[2]["meta_value"];
+	foreach($filtered_post as $post) {
+		$title = substr($post["post_title"], 0, 55);
 
-		$response .= var_dump($filtered_post);
+		if($post["meta_key"] == "industry") {
+			$ind = $post["meta_value"];
+		} else if ($post["meta_key"] == "solution_category") {
+			$sol = $post["meta_value"];
+		} else {
+			$img = $post["meta_value"];
+		}
+
+		$response .= "<a class='box' href='#'>
+            <div class='card'>
+              <div class='max-h-200 overflow-hidden'>
+                <img src='' alt='case study preview'>
+              </div>
+                <div class='card-body'>
+                  <h5>$title</h5>
+                  <p class='industry'>$ind</p>
+                </div>
+                <span class='card-badge'>$sol</span>
+            </div>
+          </a>";
+	}
 	
 	echo $response;
 	exit;
