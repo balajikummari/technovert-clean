@@ -491,14 +491,12 @@ function filter_post_by_select() {
 		$filtered_post = $wpdb->get_results($query, ARRAY_A);
 	}
 
-	foreach($filtered_post as $post) {
-		$title = $post[0]["post_title"];
-		$sol = $post[0]["meta_value"];
-		$ind = $post[1]["meta_value"];
-		$img = $post[2]["meta_value"];
+		$title = $filtered_post[0]["post_title"];
+		$sol = $filtered_post[0]["meta_value"];
+		$ind = $filtered_post[1]["meta_value"];
+		$img = $filtered_post[2]["meta_value"];
 
 		$response .= "Title: $title, Sol_cat: $sol, Industry: $ind, Img: $img";
-	}
 	
 	echo $response;
 	exit;
