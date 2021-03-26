@@ -63,11 +63,15 @@
     });
 
     $("select#industry").change(function () {
-      filterBySelectElem("industry", $(this).val());
+      if ($(this).val() != "Industry") {
+        filterBySelectElem("industry", $(this).val());
+      }
     });
 
     $("select#solution").change(function () {
-      filterBySelectElem("solution_category", $(this).val());
+      if ($(this).val() != "Solution") {
+        filterBySelectElem("solution_category", $(this).val());
+      }
     });
 
     const filterBySelectElem = (filterBy, searchVal) => {
