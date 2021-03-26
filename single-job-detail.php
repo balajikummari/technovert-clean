@@ -27,7 +27,7 @@ while ( have_posts() ) : the_post();
 
 <?php endwhile; // end of the loop. 
 
-get_footer();
+// get_footer();
 
 ?>
 
