@@ -31,7 +31,7 @@ while ( have_posts() ) : the_post();
 				<h2 class="pb-2"><?php the_title();  ?></h2>
 				<p><?php the_field('job_introduction') ?></p>
 			</div>
-		<div>
+		</div>
     </div>
 	<div class="row m-0 banner-container">
 		<div class="col-md-9 col-sm-12">
