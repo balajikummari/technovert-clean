@@ -262,5 +262,4 @@
     };
   });
     // End Jquery code
-  });
 })(jQuery);
