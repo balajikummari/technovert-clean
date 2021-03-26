@@ -37,13 +37,17 @@ $blogquery = $GLOBALS['wp_query']
 
       <div class="filters row mx-0 mt-20">
         <select name="industry" id="industry" class="col-md-3 col-12 px-0 mb-xs-30">
-          <option value="0">Industry</option>
-          <option value="1">Banking</option>
-          <option value="2">Insurance</option>
-          <option value="3">RPA</option>
+          <option value="Industry">Industry</option>
+          <option value="Banking">Banking</option>
+          <option value="Insurance">Insurance</option>
+          <option value="RPA">RPA</option>
         </select>
         <select name="solution" id="solution" class="col-md-3 col-12 px-0 mb-xs-30">
-          <option value="0">Solution</option>
+          <option value="Solution">Solution</option>
+          <option value="Digital Transformation">Digital Transformation</option>
+          <option value="Product Engineering">Product Engineering</option>
+          <option value="Quality Engineering">Quality Engineering</option>
+          <option value="User Experience">User Experience</option>
         </select>
         <div class="col-md-6 col-12 px-0 position-relative">
           <div id="search">

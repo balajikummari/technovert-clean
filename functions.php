@@ -443,7 +443,6 @@ function hidePreviewButtonSaAdmin() {
 function filter_post_by_title() {
 	$search_query = $_POST['inputValue'];
 	$post_type = $_POST['postType'];
-
 	  
 	  global $wpdb;
 	  $response="";
@@ -469,6 +468,35 @@ function filter_post_by_title() {
 	  echo $response;
 	  exit;
 	}
+
 	add_action('wp_ajax_filter_post_by_title', 'filter_post_by_title');
 	add_action('wp_ajax_nopriv_filter_post_by_title', 'filter_post_by_title'); 
 
+
+// function to get filtered post by select element
+function filter_post_by_select() {
+	$filterBy = $_POST['filterBy'];
+	$searchVal = $_POST['searchVal'];
+	  
+	global $wpdb;
+	$response = "";
+
+	$response .= "filterBy: $filterBy, searchVal: $searchVal";
+	
+	$query1 = "select post_id from yud_postmeta where meta_key='$filterBy' and meta_value='$searchVal';";
+	$idArr = $wpdb->get_results($query1);
+
+	$response .= var_dump($idArr);
+
+	foreach($idArr as $id) {
+		// feature_image, solution_category, industry, post_title
+		$query = "SELECT x.post_title, y.meta_value from yud_posts x inner join yud_postmeta y on x.id = y.post_id where x.id = $id->post_id and (y.meta_key = 'industry' or y.meta_key = 'solution_category' or y.meta_key = 'feature_image') order by y.meta_key desc;";
+		$response .= var_dump($wpdb->get_results($query));
+	}
+	
+	echo $response;
+	exit;
+}
+
+	add_action('wp_ajax_filter_post_by_select', 'filter_post_by_select');
+	add_action('wp_ajax_nopriv_filter_post_by_select', 'filter_post_by_select'); 
