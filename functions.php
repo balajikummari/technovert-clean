@@ -550,7 +550,7 @@ function fetch_all_by_post_type() {
                 <img src='" . get_field("feature_image") ."' alt='case study preview'>
               </div>
                 <div class='card-body'>
-                  <h5>" . get_the_title() "</h5>
+                  <h5>" . get_the_title() . "</h5>
                   <p class='industry'>" . get_field("industry") . "</p>
                 </div>
                 <span class='card-badge'>" . get_field("solution_category") . "</span></div></a>";
@@ -560,3 +560,6 @@ function fetch_all_by_post_type() {
 	echo $res;
 	exit;
 }
+
+add_action('wp_ajax_fetch_all_by_post_type', 'fetch_all_by_post_type');
+add_action('wp_ajax_nopriv_fetch_all_by_post_type', 'fetch_all_by_post_type');
