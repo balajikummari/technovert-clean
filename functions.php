@@ -532,18 +532,27 @@ add_action('wp_ajax_nopriv_filter_post_by_select', 'filter_post_by_select');
 
 // Fetch all posts by post type
 function fetch_all_by_post_type() {
+	global $post;
+
 	$postType = $_POST['postType'];
 	$res = "";
 
+	$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	$args = array(
-        'post_type' => $postType,
-        'posts_per_page' => -1
+			'posts_per_page'   => 12,
+			'post_status'      => 'publish',
+			'order'            => 'DESC',
+			'orderby'          => 'date',
+			'paged'            => $page,
+			'suppress_filters' => true,
+			'post_type' => $postType
 	);
 
-	$query = new WP_Query($args);
+	$allposts = get_posts($args);
 
-	if($query->have_posts()) {
-		while($query->have_posts()) {
+	if($allposts) {
+		foreach($allposts as $post) {
+			setup_postdata($post);
 			$res .= "<a class='box' href='" . get_permalink() . "'>
             <div class='card'>
               <div class='max-h-200 overflow-hidden'>
@@ -555,6 +564,9 @@ function fetch_all_by_post_type() {
                 </div>
                 <span class='card-badge'>" . get_field("solution_category") . "</span></div></a>";
 		}
+		wp_reset_postdata();
+	} else {
+		$res = "<h5>No posts available</h5>";
 	}
 
 	echo $res;
