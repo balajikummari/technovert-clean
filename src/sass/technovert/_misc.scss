@@ -181,51 +181,51 @@
 }
 
 // For sub-nav-bar
-.sub-nav-bar {
-  @extend .d-flex;
-  @extend .align-items-center;
+// .sub-nav-bar {
+//   @extend .d-flex;
+//   @extend .align-items-center;
 
-  p {
-    @extend .text-xs;
-    @extend .text-white;
-    @extend .font-weight-extra-bold;
-    @extend .mr-80;
-    letter-spacing: 0.7px;
-  }
+//   p {
+//     @extend .text-xs;
+//     @extend .text-white;
+//     @extend .font-weight-extra-bold;
+//     @extend .mr-80;
+//     letter-spacing: 0.7px;
+//   }
 
-  ul {
-    @extend .d-flex;
-    @extend .m-0;
-    @extend .list-unstyled;
-    overflow-x: auto;
+//   ul {
+//     @extend .d-flex;
+//     @extend .m-0;
+//     @extend .list-unstyled;
+//     overflow-x: auto;
 
-    li {
-      @extend .text-xs;
-      @extend .py-20;
-      @extend .d-block;
-      @extend .position-relative;
+//     li {
+//       @extend .text-xs;
+//       @extend .py-20;
+//       @extend .d-block;
+//       @extend .position-relative;
 
-      &:not(:last-child) {
-        @extend .mr-60;
-      }
+//       &:not(:last-child) {
+//         @extend .mr-60;
+//       }
 
-      a {
-        @extend .text-white;
-        white-space: nowrap;
+//       a {
+//         @extend .text-white;
+//         white-space: nowrap;
 
-        &.active::after {
-          content: "";
-          @extend .position-absolute;
-          left: 50%;
-          border: 8px solid transparent;
-          bottom: 0;
-          transform: translate(-50%);
-          border-bottom-color: white;
-        }
-      }
-    }
-  }
-}
+//         &.active::after {
+//           content: "";
+//           @extend .position-absolute;
+//           left: 50%;
+//           border: 8px solid transparent;
+//           bottom: 0;
+//           transform: translate(-50%);
+//           border-bottom-color: white;
+//         }
+//       }
+//     }
+//   }
+// }
 
 // for blog article detail
 .blog {
@@ -335,8 +335,4 @@
   }
 }
 
-//For making bootstrap nav dropdowns work on hower
-.dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0; // remove the gap so it doesn't close
-}
+
