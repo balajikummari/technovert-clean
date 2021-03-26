@@ -15,7 +15,7 @@ while ( have_posts() ) : the_post();
 ?>
 
 <section class="hero-section" style="background-image:  url(<?php the_field('feature_image_2') ?>), url(<?php the_field('feature_image')?>);background-position: right 2% bottom 5%;
-    background-size: 35rem, auto;" >
+    background-size: 35%, auto;" >
 	<div class="container-box">
         <span>We are hiring</span>
 		<h1>
@@ -77,9 +77,29 @@ while ( have_posts() ) : the_post();
 						<span>- John Johnson</span>
 					</div>
 				</div>
+				<div class="feature-content mb-3 no-underline">
+					<h5 class="pb-2 font-weight-bold">Can you model the world?</h5>
+					<p>No matter how great algorithms and code you write, if you can’t get your data and object modeling right, it demonstrates your lack of experience building real world scalable products. Before writing the first line of the code, you should understand what it will be doing, how it will be used, what it will use, how modules, services will work with each other, what structure will it have, how it will be tested and debugged, and how it will be updated. And you ask enough questions to get these answers.</p>
+				</div>
+				<div class="feature-content row mb-50 pb-50 mx-0">
+					<div class="col-2">
+						<img src="/static/images/jd/LinusTorvalds.png" width="100">
+					</div>
+					<div class="col-10 align-self-center">
+						<p class="py-3" style="font-size: 28px;">“Bad programmers worry about the code. Good programmers worry about data structures and their relationships”</p>
+						<span>-Linus Torvalds</span>
+					</div>
+				</div>
+				<div class="feature-content mb-50 no-underline">
+					<h2 class="pb-2">Responsibilities</h2>
+				 	<p>You would be working on full stack Azure to Angular tech stack that covers - SQL, Cosmos, Azure Tables, Redis, Service Fabric, C#, Azure Functions, Type Script, Angular 7, Node, SASS, Build Automation and many more.</p>
+					<p>We have roles that heavily focus on pure background architecture/middle tier C# or primarily Angular driven too.</p>
+					<p>Mentoring is part of our culture and you are expected to mentor junior team members and make them better than you!</p>
+				</div>
 			</div>
 		</div>
 	</div>
+	<a class="button-right-arrow px-60 rounded" href="<?php the_field('apply_url') ?>">Apply now</a>
 </section>
 
 
