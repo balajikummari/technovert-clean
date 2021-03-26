@@ -479,8 +479,8 @@ function filter_post_by_select() {
 	$searchVal = $_POST['searchVal'];
 	  
 	global $wpdb;
-	$filtered_post = "";
-	$response = array();
+	$filtered_post = array();
+	$response = "";
 	
 	$query1 = "select post_id from yud_postmeta where meta_key='$filterBy' and meta_value='$searchVal';";
 	$idArr = $wpdb->get_results($query1);
@@ -488,19 +488,19 @@ function filter_post_by_select() {
 	foreach($idArr as $id) {
 		// feature_image, solution_category, industry, post_title
 		$query = "SELECT x.post_title, y.meta_value from yud_posts x inner join yud_postmeta y on x.id = y.post_id where x.id = $id->post_id and (y.meta_key = 'industry' or y.meta_key = 'solution_category' or y.meta_key = 'feature_image') order by y.meta_key desc;";
-		$response .= $wpdb->get_results($query);
+		$filtered_post .= $wpdb->get_results($query);
 	}
 
-	foreach($response as $res) {
-		$title = $res[0]->post_title;
-		$sol = $res[0]->meta_value;
-		$ind = $res[1]->meta_value;
-		$img = $res[2]->meta_value;
+	foreach($filtered_post as $post) {
+		$title = $post[0]->post_title;
+		$sol = $post[0]->meta_value;
+		$ind = $post[1]->meta_value;
+		$img = $post[2]->meta_value;
 
-		$filtered_post .= "Title: $title, Sol_cat: $sol, Industry: $ind, Img: $img";
+		$response .= "Title: $title, Sol_cat: $sol, Industry: $ind, Img: $img";
 	}
 	
-	echo $filtered_post;
+	echo $response;
 	exit;
 }
 
