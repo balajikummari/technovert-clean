@@ -66,63 +66,78 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<header id="masthead" class="site-header">
-	<nav class="navbar navbar-expand-lg bg-transparent">
-  <div class="container-box clear-margin-b">
-		<a class="navbar-brand p-0" href="/">
-			<img src="/static/images/common/technovert_logo_white.svg" alt="Technovert Logo">
-		</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Services
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/cloud">Cloud</a></li>
-              <li><a class="dropdown-item" href="/modern-data-analytics">Modern Data Analytics</a></li>
-              <li><a class="dropdown-item" href="/product-engineering">Product Engineering</a></li>
-              <li><a class="dropdown-item" href="/digital-transformation">Digital Transformation</a></li>
-              <li><a class="dropdown-item" href="/quality-engineering">Quality Engineering</a></li>
-              <li><a class="dropdown-item" href="/ux-design">UX Design</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Solutions
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/insurance">Insurance</a></li>
-              <li><a class="dropdown-item" href="#">Banking</a></li>
-              <li><a class="dropdown-item" href="#">HR & People</a></li>
-              <li><a class="dropdown-item" href="#">Digital Workplace</a></li>
-              <li><a class="dropdown-item" href="#">Office 365 Apps</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/labs">Labs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Insights</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="/about" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              About
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/core-values">Core Values</a></li>
-              <li><a class="dropdown-item" href="/our-quality">Our Quality</a></li>
-              <li><a class="dropdown-item" href="/contact">Contact</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/careers">Careers</a>
-          </li>
-        </ul>
-    </div>
-  </div>
-</nav>
-</header><!-- #masthead -->
+
+    <header id="masthead" class="site-header fixed-header">
+        <!-- Main Header -->
+        <nav class="navbar main-navbar  navbar-expand-lg main-navbar bg-transparen">
+            <div class="container-box clear-margin-b g-0">
+                <div class="d-flex  nav-header justify-content-between align-items-center">
+                    <a class="navbar-brand p-0" href="/">
+                        <img src="https://w3.technovert.com/static/images/common/technovert_logo_white.svg" alt="Technovert Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <svg class="icon  text-secondary" width="19" height="22" viewBox="0 0 280 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="menu-icon" opacity="0.66">
+                                <path id="first-line" d="M0 0H280V23H0V0Z" fill="#ffffff" />
+                                <rect id="third-line" y="150" width="280" height="23" fill="#ffffff" />
+                                <rect id="middle-line" y="76" width="280" height="23" fill="#ffffff" />
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        
+                        <li class="nav-item dropdown small-dropdown">
+                            <a class="nav-link dropdown-toggle" id="customers" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Services</span><span class="icon icon-xs text-white ic-chevron-down"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="customers">
+                              <li><a class="dropdown-item" href="/cloud">Cloud</a></li>
+                              <li><a class="dropdown-item" href="/modern-data-analytics">Modern Data Analytics</a></li>
+                              <li><a class="dropdown-item" href="/product-engineering">Product Engineering</a></li>
+                              <li><a class="dropdown-item" href="/digital-transformation">Digital Transformation</a></li>
+                              <li><a class="dropdown-item" href="/quality-engineering">Quality Engineering</a></li>
+                              <li><a class="dropdown-item" href="/ux-design">UX Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown small-dropdown">
+                            <a class="nav-link dropdown-toggle" id="solutions" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Solutions</span><span class="icon icon-xs text-white ic-chevron-down"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="solutions">
+                              <li><a class="dropdown-item" href="/insurance">Insurance</a></li>
+                              <li><a class="dropdown-item" href="#">Banking</a></li>
+                              <li><a class="dropdown-item" href="#">HR & People</a></li>
+                              <li><a class="dropdown-item" href="#">Digital Workplace</a></li>
+                              <li><a class="dropdown-item" href="#">Office 365 Apps</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/labs">Labs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#">Insights</a>
+                        </li>
+                        <li class="nav-item dropdown small-dropdown">
+                            <a class="nav-link dropdown-toggle" id="about" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>About</span><span class="icon icon-xs text-white ic-chevron-down"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="about">
+                              <li><a class="dropdown-item" href="/core-values">Core Values</a></li>
+                              <li><a class="dropdown-item" href="/our-quality">Our Quality</a></li>
+                              <li><a class="dropdown-item" href="/contact">Contact</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/careers">Careers</a>
+                        </li>
+                    </ul>
+                   
+                </div>
+            </div>
+        </nav>
+
+        <!-- End of Main Header -->
+
+    </header>
