@@ -480,7 +480,7 @@ function filter_post_by_select() {
 	  
 	global $wpdb;
 	$filtered_post = "";
-	$response = [];
+	$response = array();
 	
 	$query1 = "select post_id from yud_postmeta where meta_key='$filterBy' and meta_value='$searchVal';";
 	$idArr = $wpdb->get_results($query1);
@@ -491,15 +491,13 @@ function filter_post_by_select() {
 		$response .= $wpdb->get_results($query);
 	}
 
-	if($response) {
-		foreach($response as $res) {
-			$title = $res[0]->post_title;
-			$sol = $res[0]->meta_value;
-			$ind = $res[1]->meta_value;
-			$img = $res[2]->meta_value;
+	foreach($response as $res) {
+		$title = $res[0]->post_title;
+		$sol = $res[0]->meta_value;
+		$ind = $res[1]->meta_value;
+		$img = $res[2]->meta_value;
 
-			$filtered_post .= "Title: $title, Sol_cat: $sol, Industry: $ind, Img: $img";
-		}
+		$filtered_post .= "Title: $title, Sol_cat: $sol, Industry: $ind, Img: $img";
 	}
 	
 	echo $filtered_post;
