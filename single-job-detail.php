@@ -26,7 +26,7 @@ while ( have_posts() ) : the_post();
 <section class="container-box mt-80">
 	<div class="row m-0 banner-container">
 		<div class="col-md-9 col-sm-12">
-			<div class="mb-160 mb-xs-80">
+			<div class="mb-40 mb-xs-80">
 				<div class="feature-content mb-50 no-underline">
 					<h2 class="pb-2"><?php the_title();  ?></h2>
 					<p><?php the_field('job_introduction') ?></p>
@@ -99,7 +99,12 @@ while ( have_posts() ) : the_post();
 			</div>
 		</div>
 	</div>
-	<a class="button-right-arrow px-60 rounded" href="<?php the_field('apply_url') ?>">Apply now</a>
+	<div class="row">
+    	<div class="col-md-3"></div>
+		<div class="col-md-9 col-sm-12">
+			<a class="button-right-arrow px-60 rounded" href="<?php the_field('apply_url') ?>">Apply now</a>
+		<div>
+    </div>
 </section>
 
 
