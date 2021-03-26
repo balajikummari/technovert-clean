@@ -487,11 +487,15 @@ function filter_post_by_select() {
 
 	foreach($idArr as $id) {
 		// feature_image, solution_category, industry, post_title
-		$query = "SELECT x.post_title, y.meta_key, y.meta_value from yud_posts x inner join yud_postmeta y on x.id = y.post_id where x.id = $id->post_id and (y.meta_key = 'industry' or y.meta_key = 'solution_category' or y.meta_key = 'feature_image') order by y.meta_key desc;";
+		$query = "SELECT x.id, x.post_title, y.meta_key, y.meta_value from yud_posts x inner join yud_postmeta y on x.id = y.post_id where x.id = $id->post_id and (y.meta_key = 'industry' or y.meta_key = 'solution_category' or y.meta_key = 'feature_image') order by y.meta_key desc;";
 		$filtered_post = $wpdb->get_results($query, ARRAY_A);
 	}
 
+	$count = 1;
 	foreach($filtered_post as $post) {
+		$count++;
+		$id = $post["id"];
+		$url = the_guid($id);
 		$title = substr($post["post_title"], 0, 55);
 
 		if($post["meta_key"] == "industry") {
@@ -499,13 +503,14 @@ function filter_post_by_select() {
 		} else if ($post["meta_key"] == "solution_category") {
 			$sol = $post["meta_value"];
 		} else {
-			$img = $post["meta_value"];
+			$img = the_field($post["meta_value"], $id);
 		}
 
-		$response .= "<a class='box' href='#'>
+		if($count % 3 == 0) {
+			$response .= "<a class='box' href='$url'>
             <div class='card'>
               <div class='max-h-200 overflow-hidden'>
-                <img src='' alt='case study preview'>
+                <img src='$img' alt='case study preview'>
               </div>
                 <div class='card-body'>
                   <h5>$title</h5>
@@ -514,6 +519,7 @@ function filter_post_by_select() {
                 <span class='card-badge'>$sol</span>
             </div>
           </a>";
+		}
 	}
 	
 	echo $response;
