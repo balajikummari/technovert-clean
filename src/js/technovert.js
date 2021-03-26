@@ -116,94 +116,127 @@
 
     // Mark current page in sub navigation menu, do the same with insights-nav
     $(".sub-navbar li a").each(function (i) {
-      if ($(this).attr("href") === window.location.href) {
-        $(this).addClass("active");
-      }
-    });
-
-    // Does the same thing but for blue ribbon navigation bar
-    $(".sub-navbar ul li a").each(function (i) {
-      if (window.location.href.includes($(this).attr("href"))) {
-        $(this).addClass("active");
-      } else {
-        $(this).removeClass("active");
-      }
-    });
-
-    // Does the same thing for vertical category nav
-    $(".vertical-nav li a").each(function (i) {
-      if (window.location.href.includes($(this).attr("href"))) {
-        $(this).addClass("active");
-      } else {
-        $(this).removeClass("active");
-      }
-    });
-
-    function searchFilter(itemClass, searchElement) {
-      var query = jQuery("#search").val();
-
-      if (query.length > 0) {
-        jQuery(itemClass).each(function () {
-          if (jQuery(this).find(searchElement).text().indexOf(query) !== -1) {
-            jQuery(this).show();
-          } else {
-            jQuery(this).hide();
-          }
-        });
-      } else {
-        jQuery(itemClass).show();
-      }
-    }
-
-    function locFilter() {
-      var selected = jQuery("select#location :selected").text();
-      if (selected !== "All") {
-        jQuery(".jobRecord").each(function () {
-          var loc = jQuery(this).find("h3 + span").text();
-
-          if (selected === loc) {
-            jQuery(this).show();
-          } else {
-            jQuery(this).hide();
-          }
-        });
-      } else {
-        jQuery(".jobRecord").show();
-      }
-    }
-
-    // for the case-studies post search
-    $("#post-search-field").val("");
-    const fetchPost = () => {
-      $.ajax({
-        type: "POST",
-        url: "/wp-admin/admin-ajax.php",
-        dataType: "html",
-        data: {
-          action: "filter_post_by_title",
-          inputValue: $.trim($("#post-search-field").val()),
-          postType: "case-studies",
-        },
-        success: function (res) {
-          if (res == "empty") {
-            console.log(res);
-            $("#suggestion-container")
-              .addClass("d-none")
-              .removeClass("d-block");
-          } else {
-            console.log(res);
-            $("#suggestion-container")
-              .removeClass("d-none")
-              .addClass("d-block")
-              .html(res);
-          }
-        },
+      // Mark current page in sub navigation menu
+      $("ul.subnav li a").each(function (i) {
+        if ($(this).attr("href") === window.location.href) {
+          $(this).addClass("active");
+        }
       });
-    };
-    $("#post-search-field").on("keyup", function () {
-      fetchPost();
-    });
-  });
 
-  // End Jquery code
-})(jQuery); // End of use strict
+      // Does the same thing but for blue ribbon navigation bar
+      $(".sub-navbar ul li a").each(function (i) {
+        if (window.location.href.includes($(this).attr("href"))) {
+          $(this).addClass("active");
+        } else {
+          $(this).removeClass("active");
+        }
+      });
+
+      // Does the same thing for vertical category nav
+      $(".vertical-nav li a").each(function (i) {
+        if (window.location.href.includes($(this).attr("href"))) {
+          $(this).addClass("active");
+        } else {
+          $(this).removeClass("active");
+        }
+      });
+
+      function searchFilter(itemClass, searchElement) {
+        var query = jQuery("#search").val();
+
+        if (query.length > 0) {
+          jQuery(itemClass).each(function () {
+            if (jQuery(this).find(searchElement).text().indexOf(query) !== -1) {
+              jQuery(this).show();
+            } else {
+              jQuery(this).hide();
+            }
+          });
+        } else {
+          jQuery(itemClass).show();
+        }
+      }
+
+      function locFilter() {
+        var selected = jQuery("select#location :selected").text();
+        if (selected !== "All") {
+          jQuery(".jobRecord").each(function () {
+            var loc = jQuery(this).find("h3 + span").text();
+
+            if (selected === loc) {
+              jQuery(this).show();
+            } else {
+              jQuery(this).hide();
+            }
+          });
+        } else {
+          jQuery(".jobRecord").show();
+        }
+      }
+
+      // for the case-studies post search
+      $("#post-search-field").val("");
+      const fetchPost = () => {
+        $.ajax({
+          type: "POST",
+          url: "/wp-admin/admin-ajax.php",
+          dataType: "html",
+          data: {
+            action: "filter_post_by_title",
+            inputValue: $.trim($("#post-search-field").val()),
+            postType: "case-studies",
+          },
+          success: function (res) {
+            if (res == "empty") {
+              $("#suggestion-container")
+                .addClass("d-none")
+                .removeClass("d-block");
+            } else {
+              $("#suggestion-container")
+                .removeClass("d-none")
+                .addClass("d-block")
+                .html(res);
+            }
+          },
+        });
+      };
+      $("#post-search-field").on("keyup", function () {
+        fetchPost();
+      });
+
+      $("select#industry").change(function () {
+        if ($(this).val() != "Industry") {
+          filterBySelectElem("industry", $(this).val());
+        }
+      });
+
+      $("select#solution").change(function () {
+        if ($(this).val() != "Solution") {
+          filterBySelectElem("solution_category", $(this).val());
+        }
+      });
+
+      const filterBySelectElem = (filterBy, searchVal) => {
+        $.ajax({
+          type: "POST",
+          url: "/wp-admin/admin-ajax.php",
+          dataType: "html",
+          data: {
+            action: "filter_post_by_select",
+            filterBy: filterBy,
+            searchVal: searchVal,
+            postType: "case-studies",
+          },
+          success: function (res) {
+            console.log(res);
+          },
+          error: function (err) {
+            console.log(err);
+          },
+        });
+      };
+    });
+
+    // End Jquery code
+  });
+})(jQuery);

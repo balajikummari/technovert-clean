@@ -640,3 +640,13 @@
     }
   }
 }
+
+.rounded-list-icon{
+    box-sizing: border-box;
+    height: 17px;
+    width: 17px;
+    border: 1px solid #B4BAC5;
+    background-color: #FFFFFF;
+    @extend .d-inline-block;
+    @extend .rounded-circle;
+}
