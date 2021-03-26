@@ -15,7 +15,7 @@ while ( have_posts() ) : the_post();
 ?>
 
 
-<section class="hero-section" style="background-image: url(<?php echo $feature_image ?>)">
+<section class="hero-section" style="background-image: url(<?php the_field('feature_image') ?>)">
 	<div class="container-box">
         <span>WEBINAR</span>
 		<h1>
