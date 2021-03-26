@@ -229,6 +229,7 @@
           },
           success: function (res) {
             console.log(res);
+            $(".case-study-wrapper").html(res);
           },
           error: function (err) {
             console.log(err);
@@ -236,7 +237,6 @@
         });
       };
     });
-
     // End Jquery code
   });
 })(jQuery);

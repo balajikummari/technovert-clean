@@ -495,7 +495,7 @@ function filter_post_by_select() {
 	foreach($filtered_post as $post) {
 		$count++;
 		$id = $post["id"];
-		$url = the_guid($id);
+		$url = get_permalink($id);
 		$title = substr($post["post_title"], 0, 55);
 
 		if($post["meta_key"] == "industry") {
@@ -503,7 +503,7 @@ function filter_post_by_select() {
 		} else if ($post["meta_key"] == "solution_category") {
 			$sol = $post["meta_value"];
 		} else {
-			$img = the_field($post["meta_value"], $id);
+			$img = get_field($post["meta_value"], $id);
 		}
 
 		if($count % 3 == 0) {
