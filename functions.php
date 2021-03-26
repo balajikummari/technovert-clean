@@ -492,17 +492,17 @@ function filter_post_by_select() {
 	}
 
 	foreach($filtered_post as $post) {
-		$title = $post[0]->post_title;
-		$sol = $post[0]->meta_value;
-		$ind = $post[1]->meta_value;
-		$img = $post[2]->meta_value;
+		$title = $post[0]["post_title"];
+		$sol = $post[0]["meta_value"];
+		$ind = $post[1]["meta_value"];
+		$img = $post[2]["meta_value"];
 
-		$response .= "filtered_post: $filtered_post, Title: $title, Sol_cat: $sol, Industry: $ind, Img: $img";
+		$response .= "Title: $title, Sol_cat: $sol, Industry: $ind, Img: $img";
 	}
 	
 	echo $response;
 	exit;
 }
 
-	add_action('wp_ajax_filter_post_by_select', 'filter_post_by_select');
-	add_action('wp_ajax_nopriv_filter_post_by_select', 'filter_post_by_select'); 
+add_action('wp_ajax_filter_post_by_select', 'filter_post_by_select');
+add_action('wp_ajax_nopriv_filter_post_by_select', 'filter_post_by_select');
