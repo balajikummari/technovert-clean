@@ -488,7 +488,7 @@ function filter_post_by_select() {
 	foreach($idArr as $id) {
 		// feature_image, solution_category, industry, post_title
 		$query = "SELECT x.post_title, y.meta_value from yud_posts x inner join yud_postmeta y on x.id = y.post_id where x.id = $id->post_id and (y.meta_key = 'industry' or y.meta_key = 'solution_category' or y.meta_key = 'feature_image') order by y.meta_key desc;";
-		$filtered_post .= $wpdb->get_results($query);
+		$filtered_post = $wpdb->get_results($query, ARRAY_A);
 	}
 
 	foreach($filtered_post as $post) {
@@ -497,7 +497,7 @@ function filter_post_by_select() {
 		$ind = $post[1]->meta_value;
 		$img = $post[2]->meta_value;
 
-		$response .= "Title: $title, Sol_cat: $sol, Industry: $ind, Img: $img";
+		$response .= "filtered_post: $filtered_post, Title: $title, Sol_cat: $sol, Industry: $ind, Img: $img";
 	}
 	
 	echo $response;
