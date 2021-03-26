@@ -62,11 +62,11 @@
       fetchPost();
     });
 
-    $("#industry").change(() => {
+    $("select#industry").change(function () {
       filterBySelectElem("industry", $(this).val());
     });
 
-    $("#solution").change(() => {
+    $("select#solution").change(function () {
       filterBySelectElem("solution_category", $(this).val());
     });
 
@@ -74,7 +74,7 @@
       $.ajax({
         type: "POST",
         url: "/wp-admin/admin-ajax.php",
-        dataType: "json",
+        dataType: "html",
         data: {
           action: "filter_post_by_select",
           filterBy: filterBy,
@@ -83,6 +83,9 @@
         },
         success: function (res) {
           console.log(res);
+        },
+        error: function (err) {
+          console.log(err);
         },
       });
     };
