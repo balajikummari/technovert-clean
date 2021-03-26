@@ -497,13 +497,14 @@ function filter_post_by_select() {
 		$id = $post["id"];
 		$url = get_permalink($id);
 		$title = substr($post["post_title"], 0, 55);
+		$img = get_field("feature_image", $id);
 
 		if($post["meta_key"] == "industry") {
 			$ind = $post["meta_value"];
-		} else if ($post["meta_key"] == "solution_category") {
+		}
+		
+		if ($post["meta_key"] == "solution_category") {
 			$sol = $post["meta_value"];
-		} else {
-			$img = get_field($post["meta_value"], $id);
 		}
 
 		if($count % 3 == 0) {
