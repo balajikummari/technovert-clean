@@ -58,7 +58,7 @@ $blogquery = $GLOBALS['wp_query']
         </div>
       </div>
 
-      <div class="case-study-wrapper mt-50 box-2 card-h-100">
+      <div class="case-study-wrapper posts-wrapper mt-50 box-2 card-h-100" data-ptype="case-studies">
         <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
           <a class="box" href="<?php echo the_guid(); ?>">
             <div class="card">
