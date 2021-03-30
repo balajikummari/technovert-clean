@@ -51,7 +51,7 @@ $blogquery = $GLOBALS['wp_query']
         </select>
         <div class="col-md-6 col-12 px-0 position-relative">
           <div id="search">
-            <input type="text" id="post-search-field" placeholder="Search" />
+            <input type="text" id="post-search-field" data-post-type="case-studies" placeholder="Search" />
             <span class="icon icon-sm ic-search"></span>
           </div>
           <ul class="dropdown-menu w-100" id="suggestion-container"></ul>

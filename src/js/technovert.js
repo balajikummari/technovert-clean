@@ -161,7 +161,7 @@
         data: {
           action: "filter_post_by_title",
           inputValue: $.trim($("#post-search-field").val()),
-          postType: "case-studies",
+          postType: $("#post-search-field").data("post-type"),
         },
         success: function (res) {
           if (res == "empty") {
