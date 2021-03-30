@@ -14,6 +14,8 @@ get_header();
 while ( have_posts() ) : the_post(); 
 ?>
 
+
+
 <?php  $feature_image = get_field('feature_image')?>
 <section class="hero-section" style="background-image: url(<?php echo $feature_image ?>)" >
 	<div class="container-box">
@@ -50,9 +52,15 @@ while ( have_posts() ) : the_post();
                         <p>Location</p>
                         <p><?php the_field('location')  ?></p>
                     </div>
-                    <div class="data-bar">
+                    <div class="data-bar mb-50">
                         <p>Engaged in</p>
                         <p><?php the_field('engaged_in')  ?></p>
+                    </div>
+                    <div>
+                        <button class="btn btn-x-lg btn-primary-outline d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#downloadPdf">
+                            <span class="icon ic-download text-blue icon-lg mr-12"></span>
+                            Download PDF
+                        </button>
                     </div>
                 </div>
             </div>
@@ -81,6 +89,27 @@ while ( have_posts() ) : the_post();
         <?php the_content(); ?>
     </div>
 </section>
+
+<div class="modal fade" id="downloadPdf" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog max-w-650">
+    <div class="modal-content">
+      
+      <div class="modal-body p-40">
+        <h1 class="mb-30">Get Instant Access</h1>
+        <div id="case-study-pdf-form">
+			<?php echo do_shortcode( '[contact-form-7 id="209" title="Case study pdf download"]' ); ?>
+		</div>
+        
+        <a id="pdf-download-btn" class="btn btn-primary btn-x-lg d-none mt-30" href=<?php the_field('case_study_pdf'); ?> download>
+                <span class="icon ic-download icon-lg mr-12 text-white"></span>
+                Download
+        </a>   
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
 
 <?php endwhile; // end of the loop. 
 
