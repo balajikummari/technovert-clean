@@ -126,101 +126,98 @@
       }
     });
 
-    // Mark current page in sub navigation menu, do the same with insights-nav
-    $(".sub-navbar li a").each(function (i) {
-      // Mark current page in sub navigation menu
-      $("ul.subnav li a").each(function (i) {
-        if ($(this).attr("href") === window.location.href) {
-          $(this).addClass("active");
-        }
-      });
-
-      // Does the same thing but for blue ribbon navigation bar
-      $(".sub-navbar ul li a").each(function (i) {
-        if (window.location.href.includes($(this).attr("href"))) {
-          $(this).addClass("active");
-        } else {
-          $(this).removeClass("active");
-        }
-      });
-
-      // Does the same thing for vertical category nav
-      $(".vertical-nav li a").each(function (i) {
-        if (window.location.href.includes($(this).attr("href"))) {
-          $(this).addClass("active");
-        } else {
-          $(this).removeClass("active");
-        }
-      });
-
-      // for the case-studies post search
-      $("#post-search-field").val("");
-      const fetchPost = () => {
-        $.ajax({
-          type: "POST",
-          url: "/wp-admin/admin-ajax.php",
-          dataType: "html",
-          data: {
-            action: "filter_post_by_title",
-            inputValue: $.trim($("#post-search-field").val()),
-            postType: "case-studies",
-          },
-          success: function (res) {
-            if (res == "empty") {
-              $("#suggestion-container")
-                .addClass("d-none")
-                .removeClass("d-block");
-            } else {
-              $("#suggestion-container")
-                .removeClass("d-none")
-                .addClass("d-block")
-                .html(res);
-            }
-          },
-        });
-      };
-
-      $("#post-search-field").on("keyup", function () {
-        fetchPost();
-      });
-
-      $("select#industry").change(function () {
-        if ($(this).val() != "Industry") {
-          filterBySelectElem("industry", $(this).val(), ptype);
-        } else {
-          fetchAllByPostType(ptype);
-        }
-      });
-
-      $("select#solution").change(function () {
-        if ($(this).val() != "Solution") {
-          filterBySelectElem("solution_category", $(this).val(), ptype);
-        } else {
-          fetchAllByPostType(ptype);
-        }
-      });
-
-      const filterBySelectElem = (filterBy, searchVal, postType) => {
-        $.ajax({
-          type: "POST",
-          url: "/wp-admin/admin-ajax.php",
-          dataType: "html",
-          data: {
-            action: "filter_post_by_select",
-            filterBy: filterBy,
-            searchVal: searchVal,
-            postType: postType,
-          },
-          success: function (res) {
-            console.log(res);
-            $(".case-study-wrapper").html(res);
-          },
-          error: function (err) {
-            console.log(err);
-          },
-        });
-      };
+    // Mark current page in sub navigation menu
+    $("ul.subnav li a").each(function (i) {
+      if ($(this).attr("href") === window.location.href) {
+        $(this).addClass("active");
+      }
     });
+
+    // Does the same thing but for blue ribbon navigation bar
+    $(".sub-navbar ul li a").each(function (i) {
+      if (window.location.href.includes($(this).attr("href"))) {
+        $(this).addClass("active");
+      } else {
+        $(this).removeClass("active");
+      }
+    });
+
+    // Does the same thing for vertical category nav
+    $(".vertical-nav li a").each(function (i) {
+      if (window.location.href.includes($(this).attr("href"))) {
+        $(this).addClass("active");
+      } else {
+        $(this).removeClass("active");
+      }
+    });
+
+    // for the case-studies post search
+    $("#post-search-field").val("");
+    const fetchPost = () => {
+      $.ajax({
+        type: "POST",
+        url: "/wp-admin/admin-ajax.php",
+        dataType: "html",
+        data: {
+          action: "filter_post_by_title",
+          inputValue: $.trim($("#post-search-field").val()),
+          postType: "case-studies",
+        },
+        success: function (res) {
+          if (res == "empty") {
+            $("#suggestion-container")
+              .addClass("d-none")
+              .removeClass("d-block");
+          } else {
+            $("#suggestion-container")
+              .removeClass("d-none")
+              .addClass("d-block")
+              .html(res);
+          }
+        },
+      });
+    };
+
+    $("#post-search-field").on("keyup", function () {
+      fetchPost();
+    });
+
+    $("select#industry").change(function () {
+      if ($(this).val() != "Industry") {
+        filterBySelectElem("industry", $(this).val(), ptype);
+      } else {
+        fetchAllByPostType(ptype);
+      }
+    });
+
+    $("select#solution").change(function () {
+      if ($(this).val() != "Solution") {
+        filterBySelectElem("solution_category", $(this).val(), ptype);
+      } else {
+        fetchAllByPostType(ptype);
+      }
+    });
+
+    const filterBySelectElem = (filterBy, searchVal, postType) => {
+      $.ajax({
+        type: "POST",
+        url: "/wp-admin/admin-ajax.php",
+        dataType: "html",
+        data: {
+          action: "filter_post_by_select",
+          filterBy: filterBy,
+          searchVal: searchVal,
+          postType: postType,
+        },
+        success: function (res) {
+          console.log(res);
+          $(".case-study-wrapper").html(res);
+        },
+        error: function (err) {
+          console.log(err);
+        },
+      });
+    };
 
     // hide unwanted stuff from wpcf7 form plugin
     $(".ajax-loader").hide();
