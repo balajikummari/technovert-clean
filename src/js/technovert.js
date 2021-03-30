@@ -225,26 +225,28 @@
 
     var wpcf7Elm = document.querySelector(".wpcf7");
 
-    wpcf7Elm.addEventListener(
-      "wpcf7mailsent",
-      function (event) {
-        // for form in case study page
-        if ($("#case-study-pdf-form").length) {
-          $("#case-study-pdf-form p").hide();
-          $(".wpcf7-response-output").removeClass("d-none");
-          $("#pdf-download-btn").toggleClass("d-none");
-        }
+    if (wpcf7Elm) {
+      wpcf7Elm.addEventListener(
+        "wpcf7mailsent",
+        function (event) {
+          // for form in case study page
+          if ($("#case-study-pdf-form").length) {
+            $("#case-study-pdf-form p").hide();
+            $(".wpcf7-response-output").removeClass("d-none");
+            $("#pdf-download-btn").toggleClass("d-none");
+          }
 
-        // for form in blog detail page
-        if ($("#email-subscribe").length) {
-          $(".wpcf7-response-output").removeClass("d-none");
-          setTimeout(() => {
-            $(".wpcf7-response-output").addClass("d-none");
-          }, 5000);
-        }
-      },
-      false
-    );
+          // for form in blog detail page
+          if ($("#email-subscribe").length) {
+            $(".wpcf7-response-output").removeClass("d-none");
+            setTimeout(() => {
+              $(".wpcf7-response-output").addClass("d-none");
+            }, 5000);
+          }
+        },
+        false
+      );
+    }
 
     $("#pdf-download-btn").on("click", function () {
       $("#downloadPdf").modal("hide");
@@ -253,10 +255,12 @@
       $("#pdf-download-btn").toggleClass("d-none");
     });
 
-    var emailSubscribeModal = document.getElementById("downloadPdf");
-    emailSubscribeModal.addEventListener("hidden.bs.modal", function (event) {
-      $(".wpcf7-not-valid-tip").html("");
-    });
+    let emailSubscribeModal = document.getElementById("downloadPdf");
+    if (emailSubscribeModal) {
+      emailSubscribeModal.addEventListener("hidden.bs.modal", function (event) {
+        $(".wpcf7-not-valid-tip").html("");
+      });
+    }
 
     // End Jquery code
     const fetchAllByPostType = (postType) => {
