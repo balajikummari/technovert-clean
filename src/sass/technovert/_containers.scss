@@ -356,12 +356,12 @@
   }
 
   .logo {
-    @extend .max-w-100;
+    max-width : 100%;
     @extend .max-h-55;
     @extend .mb-30;
     img {
       @extend .mb-0;
-      @extend .max-w-100;
+      max-width : 100%;
       object-fit: contain;
       object-position: 0% 0%;
     }
@@ -456,6 +456,7 @@
     height: 50px;
     width: 80%;
   }
+
 }
 
 .post-tile {
