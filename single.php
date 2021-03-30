@@ -56,31 +56,19 @@ get_header();
 				<div class="subscribe">
 					<h5 class="mb-10 font-weight-extra-bold">Join 3500 of your HR peers and stay relevant on latest trends</h5>
 					<p class="text-sm text-gray-200 mb-20">Don’t miss out on the latest tips, tools, and tactics at the forefront of HR and Employee</p>
-					<form id="email-subscribe">
+					<!-- <form id="email-subscribe">
 						<div class="input-group input-group-lg">
 							<input type="text" class="form-control form-control-sm" placeholder="Enter email address" aria-label="Enter email address" aria-describedby="basic-addon2">
 							<button class="btn btn-primary btn-input " type="button" id="button-addon2">Subscribe</button>
 						</div>
-					</form>
+					</form> -->
+					<div id="email-subscribe">
+						<?php echo do_shortcode( '[contact-form-7 id="206" title="Blog Email Subscription"]' ); ?>
+					</div>
 				</div>
 				<div class="p-30 border border-slate-40 rounded">
-                    <ul class="vertical-nav">
-                        <li class="nav-items">
-                            <a href="#" class="nav-link active">Digital Transformation</a>
-                        </li>
-                        <li class="nav-items">
-                            <a href="#" class="nav-link">Cloud</a>
-                        </li>
-                        <li class="nav-items">
-                            <a href="#" class="nav-link">Product Engineering</a>
-                        </li>
-                        <li class="nav-items">
-                            <a href="#" class="nav-link">Quality Engineering</a>
-                        </li>
-                        <li class="nav-items">
-                            <a href="#" class="nav-link">User Experience</a>
-                        </li>
-                    </ul>
+					<p class="text-xs text-uppercase font-weight-extra-bold letter-spacing-07 mb-10">Topics</p>
+					<?php get_template_part("template-parts/vertical-nav"); ?>
                 </div>
 
 			</div>
