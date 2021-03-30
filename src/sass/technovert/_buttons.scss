@@ -1,5 +1,6 @@
 .btn {
     @extend .text-body-font-size;
+    white-space: nowrap;
 
     &:focus{
         @extend .shadow-none;

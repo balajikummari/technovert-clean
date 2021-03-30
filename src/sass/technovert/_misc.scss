@@ -180,53 +180,6 @@
   }
 }
 
-// For sub-nav-bar
-// .sub-nav-bar {
-//   @extend .d-flex;
-//   @extend .align-items-center;
-
-//   p {
-//     @extend .text-xs;
-//     @extend .text-white;
-//     @extend .font-weight-extra-bold;
-//     @extend .mr-80;
-//     letter-spacing: 0.7px;
-//   }
-
-//   ul {
-//     @extend .d-flex;
-//     @extend .m-0;
-//     @extend .list-unstyled;
-//     overflow-x: auto;
-
-//     li {
-//       @extend .text-xs;
-//       @extend .py-20;
-//       @extend .d-block;
-//       @extend .position-relative;
-
-//       &:not(:last-child) {
-//         @extend .mr-60;
-//       }
-
-//       a {
-//         @extend .text-white;
-//         white-space: nowrap;
-
-//         &.active::after {
-//           content: "";
-//           @extend .position-absolute;
-//           left: 50%;
-//           border: 8px solid transparent;
-//           bottom: 0;
-//           transform: translate(-50%);
-//           border-bottom-color: white;
-//         }
-//       }
-//     }
-//   }
-// }
-
 // for blog article detail
 .blog {
   img {
@@ -293,19 +246,51 @@
   @extend .mb-30;
 
   #email-subscribe {
-    border-radius: 3px;
-    input,button {
-      @extend .text-sm;
-      @extend .py-12;
-      @extend .font-weight-default;
-    }
-    input {
-      @extend .no-rounded;
-    }
-    button {
-      border-radius: 0 3px 3px 0 !important;
+    form {
+      border-radius: 3px;
+      input,
+      button {
+        @extend .text-sm;
+        @extend .py-12;
+        @extend .font-weight-light;
+      }
+      input {
+        @extend .rounded-0;
+        border-radius: 3px 0 0 3px !important;
+      }
+      .btn-input {
+        @extend .border, .border-blue;
+        border-radius: 0 3px 3px 0 !important;
+      }
+      .wpcf7-not-valid-tip {
+        @extend .text-xs;
+      }
     }
   }
+}
+
+#case-study-pdf-form {
+  form {
+    input {
+      @extend .text-body-font-size;
+    }
+    .btn {
+      width: unset;
+      @extend .d-block;
+      @extend .ml-auto;
+    }
+    .wpcf7-not-valid-tip {
+      @extend .text-sm;
+    }
+    
+  }
+}
+
+// modified the response content styles from contact form 7
+.wpcf7-response-output {
+  @extend .text-color-gray;
+  @extend .border-0;
+  @extend .mx-0,.mb-0, .p-0;
 }
 
 .shadow-low {
@@ -334,5 +319,3 @@
     }
   }
 }
-
-

@@ -34,6 +34,7 @@ $secondary-text-color: #fff !default;
 
 $slate-10: #FAFAFC !default; 
 $slate-40: #EEF0F4 !default;
+$slate-300: #B6BFC5;
 $slate-500: #a4aab2 !default; // icon color
 
 //Footer color classes
@@ -62,6 +63,7 @@ $colors: (
   "icon-color": $slate-500,
   'slate-10': $slate-10,
   'slate-40': $slate-40,
+  'slate-300': $slate-300,
   "secondary": $secondary-text-color,
   "green": $green,
   "light-green": $green-color,
