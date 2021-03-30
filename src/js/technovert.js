@@ -3,6 +3,16 @@
 
   $(document).ready(function () {
     // for navbar
+    let defaultScroll = window.scrollY; // default when page loads
+    if (
+      defaultScroll > 80 &&
+      $(".hero-section").length &&
+      !$(".sub-navbar").length
+    ) {
+      $("header").addClass("shadow-nav");
+      $("header .navbar").addClass("bg-clay-10");
+    }
+
     $(window).scroll(function () {
       var scroll = $(window).scrollTop();
 
@@ -235,6 +245,45 @@
           },
         });
       };
+    });
+
+    // hide unwanted stuff from wpcf7 form plugin
+    $(".ajax-loader").hide();
+    $(".wpcf7-response-output").addClass("d-none");
+
+    var wpcf7Elm = document.querySelector(".wpcf7");
+
+    wpcf7Elm.addEventListener(
+      "wpcf7mailsent",
+      function (event) {
+        // for form in case study page
+        if ($("#case-study-pdf-form").length) {
+          $("#case-study-pdf-form p").hide();
+          $(".wpcf7-response-output").removeClass("d-none");
+          $("#pdf-download-btn").toggleClass("d-none");
+        }
+
+        // for form in blog detail page
+        if ($("#email-subscribe").length) {
+          $(".wpcf7-response-output").removeClass("d-none");
+          setTimeout(() => {
+            $(".wpcf7-response-output").addClass("d-none");
+          }, 5000);
+        }
+      },
+      false
+    );
+
+    $("#pdf-download-btn").on("click", function () {
+      $("#downloadPdf").modal("hide");
+      $("#case-study-pdf-form p").show();
+      $(".wpcf7-response-output").addClass("d-none");
+      $("#pdf-download-btn").toggleClass("d-none");
+    });
+
+    var emailSubscribeModal = document.getElementById("downloadPdf");
+    emailSubscribeModal.addEventListener("hidden.bs.modal", function (event) {
+      $(".wpcf7-not-valid-tip").html("");
     });
 
     // End Jquery code
