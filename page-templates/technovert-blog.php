@@ -35,7 +35,9 @@ $blogquery = $GLOBALS['wp_query']
         <div class="row mx-0 mt-60">
             <div class="col-md-4 col-sm-12 mb-xs-30 pr-xs-12 pr-md-30 pr-70">
                 <h2 class="text-clay mb-20">Insight</h2>
-                <?php get_template_part("template-parts/vertical-nav"); ?>
+                <div class="p-30 shadow-low rounded"> 
+                    <?php get_template_part("template-parts/vertical-nav"); ?>
+                </div>
             </div>
             <div class="col-md-8 col-sm-12 ">
                 <div class="box-2">

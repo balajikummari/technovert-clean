@@ -8,10 +8,13 @@
  */
 ?>
 
-<div class="p-30 shadow-low rounded">
+
   <ul class="vertical-nav">
     <li class="nav-items">
-      <a href="/category/digital-transformation/" class="nav-link active">Digital Transformation</a>
+      <a href="/blog" class="nav-link active">All Topics</a>
+    </li>
+    <li class="nav-items">
+      <a href="/category/digital-transformation/" class="nav-link">Digital Transformation</a>
     </li>
     <li class="nav-items">
       <a href="/category/cloud/" class="nav-link">Cloud</a>
@@ -26,4 +29,3 @@
       <a href="/category/user-experience/" class="nav-link">User Experience</a>
     </li>
   </ul>
-</div>
