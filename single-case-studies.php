@@ -56,12 +56,14 @@ while ( have_posts() ) : the_post();
                         <p>Engaged in</p>
                         <p><?php the_field('engaged_in')  ?></p>
                     </div>
-                    <div>
-                        <button class="btn btn-x-lg btn-primary-outline d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#downloadPdf">
-                            <span class="icon ic-download text-blue icon-lg mr-12"></span>
-                            Download PDF
-                        </button>
-                    </div>
+                    <?php if(get_field('case_study_pdf')) {?>
+                        <div>
+                            <button class="btn btn-x-lg btn-primary-outline d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#downloadPdf">
+                                <span class="icon ic-download text-blue icon-lg mr-12"></span>
+                                Download PDF
+                            </button>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -90,26 +92,28 @@ while ( have_posts() ) : the_post();
     </div>
 </section>
 
-<div class="modal fade" id="downloadPdf" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog max-w-650">
-    <div class="modal-content">
-      
-      <div class="modal-body p-40">
-        <h1 class="mb-30">Get Instant Access</h1>
-        <div id="case-study-pdf-form">
-			<?php echo do_shortcode( '[contact-form-7 id="209" title="Case study pdf download"]' ); ?>
-		</div>
+<?php if(get_field('case_study_pdf')) {?>
+    <div class="modal fade" id="downloadPdf" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog max-w-650">
+        <div class="modal-content">
         
-        <a id="pdf-download-btn" class="btn btn-primary btn-x-lg d-none mt-30" href=<?php the_field('case_study_pdf'); ?> download>
-                <span class="icon ic-download icon-lg mr-12 text-white"></span>
-                Download
-        </a>   
+        <div class="modal-body p-40">
+            <h1 class="mb-30">Get Instant Access</h1>
+            <div id="case-study-pdf-form">
+                <?php echo do_shortcode( '[contact-form-7 id="308" title="Case Study Subscription"]' ); ?>
+            </div>
+            
+            <a id="pdf-download-btn" class="btn btn-primary btn-x-lg d-none mt-30" href=<?php the_field('case_study_pdf'); ?> download>
+                    <span class="icon ic-download icon-lg mr-12 text-white"></span>
+                    Download
+            </a>   
+            
+        </div>
         
-      </div>
-      
+        </div>
     </div>
-  </div>
-</div>
+    </div>
+<?php } ?>
 
 <?php endwhile; // end of the loop. 
 

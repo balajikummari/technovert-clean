@@ -63,7 +63,7 @@ get_header();
 						</div>
 					</form> -->
 					<div id="email-subscribe">
-						<?php echo do_shortcode( '[contact-form-7 id="206" title="Blog Email Subscription"]' ); ?>
+						<?php echo do_shortcode( '[contact-form-7 id="279" title="Blog Email Subscription"]' ); ?>
 					</div>
 				</div>
 				<div class="p-30 border border-slate-40 rounded">
