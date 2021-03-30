@@ -2,6 +2,8 @@
   "use strict"; // Start of use strict
 
   $(document).ready(function () {
+    const ptype = $(".posts-wrapper").attr("data-ptype");
+
     // for navbar
     let defaultScroll = window.scrollY; // default when page loads
     if (
@@ -151,39 +153,6 @@
         }
       });
 
-      function searchFilter(itemClass, searchElement) {
-        var query = jQuery("#search").val();
-
-        if (query.length > 0) {
-          jQuery(itemClass).each(function () {
-            if (jQuery(this).find(searchElement).text().indexOf(query) !== -1) {
-              jQuery(this).show();
-            } else {
-              jQuery(this).hide();
-            }
-          });
-        } else {
-          jQuery(itemClass).show();
-        }
-      }
-
-      function locFilter() {
-        var selected = jQuery("select#location :selected").text();
-        if (selected !== "All") {
-          jQuery(".jobRecord").each(function () {
-            var loc = jQuery(this).find("h3 + span").text();
-
-            if (selected === loc) {
-              jQuery(this).show();
-            } else {
-              jQuery(this).hide();
-            }
-          });
-        } else {
-          jQuery(".jobRecord").show();
-        }
-      }
-
       // for the case-studies post search
       $("#post-search-field").val("");
       const fetchPost = () => {
@@ -210,23 +179,28 @@
           },
         });
       };
+
       $("#post-search-field").on("keyup", function () {
         fetchPost();
       });
 
       $("select#industry").change(function () {
         if ($(this).val() != "Industry") {
-          filterBySelectElem("industry", $(this).val());
+          filterBySelectElem("industry", $(this).val(), ptype);
+        } else {
+          fetchAllByPostType(ptype);
         }
       });
 
       $("select#solution").change(function () {
         if ($(this).val() != "Solution") {
-          filterBySelectElem("solution_category", $(this).val());
+          filterBySelectElem("solution_category", $(this).val(), ptype);
+        } else {
+          fetchAllByPostType(ptype);
         }
       });
 
-      const filterBySelectElem = (filterBy, searchVal) => {
+      const filterBySelectElem = (filterBy, searchVal, postType) => {
         $.ajax({
           type: "POST",
           url: "/wp-admin/admin-ajax.php",
@@ -235,10 +209,11 @@
             action: "filter_post_by_select",
             filterBy: filterBy,
             searchVal: searchVal,
-            postType: "case-studies",
+            postType: postType,
           },
           success: function (res) {
             console.log(res);
+            $(".case-study-wrapper").html(res);
           },
           error: function (err) {
             console.log(err);
@@ -287,5 +262,24 @@
     });
 
     // End Jquery code
+    const fetchAllByPostType = (postType) => {
+      $.ajax({
+        type: "POST",
+        url: "/wp-admin/admin-ajax.php",
+        dataType: "html",
+        data: {
+          action: "fetch_all_by_post_type",
+          postType: postType,
+        },
+        success: function (res) {
+          console.log(res);
+          $(".posts-wrapper").html(res);
+        },
+        error: function (err) {
+          console.log(err);
+        },
+      });
+    };
   });
+  // End Jquery code
 })(jQuery);

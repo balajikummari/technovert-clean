@@ -35,25 +35,36 @@ $blogquery = $GLOBALS['wp_query']
     <div class="container-box">
       <h4 class="text-gray">Events</h4>
 
-      <div class="filters d-flex mt-20">
-        <select name="industry" id="industry">
-          <option value="0">Industry</option>
-          <option value="1">Banking</option>
-          <option value="2">Insurance</option>
-          <option value="3">RPA</option>
+      <div class="filters row mx-0 mt-20">
+        <select name="industry" id="industry" class="col-md-3 col-12 px-0 mb-xs-30">
+          <option value="Industry">Industry</option>
+          <option value="Banking">Banking</option>
+          <option value="Insurance">Insurance</option>
+          <option value="RPA">RPA</option>
         </select>
-        <select name="solution" id="solution">
-          <option value="0">Solution</option>
+        <select name="solution" id="solution" class="col-md-3 col-12 px-0 mb-xs-30">
+          <option value="Solution">Solution</option>
+          <option value="Digital Transformation">Digital Transformation</option>
+          <option value="Product Engineering">Product Engineering</option>
+          <option value="Quality Engineering">Quality Engineering</option>
+          <option value="User Experience">User Experience</option>
         </select>
-        <input type="text" id="search" placeholder="Search" onkeyup="searchFilter('.case-study-card', 'h2');" />
+        <div class="col-md-6 col-12 px-0 position-relative">
+          <div id="search">
+            <input type="text" id="post-search-field" placeholder="Search" />
+            <span class="icon icon-sm ic-search"></span>
+          </div>
+          <ul class="dropdown-menu w-100" id="suggestion-container"></ul>
+        </div>
       </div>
 
+      <div class="posts-wrapper" data-ptype="event">
       <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
         <div class="col-9 event-card-circular mt-5 border-0 p-0 row mx-0 rounded">
       <!-- <img src="https://staging3.technovert.com/wp-content/uploads/Artificial-Intelligence.svg"> -->
           <div class="col-8 py-5 px-4">
             
-              <h5 class="" title=<?php echo substr(get_field('event_title'), 0, 50); ?>><?php echo substr(get_field('event_title'), 0, 50); ?></h5>
+              <h5 title=<?php echo substr(get_field('event_title'), 0, 50); ?>><?php echo substr(get_field('event_title'), 0, 50); ?></h5>
               <span class="badge badge-secondary">WEBINAR</span>
               <br />
               <div class="my-4"><span><?php echo date("M j l, Y", strtotime(get_field("event_date"))) ?></span></div>
@@ -65,6 +76,7 @@ $blogquery = $GLOBALS['wp_query']
           </div>
         </div>
       <?php endwhile; ?>
+      </div>
   </div>
 </section>
 

@@ -487,25 +487,31 @@ function filter_post_by_select() {
 
 	foreach($idArr as $id) {
 		// feature_image, solution_category, industry, post_title
-		$query = "SELECT x.post_title, y.meta_key, y.meta_value from yud_posts x inner join yud_postmeta y on x.id = y.post_id where x.id = $id->post_id and (y.meta_key = 'industry' or y.meta_key = 'solution_category' or y.meta_key = 'feature_image') order by y.meta_key desc;";
+		$query = "SELECT x.id, x.post_title, y.meta_key, y.meta_value from yud_posts x inner join yud_postmeta y on x.id = y.post_id where x.id = $id->post_id and (y.meta_key = 'industry' or y.meta_key = 'solution_category' or y.meta_key = 'feature_image') order by y.meta_key desc;";
 		$filtered_post = $wpdb->get_results($query, ARRAY_A);
 	}
 
+	$count = 1;
 	foreach($filtered_post as $post) {
+		$count++;
+		$id = $post["id"];
+		$url = get_permalink($id);
 		$title = substr($post["post_title"], 0, 55);
+		$img = get_field("feature_image", $id);
 
 		if($post["meta_key"] == "industry") {
 			$ind = $post["meta_value"];
-		} else if ($post["meta_key"] == "solution_category") {
+		}
+		
+		if ($post["meta_key"] == "solution_category") {
 			$sol = $post["meta_value"];
-		} else {
-			$img = $post["meta_value"];
 		}
 
-		$response .= "<a class='box' href='#'>
+		if($count % 3 == 0) {
+			$response .= "<a class='box' href='$url'>
             <div class='card'>
               <div class='max-h-200 overflow-hidden'>
-                <img src='' alt='case study preview'>
+                <img src='$img' alt='case study preview'>
               </div>
                 <div class='card-body'>
                   <h5>$title</h5>
@@ -514,6 +520,7 @@ function filter_post_by_select() {
                 <span class='card-badge'>$sol</span>
             </div>
           </a>";
+		}
 	}
 	
 	echo $response;
@@ -522,3 +529,49 @@ function filter_post_by_select() {
 
 add_action('wp_ajax_filter_post_by_select', 'filter_post_by_select');
 add_action('wp_ajax_nopriv_filter_post_by_select', 'filter_post_by_select');
+
+// Fetch all posts by post type
+function fetch_all_by_post_type() {
+	global $post;
+
+	$postType = $_POST['postType'];
+	$res = "";
+
+	$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	$args = array(
+			'posts_per_page'   => 12,
+			'post_status'      => 'publish',
+			'order'            => 'DESC',
+			'orderby'          => 'date',
+			'paged'            => $page,
+			'suppress_filters' => true,
+			'post_type' => $postType
+	);
+
+	$allposts = get_posts($args);
+
+	if($allposts) {
+		foreach($allposts as $post) {
+			setup_postdata($post);
+			$res .= "<a class='box' href='" . get_permalink() . "'>
+            <div class='card'>
+              <div class='max-h-200 overflow-hidden'>
+                <img src='" . get_field("feature_image") ."' alt='case study preview'>
+              </div>
+                <div class='card-body'>
+                  <h5>" . get_the_title() . "</h5>
+                  <p class='industry'>" . get_field("industry") . "</p>
+                </div>
+                <span class='card-badge'>" . get_field("solution_category") . "</span></div></a>";
+		}
+		wp_reset_postdata();
+	} else {
+		$res = "<h5>No posts available</h5>";
+	}
+
+	echo $res;
+	exit;
+}
+
+add_action('wp_ajax_fetch_all_by_post_type', 'fetch_all_by_post_type');
+add_action('wp_ajax_nopriv_fetch_all_by_post_type', 'fetch_all_by_post_type');
