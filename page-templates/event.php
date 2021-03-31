@@ -60,19 +60,15 @@ $blogquery = $GLOBALS['wp_query']
 
       <div class="posts-wrapper" data-ptype="event">
       <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
-        <div class="col-9 event-card-circular mt-5 border-0 p-0 row mx-0 rounded">
-      <!-- <img src="https://staging3.technovert.com/wp-content/uploads/Artificial-Intelligence.svg"> -->
-          <div class="col-8 py-5 px-4">
-            
-              <h5 title=<?php echo substr(get_field('event_title'), 0, 50); ?>><?php echo substr(get_field('event_title'), 0, 50); ?></h5>
-              <span class="badge badge-secondary">WEBINAR</span>
-              <br />
-              <div class="my-4"><span><?php echo date("M j l, Y", strtotime(get_field("event_date"))) ?></span></div>
-              <br />
-              <a class="learn-more" href="<?php echo the_guid(); ?>">More info</a>
+        <div class="event-card-circular">
+          <div class="event-content">
+              <h5 class="text-clay" title=<?php echo substr(get_field('event_title'), 0, 50); ?>><?php echo substr(get_field('event_title'), 0, 50); ?></h5>
+              <span class="badge">WEBINAR</span>
+              <div class="event-date"><span><?php echo date("M j l, Y", strtotime(get_field("event_date"))) ?></span></div>
+              <a class="text-blue" href="<?php echo the_guid(); ?>">More info</a>
           </div>
-          <div class="col-4 p-0">
-              <img class="event-logo rounded-right" src='<?php the_field("event_logo") ?>' alt="event preview" />
+          <div class="event-image">
+              <img src='<?php the_field("event_logo") ?>' alt="event preview" />
           </div>
         </div>
       <?php endwhile; ?>

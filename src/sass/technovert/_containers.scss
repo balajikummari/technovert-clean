@@ -579,20 +579,44 @@
 
 .events{
   .event-card-circular{
+    @extend .max-w-800;
     @extend .shadow-low; 
+    @extend .row, .mx-0;
+    @extend .rounded;
+    @extend .mt-5;
+
+    .event-content {
+      @extend .col-md-8, .col-12;
+      @extend .py-5, .px-4;
+      @extend .order-md-1, .order-2;
+
+      .event-date {
+        @extend .text-color-gray, .text-sm, .mb-30;
+      }
+    }
+
+    .event-image {
+      @extend .col-md-4, .col-12;
+      @extend .order-md-2, .order-1;
+      @extend .p-0;
+
+      img {
+        @extend .w-100;
+        @extend .h-100;
+        @extend .rounded-right;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
 
     .badge{
-      background-color: #B4BAC5;
-      font-weight: 100;
-      font-size: 13px;
+      @extend .bg-cadet-blue;
+      @extend .text-xxs;
+      @extend .text-white;
+      @extend .font-weight-light;
+      @extend .letter-spacing-07;
+      @extend .mb-20;
     }
-
-    .event-logo{
-      width: 100%;
-      height: 100%;
-      margin: 0;
-    }
-
   }
 }
 
