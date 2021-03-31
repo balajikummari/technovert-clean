@@ -120,10 +120,11 @@
                             <a class="nav-link" href="/blog">Insights</a>
                         </li>
                         <li class="nav-item dropdown small-dropdown">
-                            <a class="nav-link dropdown-toggle" id="about" href="/about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" id="about" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span>About</span><span class="icon icon-xs text-white ic-chevron-down"></span>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="about">
+                              <li><a class="dropdown-item" href="/about">About Us</a></li>
                               <li><a class="dropdown-item" href="/core-values">Core Values</a></li>
                               <li><a class="dropdown-item" href="/our-quality">Our Quality</a></li>
                               <li><a class="dropdown-item" href="/contact">Contact</a></li>
