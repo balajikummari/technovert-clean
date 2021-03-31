@@ -54,6 +54,10 @@
     font-size: 18px;
     letter-spacing: 0.2px;
     line-height: 28px;
+
+    &:hover {
+      color: #2e3342 !important;
+    }
   }
 
   a.active {

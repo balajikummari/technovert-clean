@@ -429,12 +429,13 @@
   .card-badge {
     @extend .position-absolute;
     @extend .px-10, .py-6;
-    @extend .rounded;
     @extend .text-white;
     @extend .bg-blue;
     @extend .font-weight-extra-bold;
     @extend .text-xs;
     @extend .letter-spacing-1;
+    @extend .text-uppercase;
+    border-radius: 3px !important;
     top: 20px;
     left: 20px;
   }
