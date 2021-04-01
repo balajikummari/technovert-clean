@@ -42,10 +42,10 @@ $blogquery = $GLOBALS['wp_query']
             <div class="col-md-8 col-sm-12 ">
                 <div class="box-2">
                     <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
-                        <a class="box" href="<?php echo the_permalink() ?>">
+                        <a class="box" href="<?php the_permalink() ?>">
                             <div class="post-tile">
                                 <div class="h-200 overflow-hidden">
-                                        <?php echo the_post_thumbnail('thumbnail') ?>
+                                    <?php the_post_thumbnail('thumbnail') ?>
                                 </div>
                                 <div class="post-body">
                                     <h5>
