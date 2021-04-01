@@ -40,8 +40,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 										'menu_class' => 'subnav',
 										'echo' => true,
 									);
-									wp_nav_menu($options); ?>
-								}
+									wp_nav_menu($options); } ?>
 					</div>
 					<div class="entry-content">
 						<?php the_content(); ?>
