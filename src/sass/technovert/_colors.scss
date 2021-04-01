@@ -9,8 +9,9 @@ $cadet-blue: #b4bac5;
 
 $aqua-10: #f8fafc;
 
-$green-col: #63c572;
+$green: #63c572;
 $green-color: #6ac069 !default;
+$green-200: #84c59e !default;
 
 $white-col: #ffffff;
 
@@ -33,6 +34,7 @@ $primary-text-color: #2c2e31 !default;
 $secondary-text-color: #fff !default;
 
 $slate-10: #fafafc !default;
+$slate-30: #f6f6f6;
 $slate-40: #eef0f4 !default;
 $slate-300: #b6bfc5;
 $slate-500: #a4aab2 !default; // icon color
@@ -62,12 +64,14 @@ $slate-500: #a4aab2 !default; // icon color
 $colors: (
   "icon-color": $slate-500,
   "slate-10": $slate-10,
+  "slate-30": $slate-30,
   "slate-40": $slate-40,
   "slate-300": $slate-300,
   "secondary": $secondary-text-color,
   "green": $green-col,
   "light-green": $green-color,
-  "blue": $blue-col,
+  "green-200": $green-200,
+  "blue": $blue,
   "blue-200": $blue-200,
   "blue-300": $blue-300,
   "blue-400": $blue-400,
