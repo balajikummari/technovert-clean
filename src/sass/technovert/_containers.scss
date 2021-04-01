@@ -621,6 +621,23 @@
   }
 }
 
+.bg-blue-on-hover {
+  &:hover {
+    @extend .bg-blue;
+
+    h3,h4,h5,h6,p,span {
+      @extend .text-white;
+    }
+  }
+}
+
+.card-blue-on-hover {
+  .card-circular {
+    transition: all 0.2s ease;
+    @extend .bg-blue-on-hover;
+  }
+}
+
 @media (min-width: 1900px) {
   .hero-section {
     min-height: 780px !important;
