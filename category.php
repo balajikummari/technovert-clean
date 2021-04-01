@@ -24,11 +24,13 @@ get_header();
             </div>
             <div class="col-md-8 col-sm-12 ">
                 <div class="box-2">
-                    <?php while ( have_posts()) : the_post();  ?>
-                        <div class="box">
+                <?php while ( have_posts()) : the_post();  ?>
+                        <a class="box" href="<?php the_permalink() ?>">
                             <div class="post-tile">
-                                <img src="https://www.keka.com//media/2021/03/smart-goals-image-375x250.jpg" alt="Alternate Text" />
-                                <div>
+                                <div class="h-200 overflow-hidden">
+                                    <?php the_post_thumbnail('thumbnail') ?>
+                                </div>
+                                <div class="post-body">
                                     <h5>
                                         <?php 
                                             $truncate_title = substr(get_the_title(),0,75);
@@ -39,7 +41,7 @@ get_header();
                                     <span>5 min Read</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     <?php endwhile; ?>
                 </div>
                 <div>
