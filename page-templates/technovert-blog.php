@@ -14,7 +14,7 @@ get_header();
 
 $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array(
-    'posts_per_page'   => 1,
+    'posts_per_page'   => 12,
     'post_status'      => 'publish',
     'order'            => 'DESC',
     'orderby'          => 'date',
