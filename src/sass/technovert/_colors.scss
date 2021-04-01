@@ -15,7 +15,7 @@ $green-200: #84C59E !default;
 
 $white: #ffffff;
 
-$gray: #666d7d;
+$gray-col: #666d7d;
 $gray-light: #F4F5F7;
 $gray-100: #bbc2d2;
 $bright-gray: #39404C;
@@ -82,7 +82,7 @@ $colors: (
   "light-blue": $blue-100,
   "cadet-blue" : $cadet-blue,
   "aqua-10": $aqua-10,
-  "gray": $gray,
+  "gray": $gray-col,
   "gray-light": $gray-light,
   "light-gray": $gray-100,
   "bright-gray": $bright-gray,
@@ -102,6 +102,10 @@ $colors: (
   }
 
   .text-color-#{$color-name} {
+    color: $color-value !important;
+  }
+
+  .tx-#{$color-name} {
     color: $color-value !important;
   }
 
