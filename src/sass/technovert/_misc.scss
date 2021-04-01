@@ -297,6 +297,37 @@
   @extend .mx-0,.mb-0, .p-0;
 }
 
+// for migration steps in cloud migration
+.migration-steps {
+  .step {
+    @extend .border, .border-slate-30;
+    border-width: 9px !important;
+    max-width: 175px;
+    @extend .pl-30;
+    @extend .mb-20;
+
+    h1 {
+      @extend .text-green-200;
+      @extend .font-weight-bold;
+      font-size: 140px;
+      line-height: 160px;
+    }
+
+    h4 {
+      @extend .mb-0;
+      span {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  ul {
+    li:not(:last-child) {
+      @extend .mb-20;
+    }
+  }
+}
+
 .shadow-low {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }

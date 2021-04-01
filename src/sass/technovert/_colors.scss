@@ -11,6 +11,7 @@ $aqua-10:#F8FAFC;
 
 $green: #63c572;
 $green-color: #6AC069 !default;
+$green-200: #84C59E !default; 
 
 $white: #ffffff;
 
@@ -33,9 +34,12 @@ $primary-text-color: #2c2e31 !default;
 $secondary-text-color: #fff !default;
 
 $slate-10: #FAFAFC !default; 
+$slate-30: #F6F6F6;
 $slate-40: #EEF0F4 !default;
 $slate-300: #B6BFC5;
 $slate-500: #a4aab2 !default; // icon color
+
+
 
 //Footer color classes
 .footer-text-color {
@@ -62,11 +66,13 @@ $slate-500: #a4aab2 !default; // icon color
 $colors: (
   "icon-color": $slate-500,
   'slate-10': $slate-10,
+  'slate-30': $slate-30,
   'slate-40': $slate-40,
   'slate-300': $slate-300,
   "secondary": $secondary-text-color,
   "green": $green,
   "light-green": $green-color,
+  "green-200": $green-200,
   "blue": $blue,
   "blue-200": $blue-200,
   "blue-300": $blue-300,
