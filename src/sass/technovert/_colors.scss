@@ -1,40 +1,40 @@
-$blue: #1077da;
-$dodger-blue: #2770F1;
-$mariner-blue: #2B80C5;
+$blue-col: #1077da;
+$dodger-blue: #2770f1;
+$mariner-blue: #2b80c5;
 $blue-100: #dbebfa;
 $blue-200: #0077b5;
 $blue-300: #1ea0f2;
 $blue-400: #3b5997;
-$cadet-blue: #B4BAC5;
+$cadet-blue: #b4bac5;
 
-$aqua-10:#F8FAFC;
+$aqua-10: #f8fafc;
 
-$green: #63c572;
-$green-color: #6AC069 !default;
+$green-col: #63c572;
+$green-color: #6ac069 !default;
 
-$white: #ffffff;
+$white-col: #ffffff;
 
 $gray-col: #666d7d;
-$gray-light: #F4F5F7;
+$gray-light: #f4f5f7;
 $gray-100: #bbc2d2;
-$bright-gray: #39404C;
-$gray-200: #69727A;
+$bright-gray: #39404c;
+$gray-200: #69727a;
 
-$clay: #2E3342;
-$clay-10: #2F3441;
+$clay-col: #2e3342;
+$clay-10: #2f3441;
 
-$mandy-pink: #E44C7D;
+$mandy-pink: #e44c7d;
 
-$aqua: #5BBAD6;
+$aqua-col: #5bbad6;
 
-$violet: #3B4A64;
+$violet: #3b4a64;
 
 $primary-text-color: #2c2e31 !default;
 $secondary-text-color: #fff !default;
 
-$slate-10: #FAFAFC !default; 
-$slate-40: #EEF0F4 !default;
-$slate-300: #B6BFC5;
+$slate-10: #fafafc !default;
+$slate-40: #eef0f4 !default;
+$slate-300: #b6bfc5;
 $slate-500: #a4aab2 !default; // icon color
 
 //Footer color classes
@@ -61,33 +61,33 @@ $slate-500: #a4aab2 !default; // icon color
 // Text Colors
 $colors: (
   "icon-color": $slate-500,
-  'slate-10': $slate-10,
-  'slate-40': $slate-40,
-  'slate-300': $slate-300,
+  "slate-10": $slate-10,
+  "slate-40": $slate-40,
+  "slate-300": $slate-300,
   "secondary": $secondary-text-color,
-  "green": $green,
+  "green": $green-col,
   "light-green": $green-color,
-  "blue": $blue,
+  "blue": $blue-col,
   "blue-200": $blue-200,
   "blue-300": $blue-300,
   "blue-400": $blue-400,
   "dodger-blue": $dodger-blue,
   "mariner-blue": $mariner-blue,
   "light-blue": $blue-100,
-  "cadet-blue" : $cadet-blue,
+  "cadet-blue": $cadet-blue,
   "aqua-10": $aqua-10,
   "gray": $gray-col,
   "gray-light": $gray-light,
   "light-gray": $gray-100,
   "bright-gray": $bright-gray,
   "gray-200": $gray-200,
-  "clay": $clay,
+  "clay": $clay-col,
   "clay-10": $clay-10,
   "mandy-pink": $mandy-pink,
-  "aqua": $aqua,
+  "aqua": $aqua-col,
   "violet": $violet,
-  "white": $white,
-  "primary": $primary-text-color
+  "white": $white-col,
+  "primary": $primary-text-color,
 );
 
 @each $color-name, $color-value in $colors {
@@ -103,7 +103,7 @@ $colors: (
     color: $color-value !important;
   }
 
-  .bg-#{$color-name} { 
+  .bg-#{$color-name} {
     background-color: $color-value !important;
   }
 
