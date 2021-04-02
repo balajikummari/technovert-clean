@@ -286,7 +286,6 @@
     .wpcf7-not-valid-tip {
       @extend .text-sm;
     }
-    
   }
 }
 
@@ -294,7 +293,7 @@
 .wpcf7-response-output {
   @extend .text-color-gray;
   @extend .border-0;
-  @extend .mx-0,.mb-0, .p-0;
+  @extend .mx-0, .mb-0, .p-0;
 }
 
 // for migration steps in cloud migration
@@ -345,6 +344,29 @@
   select {
     min-width: auto;
   }
+}
+
+.rounded-indicators {
+  li {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    @extend .rounded-circle;
+    @extend .border, .border-white;
+
+    &.active {
+      @extend .bg-white;
+    }
+  }
+}
+
+#fullFeatureContainerCarousel {
+  .rounded-indicators {
+    bottom: -40px;
+    @extend .mx-auto;
+    @extend .justify-content-start;
+  }
+  
 }
 
 @media (max-width: 767px) {
