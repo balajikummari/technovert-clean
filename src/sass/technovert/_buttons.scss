@@ -1,6 +1,12 @@
 .btn {
     @extend .text-body-font-size;
+    @extend .rounded;
+    @extend .border-0;
     white-space: nowrap;
+
+    &.no-rounded {
+        @extend .rounded-0;
+    }
 
     &:focus{
         @extend .shadow-none;
@@ -8,48 +14,47 @@
 
     &.btn-primary {
         @extend .bg-blue;
-        @extend .border-0;
-        @extend .rounded;
+        // @extend .border-0;
+        // @extend .rounded;
         @extend .text-white;
 
     }
 
     &.btn-bright-gray {
         @extend .bg-bright-gray;
-        @extend .border-0;
-        @extend .rounded;
+        // @extend .border-0;
+        // @extend .rounded;
         @extend .text-white;
 
     }
 
     &.btn-white {
         @extend .bg-white;
-        @extend .border-0;
-        @extend .rounded;
+        // @extend .border-0;
+        // @extend .rounded;
         @extend .text-blue;
 
     }
 
     &.btn-outline {
         @extend .bg-transparent;
-        @extend .rounded;
+        // @extend .rounded;
         @extend .border;
+        @extend .btn-outline;
     }
 
     &.btn-primary-outline {
-        @extend .btn-outline;
+        // @extend .btn-outline;
         @extend .text-blue;
         @extend .border-blue;
     }
 
     &.btn-white-outline {
-        @extend .btn-outline;
+        // @extend .btn-outline;
         @extend .text-white;
         @extend .border-white;
-        @extend .font-weight-extra-bold;
-        @extend .text-uppercase;
-        @extend .mb-30;
-        letter-spacing: 1px;
+        // @extend .font-weight-extra-bold;
+        // @extend .text-uppercase;
     }
 
     &.btn-x-lg {
@@ -85,7 +90,5 @@
         @extend .font-weight-extra-bold;
     }
 
-    &.no-rounded {
-        @extend .rounded-0;
-    }
+    
 }
