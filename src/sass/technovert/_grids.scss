@@ -11,17 +11,20 @@
     @extend .d-block;
     @extend .p-40;
   }
-
-  .bg-white {
+  
+  .white-bg {
     span {
       @extend .text-blue;
     }
+
     h4 {
       @extend .text-clay;
     }
+
     p {
       @extend .text-gray;
-    }
+   }
+    
   }
 }
 
