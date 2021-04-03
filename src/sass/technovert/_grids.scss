@@ -2,6 +2,10 @@
   min-height: 1260px;
   background-color: #f4f5f7;
   @extend .row, .row-cols-md-3;
+  
+  span, h4, p {
+    @extend .text-white;
+  }
 
   & > div {
     @extend .px-0;
@@ -13,6 +17,8 @@
   }
   
   .white-bg {
+    @extend .bg-white;
+
     span {
       @extend .text-blue;
     }
