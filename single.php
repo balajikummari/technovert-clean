@@ -25,20 +25,7 @@ get_header();
 				<div class="blog">
 					<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 					<div class="share">
-						<div class="social-media">
-							<span>Share article</span>
-							<div class="d-flex">
-								<a href="#" class="dot dot-sm bg-blue-400 mr-12">
-									<span class="icon icon-xs ic-facebook text-white"></span>
-								</a>
-								<a href="#" class="dot dot-sm bg-blue-300 mr-12">
-									<span class="icon icon-xs ic-twitter text-white"></span>
-								</a>
-								<a href="#" class="dot dot-sm bg-blue-200 mr-12">
-									<span class="icon icon-xs ic-linkedin text-white"></span>
-								</a>
-							</div>
-						</div>
+						<?php social_share(); ?>
 						<label>5 min read</label>
 					</div>
 					<section>
