@@ -575,3 +575,12 @@ function fetch_all_by_post_type() {
 
 add_action('wp_ajax_fetch_all_by_post_type', 'fetch_all_by_post_type');
 add_action('wp_ajax_nopriv_fetch_all_by_post_type', 'fetch_all_by_post_type');
+
+// for social share button link 
+function social_share() {
+    $url = urlencode(get_the_permalink());
+    $title = urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8'));
+    $media = urlencode(get_the_post_thumbnail_url(get_the_ID(), 'full'));
+
+    include('template-parts/social-share-template.php');
+}
