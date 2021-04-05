@@ -8,53 +8,63 @@
         @extend .rounded-0;
     }
 
+    &:hover {
+        cursor: pointer;
+    }
+
     &:focus{
         @extend .shadow-none;
     }
 
     &.btn-primary {
         @extend .bg-blue;
-        // @extend .border-0;
-        // @extend .rounded;
         @extend .text-white;
+        transition: all 0.2s ease-in-out;
 
+        &:hover {
+           background-color: darken( $blue, 5% ) !important;
+           
+        }
     }
 
     &.btn-bright-gray {
         @extend .bg-bright-gray;
-        // @extend .border-0;
-        // @extend .rounded;
         @extend .text-white;
 
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+           background-color: darken( $bright-gray, 5% ) !important;
+           
+        }
     }
 
     &.btn-white {
         @extend .bg-white;
-        // @extend .border-0;
-        // @extend .rounded;
         @extend .text-blue;
 
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+           background-color: darken( $white, 5% ) !important;
+           
+        }
     }
 
     &.btn-outline {
         @extend .bg-transparent;
-        // @extend .rounded;
         @extend .border;
         @extend .btn-outline;
     }
 
     &.btn-primary-outline {
-        // @extend .btn-outline;
         @extend .text-blue;
         @extend .border-blue;
     }
 
     &.btn-white-outline {
-        // @extend .btn-outline;
         @extend .text-white;
         @extend .border-white;
-        // @extend .font-weight-extra-bold;
-        // @extend .text-uppercase;
     }
 
     &.btn-x-lg {

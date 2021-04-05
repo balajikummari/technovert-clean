@@ -1,4 +1,4 @@
-$blue-col: #1077da;
+$blue: #1077da;
 $dodger-blue: #2770f1;
 $mariner-blue: #2b80c5;
 $blue-100: #dbebfa;
@@ -10,7 +10,7 @@ $cadet-blue: #b4bac5;
 $aqua-10: #f8fafc;
 
 $green-col: #63c572;
-$green-color: #6ac069 !default;
+$green-light: #6ac069 !default;
 $green-200: #84c59e !default;
 
 $white-col: #ffffff;
@@ -69,9 +69,9 @@ $colors: (
   "slate-300": $slate-300,
   "secondary": $secondary-text-color,
   "green": $green-col,
-  "light-green": $green-color,
+  "light-green": $green-light,
   "green-200": $green-200,
-  "blue": $blue-col,
+  "blue": $blue,
   "blue-200": $blue-200,
   "blue-300": $blue-300,
   "blue-400": $blue-400,
