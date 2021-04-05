@@ -9,24 +9,24 @@ $cadet-blue: #b4bac5;
 
 $aqua-10: #f8fafc;
 
-$green-col: #63c572;
+$green: #63c572;
 $green-light: #6ac069 !default;
 $green-200: #84c59e !default;
 
-$white-col: #ffffff;
+$white: #ffffff;
 
-$gray-col: #666d7d;
+$gray: #666d7d;
 $gray-light: #f4f5f7;
 $gray-100: #bbc2d2;
 $bright-gray: #39404c;
 $gray-200: #69727a;
 
-$clay-col: #2e3342;
+$clay: #2e3342;
 $clay-10: #2f3441;
 
 $mandy-pink: #e44c7d;
 
-$aqua-col: #5bbad6;
+$aqua: #5bbad6;
 
 $violet: #3b4a64;
 
@@ -68,7 +68,7 @@ $colors: (
   "slate-40": $slate-40,
   "slate-300": $slate-300,
   "secondary": $secondary-text-color,
-  "green": $green-col,
+  "green": $green,
   "light-green": $green-light,
   "green-200": $green-200,
   "blue": $blue,
@@ -80,17 +80,17 @@ $colors: (
   "light-blue": $blue-100,
   "cadet-blue": $cadet-blue,
   "aqua-10": $aqua-10,
-  "gray": $gray-col,
+  "gray": $gray,
   "gray-light": $gray-light,
   "light-gray": $gray-100,
   "bright-gray": $bright-gray,
   "gray-200": $gray-200,
-  "clay": $clay-col,
+  "clay": $clay,
   "clay-10": $clay-10,
   "mandy-pink": $mandy-pink,
-  "aqua": $aqua-col,
+  "aqua": $aqua,
   "violet": $violet,
-  "white": $white-col,
+  "white": $white,
   "primary": $primary-text-color,
 );
 

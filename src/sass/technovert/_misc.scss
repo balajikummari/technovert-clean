@@ -40,29 +40,28 @@
   max-height: 80px;
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: #fff;
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.05);
-  display: flex;
-  list-style-type: none;
   white-space: nowrap;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.05);
+  @extend .bg-white;
+  @extend .d-flex;
+  @extend .list-unstyled;
+  
 
   @extend .px-4, .px-md-5, .px-lg-14, .py-25;
 
   a {
-    margin-right: 60px;
-    color: #666d7d;
-    font-size: 18px;
-    letter-spacing: 0.2px;
-    line-height: 28px;
+    @extend .mr-60;
+    @extend .text-gray;
+    @extend .letter-spacing-02;
 
     &:hover {
-      color: #2e3342 !important;
+      @extend .text-clay;
     }
   }
 
   a.active {
-    color: #2e3342;
-    position: relative;
+    @extend .text-clay;
+    @extend .position-relative;
   }
 
   a.active::after {
