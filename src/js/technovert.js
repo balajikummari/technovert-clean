@@ -211,7 +211,11 @@
         },
         success: function (res) {
           console.log(res);
-          $(".case-study-wrapper").html(res);
+          if ($(".case-study-wrapper").length) {
+            $(".case-study-wrapper").html(res);
+          } else if ($(".white-paper-wrapper").length) {
+            $(".white-paper-wrapper").html(res);
+          }
         },
         error: function (err) {
           console.log(err);
