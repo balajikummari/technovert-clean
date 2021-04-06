@@ -29,11 +29,11 @@ $blogquery = $GLOBALS['wp_query']
 
 ?>
 
-<section class="white-paper">
+<section>
 <?php get_template_part("template-parts/insights-nav"); ?>
 
     <div class="container-box">
-      <h4 class="text-color-clay mt-30">Case Studies</h4>
+      <h4 class="text-color-clay mt-30">White Paper</h4>
 
       <div class="filters row mx-0 mt-20">
         <select name="industry" id="industry" class="col-md-3 col-12 px-0 mb-xs-30">
