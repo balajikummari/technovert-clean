@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Case Study
+ * Template Name: White Paper
  *
  * 
  */
@@ -19,7 +19,7 @@ while ( have_posts() ) : the_post();
 <?php  $feature_image = get_field('feature_image')?>
 <section class="hero-section" style="background-image: url(<?php echo $feature_image ?>)" >
 	<div class="container-box">
-        <span>Case Study</span>
+        <span>White Paper</span>
 		<h1>
         <?php the_title();  ?>
 		</h1>
@@ -27,13 +27,13 @@ while ( have_posts() ) : the_post();
 </section>
 
 <section class="container-box mt-60 mt-xs-40">
-    <div class="case-study">
-        <div class="case-study-left">
+    <div class="white-paper">
+        <div class="white-paper-left">
             <h5 class="text-clay font-weight-default">
             <?php the_field('intro_text')  ?>
             </h5>
         </div>
-        <div class="case-study-right">
+        <div class="white-paper-right">
             <div class="w-100">
                 <div class="card p-30">
                     <?php if(get_field('logo')) {?>
