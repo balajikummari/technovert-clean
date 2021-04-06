@@ -60,6 +60,10 @@
     @extend .font-48;
   }
 
+  p {
+    @extend .text-gray;
+  }
+
   img {
     @extend .w-100;
     @extend .mt-30;
