@@ -114,10 +114,10 @@
   }
 }
 
-.case-study {
+.case-study, .white-paper {
   @extend .row, .mx-0;
 
-  .case-study-left {
+  .case-study-left, .white-paper-left {
     @extend .pr-80;
     @extend .col-12;
     @extend .order-2;
@@ -126,7 +126,7 @@
     @extend .px-xs-0;
   }
 
-  .case-study-right {
+  .case-study-right, .white-paper-right {
     @extend .order-1;
     @extend .order-md-2;
     @extend .position-relative;
