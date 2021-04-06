@@ -23,6 +23,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/events">Events</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/white-paper">Events</a>
+            </li>
         </ul>
     </div>
 </nav>
