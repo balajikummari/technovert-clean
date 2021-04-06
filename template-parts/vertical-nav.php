@@ -29,15 +29,15 @@
     <a href="/category/user-experience/" class="nav-link">User Experience</a>
   </li>
   <li class="nav-items">
-    <a href="/category/insurance/" class="nav-link">User Experience</a>
+    <a href="/category/insurance/" class="nav-link">Insurance</a>
   </li>
   <li class="nav-items">
-    <a href="/category/digital-workplace/" class="nav-link">User Experience</a>
+    <a href="/category/digital-workplace/" class="nav-link">Digital Workplace</a>
   </li>
   <li class="nav-items">
-    <a href="/category/data-analytics/" class="nav-link">User Experience</a>
+    <a href="/category/data-analytics/" class="nav-link">Data Analytics</a>
   </li>
   <li class="nav-items">
-    <a href="/category/office-365/" class="nav-link">User Experience</a>
+    <a href="/category/office-365/" class="nav-link">Office 365</a>
   </li>
 </ul>
