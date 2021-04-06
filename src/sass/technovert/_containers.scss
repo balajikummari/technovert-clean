@@ -273,7 +273,7 @@
   background-size: cover;
   min-height: 430px;
   background-position: bottom;
-
+ 
   .talk-to-us-content {
     @extend .px-xs-0, .p-60;
     @extend .position-absolute;
@@ -628,6 +628,14 @@
 
     h3,h4,h5,h6,p,span {
       @extend .text-white;
+    }
+
+    // for svg logos in card in what we do section
+    .vector {
+      fill: #ffffff;
+    }
+    .vector-bg {
+      opacity: 0.2;
     }
   }
 }
