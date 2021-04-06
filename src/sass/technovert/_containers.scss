@@ -546,10 +546,9 @@
 }
 
 
-.case-study-wrapper {
-  padding-right: 250px;
-  @extend .pr-md-160;
-  @extend .pr-xs-0;
+.case-study-wrapper, .white-paper-wrapper {
+  @extend .max-w-900;
+
   .card {
 
     img{
