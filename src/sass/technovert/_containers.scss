@@ -659,6 +659,7 @@
 .bg-blue-on-hover {
   &:hover {
     @extend .bg-blue;
+    cursor: pointer;
 
     h3,h4,h5,h6,p,span {
       @extend .text-white;
@@ -674,11 +675,9 @@
   }
 }
 
-.card-blue-on-hover {
-  .card-circular {
-    transition: all 0.2s ease;
-    @extend .bg-blue-on-hover;
-  }
+.highlight-hover-card {
+  transition: all 0.2s ease;
+  @extend .bg-blue-on-hover;
 }
 
 @media (min-width: 1900px) {
