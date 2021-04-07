@@ -87,8 +87,39 @@
     @extend .px-md-0;
   }
 
+  &.large-feature-image {
+    div:first-of-type {
+      @extend .pr-60;
+    }
+
+    img {
+      @extend .ml-0;
+    }
+
+    .feature-content {
+      @extend .pl-0;
+      max-width: 570px !important;
+    }
+  }
+
   &.image-last {
     @extend .flex-row-reverse;
+
+    &.large-feature-image {
+      div:first-of-type {
+        @extend .pl-60;
+        @extend .pr-0;
+      }
+  
+      img {
+        @extend .mr-0;
+        @extend .ml-auto;
+      }
+  
+      .feature-content {
+        @extend .pr-0;
+      }
+    }
 
     div:first-of-type {
       @extend .pl-30;
@@ -663,7 +694,89 @@
   }
 }
 
+@media (max-width: 1199px) {
+  .feature-container {
+    &.large-feature-image {
+      .feature-content {
+        max-width: 480px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .feature-container {
+    &.large-feature-image {
+      div:first-of-type {
+        padding-right: 0 !important;
+        max-width: 720px;
+        margin: 0 auto !important;
+      }
+  
+      img {
+        margin: 0 auto !important;
+      }
+  
+      .feature-content {
+        max-width: 720px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    }
+
+    &.image-last {
+  
+      &.large-feature-image {
+        div:first-of-type {
+          padding-left: 0 !important;
+        }
+      }
+    }
+  }
+
+  .banner-container {
+    min-height: auto !important;
+  }
+
+  .card-arrow {
+    &:nth-of-type(odd) .top-arrow::after {
+      width: 100% !important;
+    }
+    &:nth-of-type(even) .top-arrow::after {
+      display: none !important;
+    }
+  }
+}
+
 @media (max-width: 767px) {
+  .feature-container {
+    &.large-feature-image {
+      div:first-of-type {
+        padding: 0 20px !important;
+        max-width: 540px;
+      }
+  
+      .feature-content {
+        padding: 0 20px !important;
+        max-width: 540px !important;
+      }
+    }
+
+    &.image-last {
+  
+      &.large-feature-image {
+        div:first-of-type {
+          padding: 0 20px !important;
+        }
+    
+        .feature-content {
+          padding: 0 20px !important;
+        }
+      }
+    }
+  }
+
+
   .hero-section {
     min-height: 65vh !important;
   }
@@ -677,21 +790,6 @@
     .talk-to-us-content {
       position: relative !important;
       top: 0;
-    }
-  }
-}
-
-@media (max-width: 991px) {
-  .banner-container {
-    min-height: auto !important;
-  }
-
-  .card-arrow {
-    &:nth-of-type(odd) .top-arrow::after {
-      width: 100% !important;
-    }
-    &:nth-of-type(even) .top-arrow::after {
-      display: none !important;
     }
   }
 }
