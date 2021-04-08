@@ -29,6 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
             <span><?php the_field('hero_label') ?></span>
             <h1><?php the_field('hero_title') ?></h1>
 						<?php 
+						global $post;
 						$menu_name = get_post_meta($post->ID, "subnav_choice", true);
 						if($menu_name != 'None') {
 							$options = array(
