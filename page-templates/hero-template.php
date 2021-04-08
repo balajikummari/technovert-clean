@@ -26,8 +26,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 					}
 					?>
 					<div class="container-box">
-            <span><?php the_field('hero_label') ?></span>
-            <h1><?php the_field('hero_title') ?></h1>
+            <h1><?php the_field('hero_label') ?></h1>
+            <h2><?php the_field('hero_title') ?></h2>
 					</div>
           </section>
 					<div class="subnav-container">
