@@ -357,6 +357,16 @@
       @extend .bg-white;
     }
   }
+
+  &.indicators-blue {
+    li {
+      @extend .border-gray;
+  
+      &.active {
+        @extend .bg-blue;
+      }
+    }
+  }
 }
 
 #fullFeatureContainerCarousel {
