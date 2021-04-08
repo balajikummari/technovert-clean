@@ -36,18 +36,19 @@
   background: linear-gradient(135deg, #5f1ab3 0%, #005f91 100%);
 }
 
+.subnav-container {
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.05);
+}
+
 .subnav {
   max-height: 80px;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.05);
   @extend .bg-white;
   @extend .d-flex;
   @extend .list-unstyled;
-  
-
-  @extend .px-4, .px-md-5, .px-lg-14, .py-25;
+  @extend .py-25;
 
   a {
     @extend .mr-60;
