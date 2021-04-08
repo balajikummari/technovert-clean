@@ -40,7 +40,7 @@
   @extend .mx-0;
 
   &.no-underline {
-    h2 {
+    h2,h3 {
       @extend .mb-0;
       &::after {
         @extend .d-none;
@@ -50,7 +50,7 @@
 
   &.content-center {
     @extend .text-center;
-    h2::after {
+    h2::after, h3::after {
       @extend .mx-auto;
     }
   }
@@ -58,6 +58,11 @@
   h2 {
     @extend .underline;
     @extend .font-48;
+  }
+
+  h3 {
+    @extend .underline;
+    @extend .font-40;
   }
 
   p {
