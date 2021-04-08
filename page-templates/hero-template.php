@@ -36,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								if($menu_name != 'None') {
 									$options = array(
 										'menu' => $menu_name,
-										'menu_class' => 'subnav',
+										'menu_class' => 'subnav container-box clear-margin-b',
 										'echo' => true,
 									);
 									wp_nav_menu($options); } ?>
