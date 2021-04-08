@@ -25,11 +25,10 @@
     @extend .mb-0;
   }
 
-  span {
+  h1 {
     @extend .hero-prefix;
   }
 
-  h1,
   h2 {
     @extend .hero-white;
     @extend .max-w-900;
