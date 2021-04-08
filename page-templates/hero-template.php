@@ -28,18 +28,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="container-box">
             <span><?php the_field('hero_label') ?></span>
             <h1><?php the_field('hero_title') ?></h1>
-						<?php 
-						global $post;
-						$menu_name = get_post_meta($post->ID, "subnav_choice", true);
-						if($menu_name != 'None') {
-							$options = array(
-								'menu' => $menu_name,
-								'menu_class' => 'subnav',
-								'echo' => true,
-							);
-							wp_nav_menu($options); } ?>
 					</div>
           </section>
+					<div class="subnav-container">
+								<?php 
+								$menu_name = get_post_meta($post->ID, "subnav_choice", true);
+								if($menu_name != 'None') {
+									$options = array(
+										'menu' => $menu_name,
+										'menu_class' => 'subnav',
+										'echo' => true,
+									);
+									wp_nav_menu($options); } ?>
+					</div>
 					<div class="entry-content">
 						<?php the_content(); ?>
 						<?php
