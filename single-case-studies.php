@@ -19,10 +19,10 @@ while ( have_posts() ) : the_post();
 <?php  $feature_image = get_field('feature_image')?>
 <section class="hero-section" style="background-image: url(<?php echo $feature_image ?>)" >
 	<div class="container-box">
-        <span>Case Study</span>
-		<h1>
-        <?php the_title();  ?>
-		</h1>
+        <h1>Case Study</h1>
+		<h2>
+            <?php the_title();  ?>
+		</h2>
 	</div>
 </section>
 
