@@ -56,7 +56,7 @@ while ( have_posts() ) : the_post();
                     </div>
                     <?php if(get_field('whitepaper_pdf')) {?>
                         <div>
-                            <button class="btn btn-x-lg btn-primary-outline d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#downloadPdf">
+                            <button class="btn btn-x-lg btn-outline btn-primary-outline d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#downloadPdf">
                                 <span class="icon ic-download text-blue icon-lg mr-12"></span>
                                 Download PDF
                             </button>
@@ -78,8 +78,8 @@ while ( have_posts() ) : the_post();
         
         <div class="modal-body p-40">
             <h1 class="mb-30">Get Instant Access</h1>
-            <div id="case-study-pdf-form">
-                <?php echo do_shortcode( '[contact-form-7 id="308" title="Case Study Subscription"]' ); ?>
+            <div id="white-paper-pdf-form">
+                <?php echo do_shortcode( '[contact-form-7 id="854" title="White Paper Subscription"]' ); ?>
             </div>
             
             <a id="pdf-download-btn" class="btn btn-primary btn-x-lg d-none mt-30" href=<?php the_field('whitepaper_pdf'); ?> download>

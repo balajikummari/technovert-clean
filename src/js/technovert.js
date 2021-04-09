@@ -240,6 +240,13 @@
             $("#pdf-download-btn").toggleClass("d-none");
           }
 
+          // for form in white paper page
+          if ($("#white-paper-pdf-form").length) {
+            $("#white-paper-pdf-form p").hide();
+            $(".wpcf7-response-output").removeClass("d-none");
+            $("#pdf-download-btn").toggleClass("d-none");
+          }
+
           // for form in blog detail page
           if ($("#email-subscribe").length) {
             $(".wpcf7-response-output").removeClass("d-none");
@@ -254,7 +261,15 @@
 
     $("#pdf-download-btn").on("click", function () {
       $("#downloadPdf").modal("hide");
-      $("#case-study-pdf-form p").show();
+
+      if ($("#case-study-pdf-form p").length) {
+        $("#case-study-pdf-form p").show();
+      }
+
+      if ($("#white-paper-pdf-form p").length) {
+        $("#white-paper-pdf-form p").show();
+      }
+
       $(".wpcf7-response-output").addClass("d-none");
       $("#pdf-download-btn").toggleClass("d-none");
     });

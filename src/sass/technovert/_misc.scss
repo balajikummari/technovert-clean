@@ -273,7 +273,7 @@
   }
 }
 
-#case-study-pdf-form {
+#case-study-pdf-form, #white-paper-pdf-form {
   form {
     input {
       @extend .text-body-font-size;
