@@ -14,9 +14,9 @@
       $("header").addClass("shadow-nav");
       $("header .navbar").addClass("bg-clay-10");
     }
-
+    let scroll;
     $(window).scroll(function () {
-      var scroll = $(window).scrollTop();
+      scroll = $(window).scrollTop();
 
       if (
         scroll > 80 &&
@@ -93,6 +93,11 @@
             });
           }, 330);
         }
+      }
+
+      // for nav color when scroll is less then 80px in mobile view
+      if (scroll < 80 && $(".hero-section").length) {
+        $("header .navbar").toggleClass("bg-clay-10");
       }
 
       $("#middle-line").toggleClass("animate-middle-line");
