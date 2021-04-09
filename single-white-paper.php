@@ -14,8 +14,6 @@ get_header();
 while ( have_posts() ) : the_post(); 
 ?>
 
-
-
 <?php  $feature_image = get_field('feature_image')?>
 <section class="hero-section" style="background-image: url(<?php echo $feature_image ?>)" >
 	<div class="container-box">
@@ -56,7 +54,7 @@ while ( have_posts() ) : the_post();
                         <p>Engaged in</p>
                         <p><?php the_field('engaged_in')  ?></p>
                     </div>
-                    <?php if(get_field('case_study_pdf')) {?>
+                    <?php if(get_field('whitepaper_pdf')) {?>
                         <div>
                             <button class="btn btn-x-lg btn-primary-outline d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#downloadPdf">
                                 <span class="icon ic-download text-blue icon-lg mr-12"></span>
@@ -68,31 +66,12 @@ while ( have_posts() ) : the_post();
             </div>
         </div>
     </div>
-    <?php if(get_field('testimonial')) {?>
-        <div class="customer-feedback">
-            <div class="d-flex ">
-                <div class="d-none d-md-block mr-20">
-                    <img src="https://www.keka.com/static/images/misc/quotes.svg" width="105" height="80" />
-                </div>
-                <div>
-                    <p class="mb-20"><?php the_field('testimonial')  ?></p>
-                    <div class="d-flex">
-                        <img src="<?php the_field('testimonial_pic')  ?>" width="60" height="60" class="img-circle mr-20" />
-                        <div>
-                            <h5 class="text-clay"><?php the_field('testimonial_name')  ?></h5>
-                            <p class="text-gray"><?php the_field('testimonial_title')  ?></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php } ?>
     <div class="customer-content">
         <?php the_content(); ?>
     </div>
 </section>
 
-<?php if(get_field('case_study_pdf')) {?>
+<?php if(get_field('whitepaper_pdf')) {?>
     <div class="modal fade" id="downloadPdf" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog max-w-650">
         <div class="modal-content">
@@ -103,7 +82,7 @@ while ( have_posts() ) : the_post();
                 <?php echo do_shortcode( '[contact-form-7 id="308" title="Case Study Subscription"]' ); ?>
             </div>
             
-            <a id="pdf-download-btn" class="btn btn-primary btn-x-lg d-none mt-30" href=<?php the_field('case_study_pdf'); ?> download>
+            <a id="pdf-download-btn" class="btn btn-primary btn-x-lg d-none mt-30" href=<?php the_field('whitepaper_pdf'); ?> download>
                     <span class="icon ic-download icon-lg mr-12 text-white"></span>
                     Download
             </a>   
