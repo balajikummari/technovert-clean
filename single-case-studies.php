@@ -58,7 +58,7 @@ while ( have_posts() ) : the_post();
                     </div>
                     <?php if(get_field('case_study_pdf')) {?>
                         <div>
-                            <button class="btn btn-x-lg btn-primary-outline d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#downloadPdf">
+                            <button class="btn btn-x-lg btn-outline btn-primary-outline d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#downloadPdf">
                                 <span class="icon ic-download text-blue icon-lg mr-12"></span>
                                 Download PDF
                             </button>
