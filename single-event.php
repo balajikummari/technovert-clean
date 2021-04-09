@@ -17,10 +17,10 @@ while ( have_posts() ) : the_post();
 
 <section class="hero-section" style="background-image: url(<?php the_field('feature_image') ?>)">
 	<div class="container-box">
-        <span>WEBINAR</span>
-		<h1>
+        <h1>WEBINAR</h1>
+		<h2>
             <?php the_field('event_title')  ?>
-		</h1>
+		</h2>
 	</div>
 </section>
 <section class="container-box mt-5">
