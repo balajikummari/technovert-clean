@@ -36,7 +36,7 @@ $blogquery = $GLOBALS['wp_query']
       <h4 class="text-color-clay mt-30">White Paper</h4>
 
       <div class="filters row mx-0 mt-20">
-        <select name="industry" id="industry" class="col-md-3 col-12 px-0 mb-xs-30">
+        <!-- <select name="industry" id="industry" class="col-md-3 col-12 px-0 mb-xs-30">
           <option value="Industry">Industry</option>
           <option value="Banking">Banking</option>
           <option value="Insurance">Insurance</option>
@@ -48,7 +48,7 @@ $blogquery = $GLOBALS['wp_query']
           <option value="Product Engineering">Product Engineering</option>
           <option value="Quality Engineering">Quality Engineering</option>
           <option value="User Experience">User Experience</option>
-        </select>
+        </select> -->
         <div class="col-md-6 col-12 px-0 position-relative">
           <div id="search">
             <input type="text" id="post-search-field" data-post-type="white-paper" placeholder="Search" />
@@ -69,7 +69,6 @@ $blogquery = $GLOBALS['wp_query']
                   <h5><?php echo substr(get_the_title(), 0, 55); ?></h5>
                   <p class="industry"><?php the_field('industry'); ?></p>
                 </div>
-                <span class="card-badge"><?php the_field('solution_category'); ?></span>
             </div>
           </a>
         <?php endwhile; ?>
