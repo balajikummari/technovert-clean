@@ -41,6 +41,11 @@ $blogquery = $GLOBALS['wp_query']
           <option value="Banking">Banking</option>
           <option value="Insurance">Insurance</option>
           <option value="RPA">RPA</option>
+          <option value="Power Apps">Power Apps</option>
+          <option value="Office 365">Office 365</option>
+          <option value="Microsoft Azure">Microsoft Azure</option>
+          <option value="Microsoft Teams">Microsoft Teams</option>
+          <option value="Enterprise">Enterprise</option>
         </select>
         <select name="solution" id="solution" class="col-md-3 col-12 px-0 mb-xs-30">
           <option value="Solution">Solution</option>
