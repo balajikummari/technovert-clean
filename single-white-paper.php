@@ -46,14 +46,6 @@ while ( have_posts() ) : the_post();
                         <p>Industry</p>
                         <p><?php the_field('industry')  ?></p>
                     </div>
-                    <div class="data-bar">
-                        <p>Location</p>
-                        <p><?php the_field('location')  ?></p>
-                    </div>
-                    <div class="data-bar mb-50">
-                        <p>Engaged in</p>
-                        <p><?php the_field('engaged_in')  ?></p>
-                    </div>
                     <?php if(get_field('whitepaper_pdf')) {?>
                         <div>
                             <button class="btn btn-x-lg btn-outline btn-primary-outline d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#downloadPdf">
