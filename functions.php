@@ -482,7 +482,8 @@ function filter_post_by_select() {
 	$filtered_post = array();
 	$response = "";
 	
-	$query1 = "select post_id from yud_postmeta where meta_key='$filterBy' and meta_value='$searchVal';";
+	// $query1 = "select post_id from yud_postmeta where meta_key='$filterBy' and meta_value='$searchVal';";
+	$query1 = "select post_id from yud_postmeta where meta_key='$filterBy' and CHARINDEX($searchVal, meta_value) > 0;";
 	$idArr = $wpdb->get_results($query1);
 
 	foreach($idArr as $id) {
