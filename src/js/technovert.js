@@ -253,11 +253,11 @@
           }
 
           // for contact-us form
-          if ($("#contact-form").length) {
+          if ($("#talk-to-us-form").length) {
             $(".wpcf7-response-output").removeClass("d-none"); // to show success output
 
             setTimeout(() => {
-              $("#contact-form").modal("hide");
+              $("#talk-to-us-form").modal("hide");
               $(".wpcf7-response-output").addClass("d-none");
             }, 5000);
           }
@@ -296,9 +296,9 @@
       });
     }
 
-    let contactFormModal = document.getElementById("contact-form");
-    if (contactFormModal) {
-      contactFormModal.addEventListener("hidden.bs.modal", function (event) {
+    let talkToUsFormModal = document.getElementById("talk-to-us-form");
+    if (talkToUsFormModal) {
+      talkToUsFormModal.addEventListener("hidden.bs.modal", function (event) {
         $(".wpcf7-not-valid-tip").html("");
         $(".form-control").val("");
         $(".form-control").html("");
