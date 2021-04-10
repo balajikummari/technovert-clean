@@ -11,7 +11,7 @@
         </a>
         <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $url; ?>" target="_blank"
             class="dot dot-sm bg-blue-200 mr-12">
-            <span class="icon icon-xs ic-linkedin text-white"></span>
+            <span class="icon icon-xs ic-linkedin2 text-white"></span>
         </a>
     </div>
 </div>
