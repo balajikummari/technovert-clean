@@ -275,17 +275,18 @@
 
 #case-study-pdf-form, #white-paper-pdf-form {
   form {
-    input {
-      @extend .text-body-font-size;
-    }
     .btn {
       width: unset;
       @extend .d-block;
       @extend .ml-auto;
     }
-    .wpcf7-not-valid-tip {
-      @extend .text-sm;
-    }
+    
+  }
+}
+
+#contact-form {
+  .btn{
+    width: unset;
   }
 }
 
@@ -295,6 +296,10 @@
   @extend .border-0;
   @extend .mx-0, .mb-0, .p-0;
 }
+
+.wpcf7-not-valid-tip {
+  @extend .text-sm;
+}                           
 
 // for migration steps in cloud migration
 .migration-steps {
