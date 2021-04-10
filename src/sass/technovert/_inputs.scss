@@ -1,6 +1,11 @@
+.form-control {
+  @extend .text-body-font-size;
+}
+
 .form-control:focus,input:focus {
   box-shadow: none;
 }
+
 input,
 select {
   margin: 0;
@@ -41,14 +46,6 @@ input {
   }
 }
 
-// #search::before {
-//   content: "";
-//   display: block;
-//   position: absolute;
-//   width: 16px;
-//   height: 16px;
-//   background: url("https://w3.technovert.com/static/css/icons/search.svg");
-// }
 
 
 .floating-label {
