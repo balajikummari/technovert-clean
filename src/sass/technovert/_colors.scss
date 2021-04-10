@@ -99,14 +99,6 @@ $colors: (
     color: $color-value !important;
   }
 
-  .text-color-#{$color-name} {
-    color: $color-value !important;
-  }
-
-  .tx-#{$color-name} {
-    color: $color-value !important;
-  }
-
   .bg-#{$color-name} {
     background-color: $color-value !important;
   }
