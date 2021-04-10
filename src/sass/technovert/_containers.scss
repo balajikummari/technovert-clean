@@ -448,12 +448,12 @@
     @extend .p-30, .p-xs-20;
 
     h5 {
-      @extend .text-color-clay;
+      @extend .text-clay;
       @extend .mb-10;
     }
 
     p {
-      @extend .text-color-gray;
+      @extend .text-gray;
     }
 
     .learn-more {
@@ -515,14 +515,14 @@
 
   h5 {
     @extend .h-95;
-    @extend .text-color-clay;
+    @extend .text-clay;
     @extend .overflow-hidden;
     @extend .mb-10;
   }
 
   p {
     @extend .text-sm;
-    @extend .text-color-gray;
+    @extend .text-gray;
     @extend .mb-20;
     @extend .overflow-hidden;
     height: 110px;
@@ -631,7 +631,7 @@
       @extend .order-md-1, .order-2;
 
       .event-date {
-        @extend .text-color-gray, .text-sm, .mb-30;
+        @extend .text-gray, .text-sm, .mb-30;
       }
     }
 
