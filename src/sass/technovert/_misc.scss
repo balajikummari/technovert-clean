@@ -40,6 +40,19 @@
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.05);
 }
 
+// for subnav x-axis scroll
+.sub-navbar,.subnav-container {
+  ul {
+    &::-webkit-scrollbar {
+      height: 7px;
+    }
+     
+    &::-webkit-scrollbar-thumb {
+      background: rgba(44, 46, 49,0.5);
+    }
+  }
+}
+
 .subnav {
   max-height: 80px;
   overflow-x: auto;
