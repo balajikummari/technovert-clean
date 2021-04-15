@@ -37,7 +37,7 @@
 
 .feature-content {
   @extend .max-w-950;
-  @extend .mx-0;
+  @extend .mx-auto;
 
   &.no-underline {
     h2,h3 {

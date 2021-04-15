@@ -1,5 +1,5 @@
 .fixed-header {
-  width: 100%;
+  @extend .w-100;
   position: fixed;
   top: 0;
   z-index: 99;
@@ -28,7 +28,7 @@ header {
   @extend .w-100;
 
   .navbar-expand-lg {
-    background: transparent;
+    @extend .bg-transparent;
     @extend .py-0;
 
     &.main-navbar {
@@ -117,7 +117,7 @@ header {
           border: 8px solid transparent;
           bottom: 0;
           transform: translate(-50%);
-          border-bottom-color: white;
+          border-bottom-color: $white;
         }
       }
     }
