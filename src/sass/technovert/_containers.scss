@@ -36,6 +36,7 @@
 }
 
 .feature-content {
+  @extend .max-w-950;
   @extend .mx-0;
 
   &.no-underline {
@@ -141,7 +142,7 @@
   }
 
   img {
-    max-width: 100%;
+    @extend .max-w-100;
     @extend .mx-auto;
   }
 
@@ -219,7 +220,7 @@
 
   p {
     @extend .text-gray;
-    letter-spacing: 0.2px;
+    @extend .letter-spacing-02;
   }
 
   img {
@@ -238,7 +239,7 @@
   @extend .text-center;
 
   img {
-    margin: 0 auto;
+    @extend .mx-auto;
   }
 }
 
@@ -367,7 +368,7 @@
   @extend .p-xs-20;
   @extend .rounded;
   @extend .bg-white;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  @extend .shadow-low;
 
   &.padding-20 {
     @extend .p-20;
@@ -378,12 +379,12 @@
   }
 
   .logo {
-    max-width : 100%;
+    @extend .max-w-100;
     @extend .max-h-55;
     @extend .mb-30;
     img {
       @extend .mb-0;
-      max-width : 100%;
+      @extend .max-w-100;
       object-fit: contain;
       object-position: 0% 0%;
     }
@@ -456,7 +457,7 @@
     @extend .text-xs;
     @extend .letter-spacing-1;
     @extend .text-uppercase;
-    border-radius: 3px !important;
+    @extend .rounded-3;
     top: 20px;
     left: 20px;
   }
@@ -487,7 +488,7 @@
 
   img {
     @extend .w-100;
-    height: auto;
+    @extend .h-100;
     @extend .rounded-top;
   }
 
@@ -653,7 +654,7 @@
 
     // for svg logos in card in what we do section
     .vector {
-      fill: #ffffff;
+      fill: $white;
     }
     .vector-bg {
       opacity: 0.2;
@@ -783,8 +784,8 @@
     box-sizing: border-box;
     height: 17px;
     width: 17px;
-    border: 1px solid #B4BAC5;
-    background-color: #FFFFFF;
+    border: 1px solid $cadet-blue;
+    background-color: $white;
     @extend .d-inline-block;
     @extend .rounded-circle;
 }
