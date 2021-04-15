@@ -1,33 +1,28 @@
+@mixin dots ($size, $line-height) {
+    width: $size;
+    height: $size;
+    min-width: $size;
+    line-height: $line-height;
+}
+
 .dot {
 
     @extend .rounded-circle;
     @extend .text-center;
 
     &.dot-xl {
-        width: 48px;
-        height: 48px;
-        line-height: 44px;
-        min-width: 48px;
+        @include dots(48px, 44px);
     }
 
     &.dot-lg {
-        width: 40px;
-        height: 40px;
-        line-height: 36px;
-        min-width: 40px;
+        @include dots(40px, 36px);
     }
 
     &.dot-md {
-        width: 32px;
-        height: 32px;
-        line-height: 28px;
-        min-width: 32px;
+        @include dots(32px, 28px);
     }
 
     &.dot-sm {
-        width: 24px;
-        height: 24px;
-        line-height: 20px;
-        min-width: 24px;
+        @include dots(24px, 20px);
     }
 }
