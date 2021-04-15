@@ -18,13 +18,16 @@
                 <a class="nav-link" href="/blog">Articles</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/white-paper">White Papers</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/case-studies">Case Studies</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/events">Events</a>
+                <a class="nav-link" href="/brochures">Brochures</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/white-paper">White Papers</a>
+                <a class="nav-link" href="/events">Events</a>
             </li>
         </ul>
     </div>
