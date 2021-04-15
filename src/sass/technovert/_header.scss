@@ -28,7 +28,7 @@ header {
   @extend .w-100;
 
   .navbar-expand-lg {
-    @extend .bg-transparent;
+    background: transparent;
     @extend .py-0;
 
     &.main-navbar {
