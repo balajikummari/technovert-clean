@@ -37,7 +37,6 @@
 
 .feature-content {
   @extend .max-w-950;
-  @extend .mx-auto;
 
   &.no-underline {
     h2,
@@ -50,6 +49,7 @@
   }
 
   &.content-center {
+    @extend .mx-auto;
     @extend .text-center;
     h2::after,
     h3::after {
