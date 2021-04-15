@@ -11,7 +11,7 @@ footer {
   .footer-menus {
     @extend .p-0, .m-0;
     li {
-      @extend .font-14;
+      @extend .text-xs;
       @extend .list-unstyled;
       a {
         @extend .footer-text-color;

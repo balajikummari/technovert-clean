@@ -219,9 +219,7 @@
 
   p {
     @extend .text-gray;
-    @extend .font-18;
     letter-spacing: 0.2px;
-    line-height: 28px;
   }
 
   img {
@@ -268,7 +266,6 @@
   }
 
   p {
-    // @extend .w-50;
     @extend .font-weight-bold;
   }
 }
@@ -329,21 +326,6 @@
   }
 }
 
-.button-right-arrow {
-  @extend .btn;
-  @extend .btn-primary;
-  @extend .rounded-0;
-  @extend .px-5;
-  @extend .py-3;
-  font-size: 18px;
-  background-color: #1077da;
-
-  .right-arrow {
-    @extend .ml-4;
-    width: 24px;
-    height: 24px;
-  }
-}
 
 .full-feature-container {
   @extend .row, .row-cols-md-2, .row-cols-1;
