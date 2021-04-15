@@ -19,12 +19,12 @@
                         <div class="footer-logo mb-20">
                             <img src="https://staging3.technovert.com/wp-content/uploads/technovert_logo.svg" class="w-100" />
                         </div>
-                        <p class="footer-text-color font-16 line-height-24 mb-24">
+                        <p class="footer-text-color text-sm font-weight-light mb-24">
                             Technovert is your digital partner. Our experience brings the
                             right insight, technology and teamwork together to create
                             outstanding digital experiences. Every time.
                         </p>
-                        <span class="text-warning font-21 line-height-24">
+                        <span class="text-warning font-21">
                             We are hiring
                         </span>
 
@@ -33,7 +33,7 @@
                 <div class="col-md-8 d-none d-md-block mb-xs-40">
                     <div class="row mb-60">
                         <div class="col-md-4">
-                            <p class="text-white mb-10">Services</p>
+                            <p class="text-white letter-spacing-02 mb-10">Services</p>
                             <?php
                             wp_nav_menu(
                             array(
@@ -44,7 +44,7 @@
                             )); ?>
                         </div>
                         <div class="col-md-4">
-                            <p class="text-white mb-10">Products</p>
+                            <p class="text-white letter-spacing-02 mb-10">Products</p>
                             <?php
                             wp_nav_menu(
                             array(
@@ -54,7 +54,7 @@
                             'container' => 'ul' )); ?>
                         </div>
                         <div class="col-md-4">
-                            <p class="text-white mb-10">About</p>
+                            <p class="text-white letter-spacing-02 mb-10">About</p>
                             <?php
                             wp_nav_menu(
                             array(
@@ -66,9 +66,9 @@
                         </div>
 
                     </div>
-                    <p class="mb-10">Locations</p>
-                    <div class="row mb-60 font-14 footer-text-color">
-                        <div class="col-md-4 ">
+                    <p class="text-white letter-spacing-02 mb-10">Locations</p>
+                    <div class="location row mb-60 text-xs">
+                        <div class="col-md-4">
                             <p>6010 W Spring Creek Pkwy, Plano, TX 75024</p>
                             <p>+1 (425) 943-9412</p>
                         </div>
@@ -174,17 +174,17 @@
                                     <div class="mb-30">
                                         <p class="mb-20">Contact</p>
                                         <ul>
-                                            <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
+                                            <li class="list-group-item bg-transparent p-0 border-0 text-xs footer-text-color">
                                                 Plot 104 Kavuri Hills<br />
                                                 Madhapur, Hyderabad 500033<br />
                                                 +91 40 4025 4293
                                             </li>
-                                            <li class="list-group-item bg-transparent border-0 font-14 footer-text-color px-0 py-4">
+                                            <li class="list-group-item bg-transparent border-0 text-xs footer-text-color px-0 py-4">
                                                 6010 W Spring Creek Pkwy,<br />
                                                 Plano, TX 75024<br />
                                                 +1 (425) 943-9412
                                             </li>
-                                            <li class="list-group-item bg-transparent p-0 border-0 font-14 footer-text-color">
+                                            <li class="list-group-item bg-transparent p-0 border-0 text-xs footer-text-color">
                                                 2211 Elliott Avenue, Suite 200<br />
                                                 Seattle, WA 98121<br />
                                                 +1 (425) 943-9412
@@ -206,13 +206,13 @@
             <div class="row align-items-center mx-0 py-40">
                 <div class="col-md-5 col-sm-7 col-12  mb-xs-20">
                     <div>
-                        <span class="text-light-gray font-16">© 2020, Technovert Solutions Inc</span>
+                        <span class="text-light-gray text-sm">© 2020, Technovert Solutions Inc</span>
                     </div>
                 </div>
                 <div class="col-md-7 col-sm-5 col-12">
                     <div class="row row-cols-sm-1 row-cols-2 row-cols-md-2">
-                        <span class="footer-text-color font-16">Privacy Policy</span>
-                        <span class="footer-text-color font-16">Terms of use</span>
+                        <span class="footer-text-color text-sm">Privacy Policy</span>
+                        <span class="footer-text-color text-sm">Terms of use</span>
                     </div>
                 </div>
             </div>

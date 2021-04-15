@@ -8,6 +8,13 @@ footer {
     max-width: 275px;
   }
 
+  .location {
+    p {
+      @extend .footer-text-color;
+      @extend .text-xs;
+    }
+  }
+
   .footer-menus {
     @extend .p-0, .m-0;
     li {
