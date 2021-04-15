@@ -60,7 +60,7 @@ while (have_posts()):
     </div>
 </section>
 
-<?php if (get_field('whitepaper_pdf'))
+<?php if (get_field('brochure_pdf'))
     { ?>
     <div class="modal fade" id="downloadPdf" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog max-w-650">
@@ -68,10 +68,10 @@ while (have_posts()):
           <div class="modal-body p-40">
               <h1 class="mb-30">Get Instant Access</h1>
               <div id="white-paper-pdf-form">
-                  <?php echo do_shortcode('[contact-form-7 id="854" title="White Paper Subscription"]'); ?>
+                  <?php echo do_shortcode('[contact-form-7 id="1002" title="Brochure Subscription"]'); ?>
               </div>
               
-              <a id="pdf-download-btn" class="btn btn-primary btn-x-lg d-none mt-30" href=<?php the_field('whitepaper_pdf'); ?> download>
+              <a id="pdf-download-btn" class="btn btn-primary btn-x-lg d-none mt-30" href=<?php the_field('brochure_pdf'); ?> download>
                       <span class="icon ic-download icon-lg mr-12 text-white"></span>
                       Download
               </a>   
