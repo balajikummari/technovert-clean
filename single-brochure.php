@@ -38,8 +38,7 @@ while (have_posts()):
                         <h5><?php the_field('subtitle') ?></h5>
                     </div>
                     <div class="data-bar">
-                        <p>Industry</p>
-                        <p><?php the_field('category') ?></p>
+                        <p class="text-gray"><?php the_field('category') ?></p>
                     </div>
                     <?php if (get_field('brochure_pdf'))
     { ?>
