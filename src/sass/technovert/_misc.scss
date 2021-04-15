@@ -4,10 +4,10 @@
 
 .underline::after {
   content: "";
-  display: block;
   width: 90px;
   height: 6px;
   margin-top: 5px;
+  @extend .d-block;
   @extend .bg-blue;
 }
 
@@ -27,9 +27,9 @@
 }
 
 .flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-center;
 }
 
 .gradient-1 {
@@ -229,7 +229,6 @@
   @extend .px-16;
   @extend .py-12;
   @extend .border;
-  //@extend .border-slate-50;
   @extend .rounded;
   @extend .mb-20;
 
