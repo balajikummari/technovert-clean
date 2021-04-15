@@ -17,7 +17,7 @@
                 <div class="col-md-4 col-lg-4 mb-xs-40">
                     <div class="pr-50 pr-xs-0">
                         <div class="footer-logo mb-20">
-                            <img src="https://staging3.technovert.com/wp-content/uploads/technovert_logo.svg" class="w-100" />
+                            <img src="https://staging3.technovert.com/wp-content/uploads/technovert_logo.svg" class="max-w-100" />
                         </div>
                         <p class="footer-text-color text-sm font-weight-light mb-24">
                             Technovert is your digital partner. Our experience brings the
