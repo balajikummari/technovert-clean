@@ -53,7 +53,7 @@ $blogquery = $GLOBALS['wp_query']
               </div>
                 <div class="card-body">
                   <h5><?php echo substr(get_the_title(), 0, 55); ?></h5>
-                  <p class="industry"><?php the_field('category'); ?></p>
+                  <p class="industry"><?php echo wp_trim_words(wp_strip_all_tags(get_the_content()), 15); ?></p>
                 </div>
             </div>
           </a>
