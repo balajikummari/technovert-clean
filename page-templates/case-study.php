@@ -67,7 +67,7 @@ $blogquery = $GLOBALS['wp_query']
         <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
           <a class="box" href="<?php echo the_guid(); ?>">
             <div class="card">
-              <div class="max-h-200 overflow-hidden">
+              <div class="h-200 overflow-hidden">
                 <img src='<?php the_field("feature_image") ?>' alt="case study preview">
               </div>
                 <div class="card-body">
