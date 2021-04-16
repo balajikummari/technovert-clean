@@ -44,9 +44,9 @@ $blogquery = $GLOBALS['wp_query']
                     <?php while ( $blogquery->have_posts()) : $blogquery->the_post();  ?>
                         <a class="box" href="<?php the_permalink() ?>">
                             <div class="post-tile">
-                                <div class="h-200 overflow-hidden">
+                                <div class="h-200 overflow-hidden <?php if(!get_the_post_thumbnail() ) { echo 'bg-gray-light'; } ?>">
                                     <?php the_post_thumbnail('thumbnail') ?>
-                                </div>
+                                </div> 
                                 <div class="post-body">
                                     <h5>
                                         <?php 
