@@ -206,7 +206,7 @@
             <div class="row align-items-center mx-0 py-40">
                 <div class="col-md-5 col-sm-7 col-12  mb-xs-20">
                     <div>
-                        <span class="text-light-gray text-sm">© 2020, Technovert Solutions Inc</span>
+                        <span class="text-gray-100 text-sm">© 2020, Technovert Solutions Inc</span>
                     </div>
                 </div>
                 <div class="col-md-7 col-sm-5 col-12">
