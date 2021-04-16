@@ -72,7 +72,7 @@ while ( have_posts() ) : the_post();
         <div class="customer-feedback">
             <div class="d-flex ">
                 <div class="d-none d-md-block mr-20">
-                    <img src="https://www.keka.com/static/images/misc/quotes.svg" width="105" height="80" />
+                    <img src="/static/images/common/quote.svg" width="105" height="80" />
                 </div>
                 <div>
                     <p class="mb-20"><?php the_field('testimonial')  ?></p>
