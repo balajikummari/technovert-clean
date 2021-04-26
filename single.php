@@ -57,6 +57,48 @@ get_header();
 
 		</div>
 </section>
+<section class="container-box">
+	<div class="feature-content mb-50">
+		<h2>Related posts</h2>
+	</div>
+	<div class="col-custom col-custom-3">
 
+		<div class="box">
+			<a href="http://w3.technovert.com/data-and-analytics-workloads/" class="card clear-padding">
+				<img src="http://w3.technovert.com/wp-content/uploads/2021/03/data-applications-scaled-1-768x513.jpg">
+				<div class="card-body">
+					<h5 class="mb-10">Data and analytics workloads: How to choose the right technology &amp; tool</h5>
+					<p class="text-gray">A framework which can aid in the decision-making process for data and analytics workloads </p>
+				</div>
+
+			</a>
+		</div>
+		<div class="box">
+			<div class="card clear-padding">
+				<a href="http://w3.technovert.com/etl-automation-approach-using-snaplogic/">
+					<img src="http://w3.technovert.com/wp-content/uploads/2021/03/ETL-automation-approach-1.jpg" alt="ETL Automation approach" class="">
+				</a>
+				<div class="card-body">
+					<h5 class="mb-10">ETL Automation approach using SnapLogic</h5>
+					<p class="text-gray">Learn how to leverage the ETL automation approach using SnapLogic and decrease the development time in data loading. Talk to our experts.</p>
+				</div>
+
+			</div>
+		</div>
+		<div class="box">
+			<div class="card clear-padding">
+				<a href="http://w3.technovert.com/data-integration-approach/">
+					<img src="/wp-content/uploads/2021/03/Data-Integration-Approach-1-1024x531.png" alt="Data integration approach" class="">
+				</a>
+				<div class="card-body">
+					<h5 class="mb-10">Data Integration Approach to Maximize your RoI</h5>
+					<p class="text-gray">Why opt for premium tools when we have a data integration approach that completely relies on open source tech yet delivers much better RoI.</p>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</section>
 <?php
 get_footer();
