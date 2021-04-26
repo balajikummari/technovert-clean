@@ -57,47 +57,53 @@ get_header();
 
 		</div>
 </section>
+
+<?php 
+	$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	$categories = get_the_category();
+	$category_id = $categories[0]->cat_ID;
+	$args = array(
+		'posts_per_page'   => 3,
+		'post_status'      => 'publish',
+		'order'            => 'DESC',
+		'orderby'          => 'date',
+		'paged'            => $page,
+		'suppress_filters' => true,
+		'post_type' => 'post',
+		'cat' => $category_id,
+		'post__not_in' => array( $post->ID )
+	);
+	
+	$GLOBALS['wp_query'] = new WP_Query( $args );
+	
+	$blogquery = $GLOBALS['wp_query']
+?>
 <section class="container-box">
 	<div class="feature-content mb-50">
 		<h2>Related posts</h2>
 	</div>
 	<div class="col-custom col-custom-3">
-
-		<div class="box">
-			<a href="http://w3.technovert.com/data-and-analytics-workloads/" class="card clear-padding">
-				<img src="http://w3.technovert.com/wp-content/uploads/2021/03/data-applications-scaled-1-768x513.jpg">
-				<div class="card-body">
-					<h5 class="mb-10">Data and analytics workloads: How to choose the right technology &amp; tool</h5>
-					<p class="text-gray">A framework which can aid in the decision-making process for data and analytics workloads </p>
-				</div>
-
-			</a>
+		<?php while ( $blogquery->have_posts()) : $blogquery->the_post(); ?>
+		<div class="box" >
+		<a class="box" href="<?php the_permalink() ?>">
+                            <div class="post-tile">
+                                <div class="h-200 overflow-hidden <?php if(!get_the_post_thumbnail() ) { echo 'bg-gray-light'; } ?>">
+                                    <?php the_post_thumbnail('thumbnail') ?>
+                                </div> 
+                                <div class="post-body">
+                                    <h5>
+                                        <?php 
+                                            $truncate_title = substr(get_the_title(),0,75);
+                                            echo (strlen(get_the_title()) > 75)  ?  $truncate_title. "..." :  get_the_title();
+                                        ?>    
+                                    </h5>
+                                    <p><?php echo substr(get_the_excerpt(),0,300). "..." ?></p>
+                                    <span>5 min Read</span>
+                                </div>
+                            </div>
+                        </a>
 		</div>
-		<div class="box">
-			<div class="card clear-padding">
-				<a href="http://w3.technovert.com/etl-automation-approach-using-snaplogic/">
-					<img src="http://w3.technovert.com/wp-content/uploads/2021/03/ETL-automation-approach-1.jpg" alt="ETL Automation approach" class="">
-				</a>
-				<div class="card-body">
-					<h5 class="mb-10">ETL Automation approach using SnapLogic</h5>
-					<p class="text-gray">Learn how to leverage the ETL automation approach using SnapLogic and decrease the development time in data loading. Talk to our experts.</p>
-				</div>
-
-			</div>
-		</div>
-		<div class="box">
-			<div class="card clear-padding">
-				<a href="http://w3.technovert.com/data-integration-approach/">
-					<img src="/wp-content/uploads/2021/03/Data-Integration-Approach-1-1024x531.png" alt="Data integration approach" class="">
-				</a>
-				<div class="card-body">
-					<h5 class="mb-10">Data Integration Approach to Maximize your RoI</h5>
-					<p class="text-gray">Why opt for premium tools when we have a data integration approach that completely relies on open source tech yet delivers much better RoI.</p>
-				</div>
-
-			</div>
-		</div>
-
+		<?php endwhile; ?>
 	</div>
 </section>
 <?php
